@@ -31,6 +31,62 @@ type XciResult struct {
 		Code int    `xml:"code,attr"`
 		Xhdr string `xml:"xhdr"`
 	} `xml:"xci>scanner>result"`
+	ReportResult struct {
+		Stats struct {
+			NodeId   string `xml:"nodeid,attr"`
+			Basetime int    `xml:"basetime,attr"`
+			Elapsed  int    `xml:"elapsed,attr"`
+			Class    string `xml:"class,attr"`
+			Version  struct {
+				Engine   string `xml:"engine"`
+				Platform string `xml:"platform"`
+			} `xml:"version"`
+			Timers struct {
+				Run struct {
+					Started int `xml:"started,attr"`
+					Elapsed int `xml:"elapsed,attr"`
+				} `xml:"run"`
+				Sync struct {
+					Latest  int `xml:"latest,attr"`
+					Elapsed int `xml:"elapsed,attr"`
+				} `xml:"sync"`
+				Save struct {
+					Latest  int `xml:"latest,attr"`
+					Elapsed int `xml:"elapsed,attr"`
+				} `xml:"save"`
+				Condense struct {
+					Latest  int `xml:"latest,attr"`
+					Elapsed int `xml:"elapsed,attr"`
+				} `xml:"condense"`
+			} `xml:"timers"`
+			Gbudb struct {
+				Size struct {
+					Bytes int `xml:"bytes,attr"`
+				} `xml:"size"`
+				Records struct {
+					Count int `xml:"count,attr"`
+				} `xml:"records"`
+				Utilization struct {
+					Percent float32 `xml:"percent,attr"`
+				} `xml:"utilization"`
+			} `xml:"gbudb"`
+			Rules struct {
+				Rulesbase struct {
+					Utc int `xml:"utc,attr"`
+				} `xml:"rulesbase"`
+				Active struct {
+					Utc int `xml:"utc,attr"`
+				} `xml:"active"`
+				Update struct {
+					Ready string `xml:"ready,attr"`
+					Utc   int    `xml:"utc,attr"`
+				} `xml:"update"`
+				Latest struct {
+					Rule string `xml:"rule,attr"`
+				} `xml:"latest"`
+			} `xml:"rules"`
+		} `xml:"stats"`
+	} `xml:"xci>report>response"`
 }
 
 func httpPing(w http.ResponseWriter, r *http.Request) {
@@ -46,26 +102,16 @@ func httpScan(w http.ResponseWriter, r *http.Request) {
 	}
 	defer file.Close()
 
-	if debug == true {
-		log.Printf("file name: %+v | ", handler.Filename)
-		log.Printf("file size: %+v | ", handler.Size)
-		log.Printf("header: %+v\n", handler.Header)
-	}
-
-	// create tmp file
 	tmpFile, err := ioutil.TempFile(workingDir, "*")
 	if err != nil {
 		log.Println(err)
 	}
 	defer tmpFile.Close()
 
-	// read contents of uploaded file into a byte array
 	fileBytes, err := ioutil.ReadAll(file)
 	if err != nil {
 		log.Println(err)
 	}
-
-	// write this byte array to our temporary file
 	tmpFile.Write(fileBytes)
 	log.Printf("saved file %+v as %+v, %+v bytes", handler.Filename, tmpFile.Name(), handler.Size)
 
@@ -83,6 +129,14 @@ func httpTestIp(w http.ResponseWriter, r *http.Request) {
 
 	// send XCI command to sniffer and get json-encoded result
 	result := snifferTestIp(ip)
+	io.WriteString(w, result)
+}
+
+func httpStatus(w http.ResponseWriter, r *http.Request) {
+	r.ParseMultipartForm(10 << 20)
+	interval := r.FormValue("interval")
+
+	result := snifferReport(interval)
 	io.WriteString(w, result)
 }
 
@@ -104,6 +158,15 @@ func snifferScan(file string, ip string) string {
 	return result
 }
 
+func snifferReport(interval string) string {
+	xci := fmt.Sprintf("<snf><xci><report><request><status class=\"%v\"/></request></report></xci></snf>", interval)
+	log.Println("sending xci command: ", xci)
+	x := sendXci(xci)
+	log.Println("received xci response: ", string(x))
+	result := XciToJson(x, "report")
+	return result
+}
+
 func XciToJson(xci []byte, reqType string) string {
 	var data XciResult
 	err := xml.Unmarshal(xci, &data)
@@ -118,6 +181,9 @@ func XciToJson(xci []byte, reqType string) string {
 		return fmt.Sprintf("%s", string(json))
 	case "testip":
 		json, _ := json.Marshal(data.IpResult)
+		return fmt.Sprintf("%s", string(json))
+	case "report":
+		json, _ := json.Marshal(data.ReportResult)
 		return fmt.Sprintf("%s", string(json))
 	default:
 		return "no response"
@@ -171,6 +237,7 @@ func setupRoutes() {
 	http.HandleFunc("/ping", httpPing)
 	http.HandleFunc("/scan", httpScan)
 	http.HandleFunc("/testip", httpTestIp)
+	http.HandleFunc("/status", httpStatus)
 	log.Println("listening on port 8080")
 	log.Println("initialized snifferfy")
 	log.Fatal(http.ListenAndServe(":8080", nil))
