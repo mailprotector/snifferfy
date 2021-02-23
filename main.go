@@ -6,10 +6,11 @@ import (
 	"fmt"
 	"io"
 	"io/ioutil"
-	"log"
 	"net"
 	"net/http"
 	"os"
+
+	log "github.com/sirupsen/logrus"
 )
 
 var debug bool = false
@@ -30,6 +31,28 @@ type XciResult struct {
 	ScanResult struct {
 		Code int    `xml:"code,attr"`
 		Xhdr string `xml:"xhdr"`
+		Log  struct {
+			Scan struct {
+				TimeStamp   int    `xml:"u,attr"`
+				Message     string `xml:"m,attr"`
+				Result      int    `xml:"s,attr"`
+				RuleId      int    `xml:"r,attr"`
+				Performance struct {
+					SetupTime  int `xml:"s,attr"`
+					ScanTime   int `xml:"t,attr"`
+					Bytes      int `xml:"l,attr"`
+					Evaluators int `xml:"d,attr"`
+				} `xml:"p"`
+				Gbudb struct {
+					Ordinal     int     `xml:"o,attr"`
+					Ip          string  `xml:"i,attr"`
+					Flag        string  `xml:"t,attr"`
+					Confidence  float32 `xml:"c,attr"`
+					Probability float32 `xml:"p,attr"`
+					Result      string  `xml:"r,attr"`
+				} `xml:"g"`
+			} `xml:"s"`
+		} `xml:"log"`
 	} `xml:"xci>scanner>result"`
 	ReportResult struct {
 		Stats struct {
@@ -95,28 +118,50 @@ func httpPing(w http.ResponseWriter, r *http.Request) {
 
 func httpScan(w http.ResponseWriter, r *http.Request) {
 	r.ParseMultipartForm(10 << 20)
+	log.Debug("raw form data: ", r)
+	l := r.FormValue("logEnable")
+	x := r.FormValue("xhdrEnable")
 	ip := r.FormValue("ip")
+
+	if l == "" {
+		l = "yes"
+	}
+
+	if x == "" {
+		x = "yes"
+	}
+
+	if ip == "" {
+		log.Error("originating ip address not provided...skipping")
+		http.Error(w, "{\"level\":\"error\",\"msg\":\"originating ip address not provided...skipping\"}", http.StatusInternalServerError)
+		return
+	}
+
 	file, handler, err := r.FormFile("file")
 	if err != nil {
-		log.Fatal(err)
+		log.Error(err)
+		http.Error(w, fmt.Sprintf("{\"level\":\"error\",\"msg\":\"%v\"}", err), http.StatusInternalServerError)
+		return
 	}
 	defer file.Close()
 
 	tmpFile, err := ioutil.TempFile(workingDir, "*")
 	if err != nil {
-		log.Println(err)
+		log.Error(err)
+		http.Error(w, fmt.Sprintf("{\"level\":\"error\",\"msg\":\"%v\"}", err), http.StatusInternalServerError)
+		return
 	}
 	defer tmpFile.Close()
 
 	fileBytes, err := ioutil.ReadAll(file)
 	if err != nil {
-		log.Println(err)
+		log.Error(err)
 	}
 	tmpFile.Write(fileBytes)
-	log.Printf("saved file %+v as %+v, %+v bytes", handler.Filename, tmpFile.Name(), handler.Size)
+	log.Debug("saved file %+v as %+v, %+v bytes", handler.Filename, tmpFile.Name(), handler.Size)
 
 	// send XCI command to sniffer and get json-encoded result
-	result := snifferScan(tmpFile.Name(), ip)
+	result := snifferScan(tmpFile.Name(), ip, l, x)
 	io.WriteString(w, result)
 
 	// remove temp file
@@ -142,27 +187,28 @@ func httpStatus(w http.ResponseWriter, r *http.Request) {
 
 func snifferTestIp(ip string) string {
 	xci := fmt.Sprintf("<snf><xci><gbudb><test ip=\"%v\"/></gbudb></xci></snf>", ip)
-	log.Println("sending xci command: ", xci)
-	x := sendXci(xci)
-	log.Println("received xci response: ", string(x))
-	result := XciToJson(x, "testip")
+	log.Debug("sending xci command: ", xci)
+	r := sendXci(xci)
+	log.Debug("received xci response: ", string(r))
+	result := XciToJson(r, "testip")
 	return result
 }
 
-func snifferScan(file string, ip string) string {
-	xci := fmt.Sprintf("<snf><xci><scanner><scan xhdr=\"yes\" log=\"yes\" file=\"%v\" ip=\"%v\"/></scanner></xci></snf>", file, ip)
-	log.Println("sending xci command: ", xci)
-	x := sendXci(xci)
-	log.Println("received xci response: ", string(x))
-	result := XciToJson(x, "scan")
+func snifferScan(file string, ip string, l string, x string) string {
+	xci := fmt.Sprintf("<snf><xci><scanner><scan xhdr=\"%v\" log=\"%v\" file=\"%v\" ip=\"%v\"/></scanner></xci></snf>", x, l, file, ip)
+	log.Debug("sending xci command: ", xci)
+	r := sendXci(xci)
+	log.Debug("received xci response: ", string(r))
+	result := XciToJson(r, "scan")
+	log.Info(result)
 	return result
 }
 
 func snifferReport(interval string) string {
 	xci := fmt.Sprintf("<snf><xci><report><request><status class=\"%v\"/></request></report></xci></snf>", interval)
-	log.Println("sending xci command: ", xci)
+	log.Debug("sending xci command: ", xci)
 	x := sendXci(xci)
-	log.Println("received xci response: ", string(x))
+	log.Debug("received xci response: ", string(x))
 	result := XciToJson(x, "report")
 	return result
 }
@@ -171,10 +217,10 @@ func XciToJson(xci []byte, reqType string) string {
 	var data XciResult
 	err := xml.Unmarshal(xci, &data)
 	if err != nil {
-		log.Fatal(err)
+		log.Error("xml conversion failed: ", err)
 	}
 
-	log.Println("unmarshaled xml: ", data)
+	log.Debug("unmarshaled xml: ", data)
 	switch reqType {
 	case "scan":
 		json, _ := json.Marshal(data.ScanResult)
@@ -203,7 +249,7 @@ func connInit() net.Conn {
 	c, err := net.DialTCP("tcp", nil, tcpAddr)
 
 	if err != nil {
-		log.Println("connection to snf-server failed:", err.Error())
+		log.Error("connection to snf-server failed:", err.Error())
 	}
 	return c
 }
@@ -211,7 +257,7 @@ func connInit() net.Conn {
 func connWrite(xci string, c net.Conn) {
 	_, err := c.Write([]byte(xci))
 	if err != nil {
-		log.Println("write to snf-server failed:", err.Error())
+		log.Error("write to snf-server failed:", err.Error())
 	}
 }
 
@@ -222,10 +268,10 @@ func connRead(c net.Conn) (int, []byte) {
 	for {
 		n, err := c.Read(buffer)
 		totalBytes += n
-		//log.Println("connread totalBytes:", totalBytes)
+		log.Debug("connread totalBytes:", totalBytes)
 		if err != nil {
 			if err != io.EOF {
-				log.Println("read from snf-server failed: ", err.Error())
+				log.Error("read from snf-server failed: ", err.Error())
 			}
 			break
 		}
@@ -238,11 +284,15 @@ func setupRoutes() {
 	http.HandleFunc("/scan", httpScan)
 	http.HandleFunc("/testip", httpTestIp)
 	http.HandleFunc("/status", httpStatus)
-	log.Println("listening on port 8080")
-	log.Println("initialized snifferfy")
+	log.Info("listening on port 8080")
+	log.Info("initialized snifferfy")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
 func main() {
+	log.SetFormatter(&log.JSONFormatter{})
+	log.SetOutput(os.Stdout)
+	log.SetLevel(log.InfoLevel)
+
 	setupRoutes()
 }
