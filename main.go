@@ -10,12 +10,18 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/ilyakaznacheev/cleanenv"
 	log "github.com/sirupsen/logrus"
 )
 
-var debug bool = false
-var workingDir = "/usr/share/snf-server/storage/"
-var snifferHost = "localhost:9001"
+var cfg ConfigOptions
+
+type ConfigOptions struct {
+	SnfPort    string `env:"SNFPORT" env-default:"9001"`
+	HttpPort   string `env:"HTTPPORT" env-default:"8080"`
+	WorkingDir string `env:"WORKINGDIR" env-default:"/usr/share/snf-server/storage/"`
+	LogLevel   string `env:"LOGLEVEL" env-default:"info"`
+}
 
 type XciResult struct {
 	IpResult struct {
@@ -123,13 +129,8 @@ func httpScan(w http.ResponseWriter, r *http.Request) {
 	x := r.FormValue("xhdrEnable")
 	ip := r.FormValue("ip")
 
-	if l == "" {
-		l = "yes"
-	}
-
-	if x == "" {
-		x = "yes"
-	}
+	l = setDefault(l, "yes")
+	x = setDefault(x, "no")
 
 	if ip == "" {
 		log.Error("originating ip address not provided...skipping")
@@ -145,7 +146,7 @@ func httpScan(w http.ResponseWriter, r *http.Request) {
 	}
 	defer file.Close()
 
-	tmpFile, err := ioutil.TempFile(workingDir, "*")
+	tmpFile, err := ioutil.TempFile(cfg.WorkingDir, "*")
 	if err != nil {
 		log.Error(err)
 		http.Error(w, fmt.Sprintf("{\"level\":\"error\",\"msg\":\"%v\"}", err), http.StatusInternalServerError)
@@ -159,30 +160,35 @@ func httpScan(w http.ResponseWriter, r *http.Request) {
 	}
 	tmpFile.Write(fileBytes)
 	log.Debug("saved file %+v as %+v, %+v bytes", handler.Filename, tmpFile.Name(), handler.Size)
-
-	// send XCI command to sniffer and get json-encoded result
 	result := snifferScan(tmpFile.Name(), ip, l, x)
-	io.WriteString(w, result)
-
-	// remove temp file
+	if result != "" {
+		io.WriteString(w, result)
+	} else {
+		http.Error(w, "{\"level\":\"error\",\"msg\":\"received empty response from sniffer\"}", http.StatusInternalServerError)
+	}
 	defer os.Remove(tmpFile.Name())
 }
 
 func httpTestIp(w http.ResponseWriter, r *http.Request) {
 	r.ParseMultipartForm(10 << 20)
 	ip := r.FormValue("ip")
-
-	// send XCI command to sniffer and get json-encoded result
 	result := snifferTestIp(ip)
-	io.WriteString(w, result)
+	if result != "" {
+		io.WriteString(w, result)
+	} else {
+		http.Error(w, "{\"level\":\"error\",\"msg\":\"received empty response from sniffer\"}", http.StatusInternalServerError)
+	}
 }
 
 func httpStatus(w http.ResponseWriter, r *http.Request) {
 	r.ParseMultipartForm(10 << 20)
 	interval := r.FormValue("interval")
-
 	result := snifferReport(interval)
-	io.WriteString(w, result)
+	if result != "" {
+		io.WriteString(w, result)
+	} else {
+		http.Error(w, "{\"level\":\"error\",\"msg\":\"received empty response from sniffer\"}", http.StatusInternalServerError)
+	}
 }
 
 func snifferTestIp(ip string) string {
@@ -234,7 +240,6 @@ func XciToJson(xci []byte, reqType string) string {
 	default:
 		return "no response"
 	}
-
 }
 
 func sendXci(cmd string) []byte {
@@ -245,11 +250,11 @@ func sendXci(cmd string) []byte {
 }
 
 func connInit() net.Conn {
-	tcpAddr, err := net.ResolveTCPAddr("tcp", snifferHost)
+	tcpAddr, err := net.ResolveTCPAddr("tcp", "localhost:"+cfg.SnfPort)
 	c, err := net.DialTCP("tcp", nil, tcpAddr)
 
 	if err != nil {
-		log.Error("connection to snf-server failed:", err.Error())
+		panic(err.Error())
 	}
 	return c
 }
@@ -279,20 +284,48 @@ func connRead(c net.Conn) (int, []byte) {
 	return totalBytes, buffer
 }
 
+func setDefault(v string, d string) string {
+	if v == "" {
+		return d
+	} else {
+		return v
+	}
+}
+
+func setupLogging(logLevel string) {
+	log.SetFormatter(&log.JSONFormatter{})
+	log.SetOutput(os.Stdout)
+	if logLevel == "info" {
+		log.SetLevel(log.InfoLevel)
+	} else if logLevel == "debug" {
+		log.SetLevel(log.DebugLevel)
+	}
+}
+
 func setupRoutes() {
 	http.HandleFunc("/ping", httpPing)
 	http.HandleFunc("/scan", httpScan)
 	http.HandleFunc("/testip", httpTestIp)
 	http.HandleFunc("/status", httpStatus)
-	log.Info("listening on port 8080")
-	log.Info("initialized snifferfy")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+
+	log.Info("initialized snifferfy on port ", cfg.HttpPort)
+	err := http.ListenAndServe(":"+cfg.HttpPort, nil)
+	if err != nil {
+		log.Panic(err)
+	}
+}
+
+func init() {
+	// config
+	err := cleanenv.ReadEnv(&cfg)
+	if err != nil {
+		panic(err)
+	}
+
+	// logging
+	setupLogging(cfg.LogLevel)
 }
 
 func main() {
-	log.SetFormatter(&log.JSONFormatter{})
-	log.SetOutput(os.Stdout)
-	log.SetLevel(log.InfoLevel)
-
 	setupRoutes()
 }
