@@ -19,10 +19,10 @@ import (
 var cfg ConfigOptions
 
 type ConfigOptions struct {
-	SnfPort    string `env:"SNFPORT" env-default:"9001"`
-	HttpPort   string `env:"HTTPPORT" env-default:"8080"`
-	WorkingDir string `env:"WORKINGDIR" env-default:"/usr/share/snf-server/storage/"`
-	LogLevel   string `env:"LOGLEVEL" env-default:"info"`
+	SnfPort    string `env:"SNIFFERFY_SNFPORT" env-default:"9001"`
+	HttpPort   string `env:"SNIFFERFY_HTTPPORT" env-default:"8080"`
+	WorkingDir string `env:"SNIFFERFY_WORKINGDIR" env-default:"/usr/share/snf-server/storage/"`
+	LogLevel   string `env:"SNIFFERFY_LOGLEVEL" env-default:"info"`
 }
 
 type XciResult struct {
@@ -123,9 +123,8 @@ type XciResult struct {
 func httpHealth(w http.ResponseWriter, r *http.Request) {
 	_, err := connInit()
 	if err != nil {
-		w.Header().Set("Content-Type", "application/json")
-		w.WriteHeader(http.StatusInternalServerError)
-		io.WriteString(w, fmt.Sprintf("{\"level\":\"error\",\"msg\":\"%v\"}", err))
+		log.Error(err)
+		writeHttpError(w, fmt.Sprintf("%v", err))
 		return
 	}
 
@@ -149,9 +148,7 @@ func httpScan(w http.ResponseWriter, r *http.Request) {
 	file, handler, err := r.FormFile("file")
 	if err != nil {
 		log.Error(err)
-		w.Header().Set("Content-Type", "application/json")
-		w.WriteHeader(http.StatusInternalServerError)
-		io.WriteString(w, fmt.Sprintf("{\"level\":\"error\",\"msg\":\"%v\"}", err))
+		writeHttpError(w, fmt.Sprintf("%v", err))
 		return
 	}
 	defer file.Close()
@@ -160,9 +157,7 @@ func httpScan(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		log.Error(err)
-		w.Header().Set("Content-Type", "application/json")
-		w.WriteHeader(http.StatusInternalServerError)
-		io.WriteString(w, fmt.Sprintf("{\"level\":\"error\",\"msg\":\"%v\"}", err))
+		writeHttpError(w, fmt.Sprintf("%v", err))
 		return
 	}
 	defer tmpFile.Close()
@@ -170,9 +165,7 @@ func httpScan(w http.ResponseWriter, r *http.Request) {
 	fileBytes, err := ioutil.ReadAll(file)
 	if err != nil {
 		log.Error(err)
-		w.Header().Set("Content-Type", "application/json")
-		w.WriteHeader(http.StatusInternalServerError)
-		io.WriteString(w, fmt.Sprintf("{\"level\":\"error\",\"msg\":\"%v\"}", err))
+		writeHttpError(w, fmt.Sprintf("%v", err))
 		return
 	}
 	tmpFile.Write(fileBytes)
@@ -182,21 +175,18 @@ func httpScan(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		log.Error(err)
-		w.Header().Set("Content-Type", "application/json")
-		w.WriteHeader(http.StatusInternalServerError)
-		io.WriteString(w, fmt.Sprintf("{\"level\":\"error\",\"msg\":\"%v\"}", err))
+		writeHttpError(w, fmt.Sprintf("%v", err))
 		return
 	}
 
 	if result != "" {
+		log.Info(result)
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusOK)
 		io.WriteString(w, result)
 		return
 	} else {
-		w.Header().Set("Content-Type", "application/json")
-		w.WriteHeader(http.StatusInternalServerError)
-		io.WriteString(w, "{\"level\":\"error\",\"msg\":\"received empty response from sniffer\"}")
+		writeHttpError(w, fmt.Sprintf("%v", err))
 	}
 
 	defer os.Remove(tmpFile.Name())
@@ -205,14 +195,21 @@ func httpScan(w http.ResponseWriter, r *http.Request) {
 func httpTestIp(w http.ResponseWriter, r *http.Request) {
 	r.ParseMultipartForm(10 << 20)
 	ip := r.FormValue("ip")
+
+	if ip == "" {
+		writeHttpError(w, fmt.Sprintf("must include ip to search"))
+		return
+	}
+
 	result, err := snifferTestIp(ip)
 
 	if err != nil {
-		w.Header().Set("Content-Type", "application/json")
-		w.WriteHeader(http.StatusInternalServerError)
-		io.WriteString(w, fmt.Sprintf("{\"level\":\"error\",\"msg\":\"%v\"}", err))
+		log.Error(err)
+		writeHttpError(w, fmt.Sprintf("%v", err))
+		return
 	}
 
+	log.Info(result)
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 	io.WriteString(w, result)
@@ -225,11 +222,12 @@ func httpStatus(w http.ResponseWriter, r *http.Request) {
 	result, err := snifferReport(interval)
 
 	if err != nil {
-		w.Header().Set("Content-Type", "application/json")
-		w.WriteHeader(http.StatusInternalServerError)
-		io.WriteString(w, fmt.Sprintf("{\"level\":\"error\",\"msg\":\"%v\"}", err))
+		log.Error(err)
+		writeHttpError(w, fmt.Sprintf("%v", err))
+		return
 	}
 
+	log.Info(result)
 	io.WriteString(w, result)
 }
 
@@ -268,7 +266,6 @@ func snifferScan(file string, ip string, l string, x string) (string, error) {
 	log.Debug("received xci response: ", string(r))
 	result := XciToJson(r, "scan")
 
-	log.Info(result)
 	return result, nil
 }
 
@@ -283,6 +280,7 @@ func snifferReport(interval string) (string, error) {
 
 	log.Debug("received xci response: ", string(r))
 	result := XciToJson(r, "report")
+
 	return result, nil
 }
 
@@ -327,7 +325,6 @@ func connInit() (net.Conn, error) {
 	c, err := net.DialTCP("tcp", nil, tcpAddr)
 
 	if err != nil {
-		log.Error(err.Error())
 		return nil, err
 	}
 
@@ -359,10 +356,16 @@ func connRead(c net.Conn) (int, []byte) {
 	return totalBytes, buffer
 }
 
+func writeHttpError(w http.ResponseWriter, msg string) {
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusInternalServerError)
+	io.WriteString(w, fmt.Sprintf("{\"level\":\"error\",\"msg\":\"%v\"}", msg))
+}
+
 func notFound(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusNotFound)
-	io.WriteString(w, "{\"level\":\"error\",\"msg\":\"not found\"}")
+	io.WriteString(w, "{\"level\":\"error\",\"msg\":\"endpoint not found\"}")
 }
 
 func setDefault(v string, d string) string {
@@ -402,7 +405,7 @@ func setupRoutes() {
 	}
 
 	if err := srv.ListenAndServe(); err != nil {
-		log.Panic(err)
+		log.Fatal(err)
 	}
 }
 
