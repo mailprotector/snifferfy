@@ -219,6 +219,11 @@ func httpStatus(w http.ResponseWriter, r *http.Request) {
 	r.ParseMultipartForm(10 << 20)
 	interval := r.FormValue("interval")
 
+	if (interval != "second") && (interval != "minute") && (interval != "hour") {
+		writeHttpError(w, fmt.Sprintf("must include interval"))
+		return
+	}
+
 	result, err := snifferReport(interval)
 
 	if err != nil {
