@@ -1,0 +1,109 @@
+--------------------------17b9ab53aca31055
+Content-Disposition: form-data; name="file"; filename="0000A16E-3C5D-43AB-A10B-9D0282F300B9.1"
+Content-Type: application/octet-stream
+
+Authentication-Results: quarantined.mailprotector.net; 
+Received: from igate-4.inbound.emailservice.io (ip-10-187-77-249.ec2.internal [10.187.77.249])
+	by quarantined.mailprotector.net (Haraka/2.4.0) with ESMTP id 0000A16E-3C5D-43AB-A10B-9D0282F300B9.1
+	envelope-from <01000177b02820ba-75717c97-7ec9-4ed7-8823-e1e184c481aa-000000@amazonses.com>;
+	Wed, 17 Feb 2021 13:22:42 +0000
+Received: from sonic317-26.consmr.mail.bf2.yahoo.com (sonic317-26.consmr.mail.bf2.yahoo.com [74.6.129.81])
+	by igate-4.inbound.emailservice.io (Postfix) with ESMTPS id 0FEEC61CCD
+	for <JOAN@CTSBINC.COM>; Wed, 17 Feb 2021 13:22:42 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1613568161; bh=Dfgc32t3BzScxiX0ENwQIwpaGnSbbgzm5gjftHjDO44=; h=List-Unsubscribe:Date:From:To:Subject:From:Subject:Reply-To; b=HGiKchrtXjA1k9WCwJHYxgN2CDdIbnD6w8Be8A1Eepbq/AeScY5Y9hXB+Mx6OF2Myh7+m1Iq+qLJn2mbfXIjlqDjz1+h5BeTwXvjec29qaWtAjPEqP9iVULrPED7cl7dZRn/f1Bsi9Z84j/7V00NbKlXCvwRA4uLhggHctHtVAxlKwOHc8zXi9hofEByYrDhFXEZGs96dZuimflih4wTEmf4AeMtqfMH5bfZf1pzxS1uKj2WwvBYf/+YnRQO0LRyf1PEKB4MFthVx1FawoLhuSo/AOoqOK4ouDdopYSEDYRMAXv/S7HkqEtTyDQxWvVn68fPe2EY/z7SBrOwYS3whQ==
+X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1613568161; bh=OlLpLt5yJwNYp2gKeXbB6rOd6NJybIO6wLuiXF24pt/=; h=X-Sonic-MF:Date:From:To:Subject:From:Subject; b=D1giMq42AE1K2pWQjql9N4OBAsIgw1daCo32nJwTn9X//ybKO3UhkiA2D1OtdiVikNOVULeauDubWrZcp7DHl5fk9m7390PF4qqz/iC3fEjl0SGD4ccHCYabvdYhyuqWWcYGYGM/N657lcfmB+eiPn9Nkj4yUC+qIqhxQlwU7sHhoJylrdXI+bvktVUe6VuvgCoRy0LpWwKVpCZJuFaTR5uDSxKfNDh5Lw3Cz9LYgWvTuU//waXaJ1S+uTBnFMtkb3CDSyiEEdrkOAbKnUJi8FFaFPoyH6Wx0kzDj/KIdetPg1DwySNgzO5PdOi3OEGwmi9YnNXh30p6V6gjmAQENA==
+X-Sonic-MF: 01000177b02820ba-75717c97-7ec9-4ed7-8823-e1e184c481aa-000000@amazonses.com
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic317.consmr.mail.bf2.yahoo.com with HTTP; Wed, 17 Feb 2021 13:22:41 +0000
+Received: from 10.213.248.132
+ by atlas104.sbc.mail.gq1.yahoo.com with HTTP; Wed, 17 Feb 2021 13:22:36 +0000
+Received: from 144.160.152.215 (EHLO flpd576.prodigy.net)
+ by 10.213.248.132 with SMTPs; Wed, 17 Feb 2021 13:22:36 +0000
+X-Originating-Ip: [54.240.48.86]
+Received-SPF: pass (domain of amazonses.com designates 54.240.48.86 as permitted sender)
+Authentication-Results: atlas104.sbc.mail.gq1.yahoo.com;
+ dkim=pass header.i=@amazonses.com header.s=224i4yxa5dv7c2xz3womw6peuasteono;
+ spf=pass smtp.mailfrom=amazonses.com;
+ dmarc=unknown header.from=magicalusagrabber.com;
+X-Apparently-To: joan31@bellsouth.net; Wed, 17 Feb 2021 13:22:37 +0000
+X-YMailISG: iMAZZrsWLDsxFXwFQ7G_PwQVkP4xcSJedojnTV8ttIkVwmU3
+ V3PPETZtBaTSl2Xcoqs4CqlZai8vVoJbjVszqrS6RldsJc6dHCVukFnAuxpm
+ usPm7CIIKlznbYDuOAxcwHylkW.ts4AT.LqBzHSxdGsVGh1iIol27EQ4h6YM
+ ag4pziVkbOvQEdUB6S7vq8R5U6seFYjnkr.RSOBK8FLUBfXpFE3NzbMPFZwR
+ Y00Wwr8TGwzTO9c0DLn0zRRdXPvQv8He7PNwxaSVXhpZJiA_YgELW_5XU9_Y
+ r0P_bW6SC4Xvh9zwTWWyZVHAYChwEfdhfkW67PqMH3ef4QsAyMVtj1JN4eGM
+ J2lwX7V2W0VOEbFRlhXgfakKQSbXPB5iHAWTQkLLqq1PGQpPO6r_s7RJzzfF
+ 3Ekc2wwVN.AuS5PJnjisI9gKmNSoLL7p2YTVOkTIQOob0lydqLzBGVuR4Gbc
+ NJNn0j02WJBQ_6icKta3En_vBMWRyMTQZcXeCJOu7SdsUdfrRP1fH5OkRE0b
+ 5NhcFN2N0zHIW9mtF2Nu8tuEyzKyBBR4fQhYWjAqDu2K4f90w_RoOqqaj2yA
+ Pjyl_uWj54YJI7RHs7oF2neEmpzySeDbIk6JOmWnpljcmrH5TasWNAvHy6H3
+ 6rD6CEBXkq1SywD9RPLlGzHc_6jLqfXJlVvGbt7Oc3tXHDU.L6QwhGQkelXq
+ ELQJ02c3dqWr.taTRKG_1kBnbYsNJe_GUNnwQPr4cPtnWqZi_LpyEQ4ivyKz
+ _Yg6RjaQew6dxehCGhx1mw5fPlLkRJE_qq8XyvdFPgRp2dA9Xlm5GbCohseQ
+ WNr11beAmJWK3.cxrlCaUUiJi_f2QfA0sw4C8WZelkcqI_1pDqg2hxx3SY54
+ mnP5bBX9iG0yNMkM1N2jdmsLJNZqyNckv45yTdd3pcIvfJPV3fsMh2sesia3
+ DxZAAnzb9eZC4wujOcqaa8Zjfzu1qB4mMHrcFi69fnjzdrkP3302l_8.O6A4
+ 2MntsjYDtb1UuA941ZrbHNm4OMGSZi4hJPsnmMfX.RTSUG_PyIXN_A.cr_8X
+ acHGqZ11w1CZ0.JAl3gI6I_sVP81bXTcdTCrjTDUx83X4L2VEzGoFXXjb.FD
+ dAoj2FVGS6aJgWHY571O1DwADGDwQddDgnzE6J5VYyaGUQ3OJ6LB3A7O
+X-Originating-IP: [54.240.48.86]
+Received: from a48-86.smtp-out.amazonses.com (a48-86.smtp-out.amazonses.com [54.240.48.86])
+	by flpd576.prodigy.net (Inbound 8.15.2/8.15.2) with ESMTPS id 11HDLadf119499
+	(version=TLSv1.2 cipher=AES128-SHA256 bits=128 verify=NO)
+	for <joan31@bellsouth.net>; Wed, 17 Feb 2021 05:22:36 -0800
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=224i4yxa5dv7c2xz3womw6peuasteono; d=amazonses.com; t=1613568156;
+	h=List-Unsubscribe:Date:From:To:Content-Type:MIME-Version:List-Unsubscribe-Post:Subject:Feedback-ID:Message-ID;
+	bh=IpRVvpo2NlRV2Kk+BzwHCBkukM0i+/sETTn8jrbWOdw=;
+	b=f5+ktzQG79re0g0w1O6SKwLOHcuZaSZ5IZkvZexQNx//80zpa1Yer236EtJ3s+mw
+	IJ54mrJO3izlVYAF1AJ8/GMiO79gJ77ENk1xkSadFtGQkvnLiJ0sXdnX+TyjLqXLlwj
+	JY5al6jFL2YquqJH8avCTRB+2ZtzgvEceZRyWYkk=
+List-Unsubscribe: <https://magicalusagrabber.com/u/UDIo5UA1qOv9OIu5KIxXD3TjepPkbt4-faBw0SCxqP7IRynkRSy_l9TnrDHjU6LP>
+Date: Wed, 17 Feb 2021 13:22:35 +0000
+From: "=?UTF-8?Q?UsaGrabber_-_Start_Comparing?=" <deliacarr@magicalusagrabber.com>
+X-MSFBL: <a1ycp9hL2mPUxcRa_XYS7cH8OCFTFB7Ttzs12fmrEds=|602d17b23e27e72c5b358504@magicalusagrabber.com>
+To: joan31@bellsouth.net
+Original-from: deliacarr@magicalusagrabber.com
+Content-Type: text/html; charset=utf-8
+X-Auto-Response-Suppress: All
+Bounces-to: deliacarr@magicalusagrabber.com
+MIME-Version: 1.0
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Subject: =?UTF-8?Q?Check_our_quotes_and_qualify_for_a_?=
+ =?UTF-8?Q?new,_low_homeowners_insurance_rates.?=
+Feedback-ID: 1.us-east-1.gRRGNpCLK2Lk1U4YmHKIboOn6vs8xZ0pV9py6RWFvss=:AmazonSES
+Message-ID: <01000177b02820ba-75717c97-7ec9-4ed7-8823-e1e184c481aa-000000@email.amazonses.com>
+X-SES-Outgoing: 2021.02.17-54.240.48.86
+X-Yahoo-Forwarded: From joan31@bellsouth.net To JOAN@CTSBINC.COM
+X-Prime: {"joan@ctsbinc.com": {"provider_id": 65, "user_id": 905987, "reseller_id": 1835, "user_group_id": 20345, "customer_id": 14722, "domain_id": 21410}}
+X-Mailprotector-Decision: quarantine_spam
+X-Mailprotector-Connection: TLSv1.2|sonic317-26.consmr.mail.bf2.yahoo.com|74.6.129.81|sonic317-26.consmr.mail.bf2.yahoo.com|-0.490566|0.480569|0|normal|ugly|79|27|0|0
+X-Mailprotector-Results: spf_fail from_spf_neutral subject_50_chars subject_10_spaces dkim_verified bulk
+X-Mailprotector-Score: 415
+X-Mailprotector-IP-Analysis: 0, 74.6.129.81, Ugly c=0.480569 p=-0.490566 Source Normal
+X-Mailprotector-Scan-Diagnostics:  100-1570330-4664-4689-m 100-1570330-0-6474-f
+X-Mailprotector-Timestamp: 7Y31kuzWq4of0yxWwaePAQ==
+X-Mailprotector-ID: 1efa2696-250c-4a34-a03e-1b8d0f5d0a8b
+
+<!doctype html>
+<html>
+<head> 
+</head> 
+<body> 
+<p><a href="https://magicalusagrabber.com/c/UDIo5UA1qOv9OIu5KIxXD3TjepPkbt4-faBw0SCxqP7IRynkRSy_l9TnrDHjU6LP/gBMOdw%3D%3D"><img src="https://magicalusagrabber.com/i/1965466164-STRqEQw3c3tpcSTeuVtc63QYI3yfscATaGESr9j0cUAKU4sn" width="585" height="751" alt="" style="display: block; margin-left: auto; margin-right: auto;"></a></p> 
+<p style="text-align: center;"><a href="https://magicalusagrabber.com/c/UDIo5UA1qOv9OIu5KIxXD3TjepPkbt4-faBw0SCxqP7IRynkRSy_l9TnrDHjU6LP/UpiBbQ%3D%3D"><img src="https://magicalusagrabber.com/i/1895753392-mHVQG7rSzO4cIaZ1TqRGvNdIMVWBQIvq5RF6JApD44ONyzmd" width="166" height="94" alt=""></a></p> 
+<p style="text-align: center;"><a href="https://magicalusagrabber.com/u/UDIo5UA1qOv9OIu5KIxXD3TjepPkbt4-faBw0SCxqP7IRynkRSy_l9TnrDHjU6LP"><img src="https://magicalusagrabber.com/i/1890039079-xflpNUN7Q5RoEf2KOffIf4AyIr3ed5Z8nni9kQGNnyy9t9uw" width="900" height="106" alt=""></a></p> 
+<p style="text-align: center;"></p>  
+<img src="https://magicalusagrabber.com/o/UDIo5UA1qOv9OIu5KIxXD3TjepPkbt4-faBw0SCxqP7IRynkRSy_l9TnrDHjU6LP" alt="">
+</body>
+</html>
+
+
+--------------------------17b9ab53aca31055
+Content-Disposition: form-data; name="ip"
+
+54.240.48.86
+--------------------------17b9ab53aca31055
+Content-Disposition: form-data; name="logEnable"
+
+yes
+--------------------------17b9ab53aca31055--
