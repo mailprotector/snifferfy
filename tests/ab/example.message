@@ -1,0 +1,2631 @@
+POST /scan HTTP/1.1
+Host: localhost:8080
+User-Agent: curl/7.64.1
+Accept: */*
+Content-Length: 156636
+Content-Type: multipart/form-data; boundary=------------------------140efc8d841da7c9
+Expect: 100-continue
+
+--------------------------140efc8d841da7c9
+Content-Disposition: form-data; name="file"; filename="000012AC-3C32-4AD7-804C-AF2B416835A2.1"
+Content-Type: application/octet-stream
+
+Authentication-Results: quarantined.mailprotector.net; 
+Received: from igate-3.inbound.emailservice.io (ip-10-152-90-143.ec2.internal [10.152.90.143])
+	by quarantined.mailprotector.net (Haraka/2.4.0) with ESMTP id 000012AC-3C32-4AD7-804C-AF2B416835A2.1
+	envelope-from <bounce-cn1-ZH_CNN_i_News_NDBAN031720213820881-h-5ea8661b3a=2@newsletters.cnn.com>;
+	Wed, 17 Mar 2021 10:18:23 +0000
+Received: from cnn2news-86-2.bm16.maas.zetaglobal.net (cnn2news-86-2.bm16.maas.zetaglobal.net [96.47.27.93])
+	by igate-3.inbound.emailservice.io (Postfix) with ESMTPS id 2AD5D610C7
+	for <helen@garymanufacturing.com>; Wed, 17 Mar 2021 10:18:23 +0000 (UTC)
+DKIM-Signature: a=rsa-sha256; bh=XsEgjaecH0X8hVrKqmKc7osBA/X0e0jiMY55+L0xQLU=;
+ c=relaxed/relaxed; d=newsletters.cnn.com;
+ h=X-Mailer-Info:X-Mailer-Info-Extra:Subject:From:To:Date:Message-ID:Reply-to:List-Unsubscribe:Feedback-ID:X-rpcampaign:X-cid:X-messageuid:Precedence:List-Unsubscribe-Post:campaign_token:campaign_id:rcpt_domain:MIME-Version:Content-Type;
+ s=v2; t=1615976298; v=1;
+ b=WmT8Ue12Qlg3dpl5/DzT/ZpQkOsvLZGd49TkBnJ0u1urKYhH9hWJOTBmVf06PuZETP0npXc7
+ qjd4ID6Mtvnsq9uEhwhyNMvXP3JrlZ4/9SrYviUGwDflWM+wpvnXy8trG17rV4GC1nzsbX+h6tr
+ l6JvqNxNJuJvTLv+ZTpwLNn5CJZ1Rt5jZ6uebqt7hncY7n/UXEWuZtn3/kHnDm+9XsW0d3kFZ7a
+ ulzEROyi8SQRxd7WKHDqY1M4oI2LmJ5/CVnfP/tdAVGrzuetWmTJ64zzCsGeGHw0ksFayONF+Oa
+ TVCR854LU+QkKJc/XTbjCTJAmdS4myAgQjK4GzXAfOrig==
+X-Mailer-Info: 3.j5WM.geo91Yu52Xp9lbld3cf5GZiFmbwMTM3IDMyEzM4IDM4gTM.oVGbl5GQnFmc51WYuVnZhNGd1JXaudmLj9Wb.snItlGZiojIxYTM1kzN2EDN2EjMxADN2UDZhZ2MjJDNxICLiMGdiojIj5mbtcjMyQjY1MWY4MTY3MmYyQTZmJmM4Y2N4QmZ1YGN1QjMtEjIsIickJiOicWYylXbh5WdmF2Y0Vncp52ZuM2btJSf
+X-Mailer-Info-Extra: 5ea8661b3a:0t92Yu4mbj5ycyVGd0VGbzdXZuBUM0IzYzYWYk
+ VjN0ATMyEjN0EjN3kTNxYTMt4mc1RXZyBgcA0nIt92YucmbpJXd0NWYmVnbh1WeyF2Zio
+ jIkJnIsISMtIDN1QjZ1YGZ4cjZ4IjYmVGNyI2Y3E2M4E2Y1IGNyIzNt4mbjJiOiQ3Yiwi
+ IxQjMjNjZhRWN2QDMxITM2QTM2cTO1EjNxIiOiQWatJyeAMGAt92YucmbpJXd0NWYmVnb
+ h1WeyF2ZA5WZsVGa++
+Subject: Asian Americans are on edge after deadly shootings in Atlanta
+From: CNN's 5 Things <5things@newsletters.cnn.com>
+To: helen@garymanufacturing.com
+Date: 17 Mar 2021 10:18:18 -0000
+Message-ID: <mid-16159761461210465daf3c241@newsletters.cnn.com>
+Reply-to: CNN's 5 Things<reply-16159761461210465daf3c241@newsletters.cnn.com>
+List-Unsubscribe: <https://view.newsletters.cnn.com/messages/16159761461210465daf3c241/unsubscribe>, <mailto:unsubscribe-16159761461210465daf3c241@newsletters.cnn.com?subject=Unsubscribe>
+Feedback-ID: 7224b5ca83a7cb24efb28f78df5f4542:cnn:broadcast:bme
+X-rpcampaign: cnn382088_1
+X-cid: cnn382088_1
+X-messageuid: 16159761461210465daf3c241
+Precedence: bulk
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+campaign_token: cnn-7224b5ca83a7cb24efb28f78df5f4542-1
+campaign_id: 382088
+rcpt_domain: garymanufacturing.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="==5c1d2a8100ea06d7dae4e41eb89d6a3a"
+X-Prime: {"helen@garymanufacturing.com": {"provider_id": 65, "user_id": 1486189, "reseller_id": 17531, "user_group_id": 33668, "customer_id": 19485, "domain_id": 33094}}
+X-Mailprotector-Decision: quarantine_policy
+X-Mailprotector-Connection: TLSv1.2|cnn2news-86-2.bm16.maas.zetaglobal.net|96.47.27.93|cnn2news-86-2.bm16.maas.zetaglobal.net|0|0|0|new|ugly|0|0|0|0
+X-Mailprotector-Results: spf_pass subject_50_chars from_spf_pass reply_spf_pass multiple_from_replyto dkim_verified bulk block:from
+X-Mailprotector-Score: 95
+X-Mailprotector-IP-Analysis: 0, 96.47.27.93, Ugly c=0 p=0 Source New
+X-Mailprotector-Scan-Diagnostics:  100-1581139-1823-1834-m 100-75201-1887-1906-m 100-1570330-2098-2123-m 100-1581139-0-32639-f
+X-Mailprotector-Timestamp: wTzNdpnvNSyTMIll2L0IXQ==
+X-Mailprotector-ID: b27c3264-2e6b-48c4-86a6-fcd24f84923d
+
+This is a multi-part message in MIME format.
+
+--==5c1d2a8100ea06d7dae4e41eb89d6a3a
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+It looks like your email client might not support HTML formatted email.
+
+Try opening this email in another email client.
+
+Or, open the following link to view this email in a browser:
+https://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29=
+t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y=
+2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY=
+29tIn0/TWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly92=
+aWV3Lm5ld3NsZXR0ZXJzLmNubi5jb20vbWVzc2FnZXMvMTYxNTk3NjE0NjEyMTA0NjVkYWYz=
+YzI0MS9yYXc/qP3V0bV90ZXJtPTE2MTU5NzYxNDYxMjEwNDY1ZGFmM2MyNDEmdXRtX3NvdXJ=
+jZT1jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG5lc2RheSUyQytNYXJjaCsxNyUyQysyMDIxJnV=
+0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPTE2MTU5NzYxNDYxMjImYnRfZWU9aklrclo=
+1c2xkWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQzJOZjRxZzBQUlZ3WWNsVWE1amFMNUtPa2t1a2l=
+Fb3JQbXphJmJ0X3RzPTE2MTU5NzYxNDYxMjI/sf82ddcf1b0
+
+------------------------------------------------------------------------=
+-------
+
+We respect your privacy, if this e-mail has been sent to you by error or=
+ you no longer wish to receive email, open the following link in a brows=
+er to unsubscribe:
+https://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29=
+t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y=
+2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY=
+29tIn0/TWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly9m=
+b3JtLmNubi5jb20vdW5zdWJzY3JpYmU/qP2VuY2F1PVRNN3AwVmsxbU0zQ21yZlYlMkYxWXF=
+DYWo1anRaUE04bmxocUZBOVlUVFkwakZEYkpqVDJPVDAlMkZSTnE2WlIlMEE1eXF2JTBBJm1=
+lc3NhZ2VfdWlkPTE2MTU5NzYxNDYxMjEwNDY1ZGFmM2MyNDEmdXRtX3Rlcm09MTYxNTk3NjE=
+0NjEyMTA0NjVkYWYzYzI0MSZ1dG1fc291cmNlPWNubl9GaXZlK1RoaW5ncytmb3IrV2VkbmV=
+zZGF5JTJDK01hcmNoKzE3JTJDKzIwMjEmdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ24=
+9MTYxNTk3NjE0NjEyMiZidF9lZT1qSWtyWjVzbGRZaUdPRk5xUE52WHNmdXdpJTJGckhDMk5=
+mNHFnMFBSVndZY2xVYTVqYUw1S09ra3VraUVvclBtemEmYnRfdHM9MTYxNTk3NjE0NjEyMg/=
+s792fdca791
+
+--==5c1d2a8100ea06d7dae4e41eb89d6a3a
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://=
+www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-micr=
+osoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+
+<head>
+	<!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:Pixel=
+sPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-=
+->
+	<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+	<meta name=3D"viewport" content=3D"width=3Ddevice-width">
+	<!--[if !mso]><!-->
+	<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+	<!--<![endif]-->
+	<title></title>
+	<!--[if !mso]><!-->
+	<!--<![endif]-->
+	<style type=3D"text/css">
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		table,
+		td,
+		tr {
+			vertical-align: top;
+			border-collapse: collapse;
+		}
+
+		* {
+			line-height: inherit;
+		}
+
+		a[x-apple-data-detectors=3Dtrue] {
+			color: inherit !important;
+			text-decoration: none !important;
+		}
+	</style>
+	<style type=3D"text/css" id=3D"media-query">
+		@media (max-width: 620px) {
+
+			.block-grid,
+			.col {
+				min-width: 320px !important;
+				max-width: 100% !important;
+				display: block !important;
+			}
+
+			.block-grid {
+				width: 100% !important;
+			}
+
+			.col {
+				width: 100% !important;
+			}
+
+			.col_cont {
+				margin: 0 auto;
+			}
+
+			img.fullwidth,
+			img.fullwidthOnMobile {
+				max-width: 100% !important;
+			}
+
+			.no-stack .col {
+				min-width: 0 !important;
+				display: table-cell !important;
+			}
+
+			.no-stack.two-up .col {
+				width: 50% !important;
+			}
+
+			.no-stack .col.num2 {
+				width: 16.6% !important;
+			}
+
+			.no-stack .col.num3 {
+				width: 25% !important;
+			}
+
+			.no-stack .col.num4 {
+				width: 33% !important;
+			}
+
+			.no-stack .col.num5 {
+				width: 41.6% !important;
+			}
+
+			.no-stack .col.num6 {
+				width: 50% !important;
+			}
+
+			.no-stack .col.num7 {
+				width: 58.3% !important;
+			}
+
+			.no-stack .col.num8 {
+				width: 66.6% !important;
+			}
+
+			.no-stack .col.num9 {
+				width: 75% !important;
+			}
+
+			.no-stack .col.num10 {
+				width: 83.3% !important;
+			}
+
+			.video-block {
+				max-width: none !important;
+			}
+
+			.mobile_hide {
+				min-height: 0px;
+				max-height: 0px;
+				max-width: 0px;
+				display: none;
+				overflow: hidden;
+				font-size: 0px;
+			}
+
+			.desktop_hide {
+				display: block !important;
+				max-height: none !important;
+			}
+		}
+	</style>
+</head>
+
+<body class=3D"clean-body" style=3D"margin: 0; padding: 0; -webkit-text-=
+size-adjust: 100%; background-color: #fff;">
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">Spa kil=
+lings ... Pandemic ... 2020 election ... Cuomo ... Japan</div><img src=3D=
+"https://e.newsletters.cnn.com/open/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29=
+t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y=
+2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY=
+29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEs/s829f8795b6=
+" height=3D"2" width=3D"3" alt=3D"">
+	<!--[if IE]><div class=3D"ie-browser"><![endif]-->
+	<table class=3D"nl-container" style=3D"table-layout: fixed; vertical-al=
+ign: top; min-width: 320px; border-spacing: 0; border-collapse: collapse=
+; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fff; =
+width: 100%;" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" =
+width=3D"100%" bgcolor=3D"#fff" valign=3D"top">
+		<tbody>
+			<tr style=3D"vertical-align: top;" valign=3D"top">
+				<td style=3D"word-break: break-word; vertical-align: top;" valign=3D=
+"top">
+					<!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0"><tr><td align=3D"center" style=3D"background-col=
+or:#fff"><![endif]-->
+					<div style=3D"background-color:#FAFAFA;">
+						<div class=3D"block-grid " style=3D"min-width: 320px; max-width: 6=
+00px; overflow-wrap: break-word; word-wrap: break-word; word-break: brea=
+k-word; Margin: 0 auto; background-color: #fafafa;">
+							<div style=3D"border-collapse: collapse;display: table;width: 100=
+%;background-color:#fafafa;">
+								<!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"background-color:#FAFAFA;"><tr><td a=
+lign=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"width:600px"><tr class=3D"layout-full-width" style=3D"backgroun=
+d-color:#fafafa"><![endif]-->
+								<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"=
+background-color:#fafafa;width:600px; border-top: 0px solid transparent;=
+ border-left: 0px solid transparent; border-bottom: 0px solid transparen=
+t; border-right: 0px solid transparent;" valign=3D"top"><table width=3D"=
+100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"=
+padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5=
+px;"><![endif]-->
+								<div class=3D"col num12" style=3D"min-width: 320px; max-width: 6=
+00px; display: table-cell; vertical-align: top; width: 600px;">
+									<div class=3D"col_cont" style=3D"width:100% !important;">
+										<!--[if (!mso)&(!IE)]><!-->
+										<div style=3D"border-top:0px solid transparent; border-left:0p=
+x solid transparent; border-bottom:0px solid transparent; border-right:0=
+px solid transparent; padding-top:5px; padding-bottom:5px; padding-right=
+: 0px; padding-left: 0px;">
+											<!--<![endif]-->
+											<div style=3D"font-size:16px;text-align:center;font-family:He=
+lvetica Neue, Helvetica, Arial, sans-serif"></div>
+											<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 15px; padding-lef=
+t: 15px; padding-top: 15px; padding-bottom: 15px; font-family: Arial, sa=
+ns-serif"><![endif]-->
+											<div style=3D"color:#555555;font-family:Helvetica Neue, Helve=
+tica, Arial, sans-serif;line-height:1.2;padding-top:15px;padding-right:1=
+5px;padding-bottom:15px;padding-left:15px;">
+												<div class=3D"txtTinyMce-wrapper" style=3D"font-family: Helv=
+etica Neue, Helvetica, Arial, sans-serif; font-size: 12px; line-height: =
+1.2; color: #555555; mso-line-height-alt: 14px;">
+													<p style=3D"font-size: 14px; line-height: 1.2; text-align: =
+center; word-break: break-word; font-family: Helvetica Neue, Helvetica, =
+Arial, sans-serif; mso-line-height-alt: 17px; margin: 0;"><span style=3D=
+"color: #aaaaaa; font-size: 14px;"><a style=3D"text-decoration: none; co=
+lor: #aaaaaa;" href=3D"https://e.newsletters.cnn.com/click/EaGVsZW5AZ2Fy=
+eW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIi=
+wiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2=
+FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyM=
+Dg4MSxjbjEsaHR0cHM6Ly92aWV3Lm5ld3NsZXR0ZXJzLmNubi5jb20vbWVzc2FnZXMvMTYxN=
+Tk3NjE0NjEyMTA0NjVkYWYzYzI0MS9yYXc/qP3V0bV90ZXJtPTE2MTU5NzYxNDYxMjEwNDY1=
+ZGFmM2MyNDEmdXRtX3NvdXJjZT1jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG5lc2RheSUyQytN=
+YXJjaCsxNyUyQysyMDIxJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPTE2MTU5NzYx=
+NDYxMjImYnRfZWU9aklrclo1c2xkWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQzJOZjRxZzBQUlZ3=
+WWNsVWE1amFMNUtPa2t1a2lFb3JQbXphJmJ0X3RzPTE2MTU5NzYxNDYxMjI/s7da1757c22"=
+ target=3D"_blank" rel=3D"noopener" data-location=3D"t1">View in browser=
+</a></span></p>
+												</div>
+											</div>
+											<!--[if mso]></td></tr></table><![endif]-->
+											<!--[if (!mso)&(!IE)]><!-->
+										</div>
+										<!--<![endif]-->
+									</div>
+								</div>
+								<!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+								<!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif=
+]-->
+							</div>
+						</div>
+					</div>
+					<div style=3D"background-color:transparent;">
+						<div class=3D"block-grid " style=3D"min-width: 320px; max-width: 6=
+00px; overflow-wrap: break-word; word-wrap: break-word; word-break: brea=
+k-word; Margin: 0 auto; background-color: transparent;">
+							<div style=3D"border-collapse: collapse;display: table;width: 100=
+%;background-color:transparent;">
+								<!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr><=
+td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0" style=3D"width:600px"><tr class=3D"layout-full-width" style=3D"backg=
+round-color:transparent"><![endif]-->
+								<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"=
+background-color:transparent;width:600px; border-top: 0px solid transpar=
+ent; border-left: 0px solid transparent; border-bottom: 0px solid transp=
+arent; border-right: 0px solid transparent;" valign=3D"top"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=
+=3D"padding-right: 20px; padding-left: 20px; padding-top:0px; padding-bo=
+ttom:0px;"><![endif]-->
+								<div class=3D"col num12" style=3D"min-width: 320px; max-width: 6=
+00px; display: table-cell; vertical-align: top; width: 600px;">
+									<div class=3D"col_cont" style=3D"width:100% !important;">
+										<!--[if (!mso)&(!IE)]><!-->
+										<div style=3D"border-top:0px solid transparent; border-left:0p=
+x solid transparent; border-bottom:0px solid transparent; border-right:0=
+px solid transparent; padding-top:0px; padding-bottom:0px; padding-right=
+: 20px; padding-left: 20px;">
+											<!--<![endif]-->
+											<div class=3D"img-container center fixedwidth" align=3D"cente=
+r" style=3D"padding-right: 0px;padding-left: 0px;">
+												<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0"><tr style=3D"line-height:0px"><td style=3D"paddi=
+ng-right: 0px;padding-left: 0px;" align=3D"center"><![endif]-->
+												<div style=3D"font-size:1px;line-height:30px">=C2=A0</div>
+<img class=3D"center fixedwidth" align=3D"center" border=3D"0" src=3D"ht=
+tps://images.newsletters.cnn.com/images/3dfe4d97843b307b4fa50e553d3f9467=
+/5Things_DarkMode_01.png" alt=3D"5 things" title=3D"5 things" style=3D"t=
+ext-decoration: none; -ms-interpolation-mode: bicubic; height: auto; bor=
+der: 0; width: 100%; max-width: 280px; display: block;" width=3D"280">
+												<div style=3D"font-size:1px;line-height:5px">=C2=A0</div>
+												<!--[if mso]></td></tr></table><![endif]-->
+											</div>
+											<div class=3D"img-container center fixedwidth" align=3D"cente=
+r" style=3D"padding-right: 0px;padding-left: 0px;">
+												<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0"><tr style=3D"line-height:0px"><td style=3D"paddi=
+ng-right: 0px;padding-left: 0px;" align=3D"center"><![endif]--><img clas=
+s=3D"center fixedwidth" align=3D"center" border=3D"0" src=3D"https://ima=
+ges.newsletters.cnn.com/images/3dfe4d97843b307b4fa50e553d3f9467/CNN_Head=
+erDivider_Short.png" alt=3D"Alternate text" title=3D"Alternate text" sty=
+le=3D"text-decoration: none; -ms-interpolation-mode: bicubic; height: au=
+to; border: 0; width: 100%; max-width: 504px; display: block;" width=3D"=
+504">
+												<!--[if mso]></td></tr></table><![endif]-->
+											</div>
+											<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left=
+: 0px; padding-top: 15px; padding-bottom: 15px; font-family: Arial, sans=
+-serif"><![endif]-->
+											<div style=3D"color:#202020;font-family:'Helvetica Neue', Hel=
+vetica, Arial, sans-serif;line-height:1.8;padding-top:15px;padding-right=
+:0px;padding-bottom:15px;padding-left:0px;">
+												<div class=3D"txtTinyMce-wrapper" style=3D"line-height: 1.8;=
+ font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:=
+ 12px; color: #202020; mso-line-height-alt: 22px;">
+													<p style=3D"font-size: 16px; line-height: 1.8; text-align: =
+center; word-break: break-word; font-family: Helvetica Neue, Helvetica, =
+Arial, sans-serif; mso-line-height-alt: 29px; margin: 0;"><span style=3D=
+"font-size: 16px;">Wednesday 03.17.21</span></p>
+													<p style=3D"font-size: 16px; line-height: 1.8; text-align: =
+center; word-break: break-word; font-family: Helvetica Neue, Helvetica, =
+Arial, sans-serif; mso-line-height-alt: 29px; margin: 0;"><span style=3D=
+"font-size: 16px; color: #202020;"><br><span style=3D"background-color: =
+transparent; font-size: 16px;">A PSA from the Irish on this <a href=3D"h=
+ttps://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t=
+/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2=
+E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY2=
+9tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d=
+3cuY25uLmNvbS8yMDIxLzAzLzE3L3VzL2hhcHB5LXN0LXBhdHR5cy1kYXktdHJuZC9pbmRle=
+C5odG1s/qP3V0bV90ZXJtPTE2MTU5NzYxNDYxMjEwNDY1ZGFmM2MyNDEmdXRtX3NvdXJjZT1=
+jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG5lc2RheSUyQytNYXJjaCsxNyUyQysyMDIxJnV0bV9=
+tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPTE2MTU5NzYxNDYxMjImYnRfZWU9aklrclo1c2x=
+kWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQzJOZjRxZzBQUlZ3WWNsVWE1amFMNUtPa2t1a2lFb3J=
+QbXphJmJ0X3RzPTE2MTU5NzYxNDYxMjI/s6e9f5e6bb5" target=3D"_blank" style=3D=
+"text-decoration: none; color: #f63339;" rel=3D"noopener" data-location=3D=
+"t2">St. Patrick's Day</a>: It's Paddy, never Patty. Here's what else yo=
+u need to know to <strong>Get Up to Speed and On With Your Day</strong>.=
+<br></span></span>=C2=A0</p>
+													<p style=3D"line-height: 1.8; text-align: center; font-size=
+: 16px; word-break: break-word; font-family: Helvetica Neue, Helvetica, =
+Arial, sans-serif; mso-line-height-alt: 29px; margin: 0;"><span style=3D=
+"font-size: 16px;">By <a style=3D"text-decoration: none; color: #f63339;=
+" title=3D"5things@cnn.com" href=3D"mailto:5things@cnn.com?subject=3DTod=
+ay's%205%20Things" target=3D"_blank" rel=3D"noopener" data-location=3D"t=
+3">Harmeet Kaur</a></span></p>
+												</div>
+											</div>
+											<!--[if mso]></td></tr></table><![endif]-->
+											<!--[if (!mso)&(!IE)]><!-->
+										</div>
+										<!--<![endif]-->
+									</div>
+								</div>
+								<!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+								<!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif=
+]-->
+							</div>
+						</div>
+					</div>
+					<div style=3D"background-color:transparent;">
+						<div class=3D"block-grid " style=3D"min-width: 320px; max-width: 6=
+00px; overflow-wrap: break-word; word-wrap: break-word; word-break: brea=
+k-word; Margin: 0 auto; background-color: transparent;">
+							<div style=3D"border-collapse: collapse;display: table;width: 100=
+%;background-color:transparent;">
+								<!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr><=
+td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0" style=3D"width:600px"><tr class=3D"layout-full-width" style=3D"backg=
+round-color:transparent"><![endif]-->
+								<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"=
+background-color:transparent;width:600px; border-top: 0px solid transpar=
+ent; border-left: 0px solid transparent; border-bottom: 0px solid transp=
+arent; border-right: 0px solid transparent;" valign=3D"top"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=
+=3D"padding-right: 20px; padding-left: 20px; padding-top:0px; padding-bo=
+ttom:0px;"><![endif]-->
+								<div class=3D"col num12" style=3D"min-width: 320px; max-width: 6=
+00px; display: table-cell; vertical-align: top; width: 600px;">
+									<div class=3D"col_cont" style=3D"width:100% !important;">
+										<!--[if (!mso)&(!IE)]><!-->
+										<div style=3D"border-top:0px solid transparent; border-left:0p=
+x solid transparent; border-bottom:0px solid transparent; border-right:0=
+px solid transparent; padding-top:0px; padding-bottom:0px; padding-right=
+: 20px; padding-left: 20px;">
+											<!--<![endif]-->
+											<div class=3D"img-container center fixedwidth" align=3D"cente=
+r" style=3D"padding-right: 0px;padding-left: 0px;">
+												<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0"><tr style=3D"line-height:0px"><td style=3D"paddi=
+ng-right: 0px;padding-left: 0px;" align=3D"center"><![endif]--><img clas=
+s=3D"center fixedwidth" align=3D"center" border=3D"0" src=3D"https://ima=
+ges.newsletters.cnn.com/images/3dfe4d97843b307b4fa50e553d3f9467/21031700=
+2333-05-atlanta-spa-shootings-story-top.jpg" style=3D"text-decoration: n=
+one; -ms-interpolation-mode: bicubic; height: auto; border: 0; width: 10=
+0%; max-width: 560px; display: block;" width=3D"560">
+												<!--[if mso]></td></tr></table><![endif]-->
+											</div>
+											<!--[if (!mso)&(!IE)]><!-->
+										</div>
+										<!--<![endif]-->
+									</div>
+								</div>
+								<!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+								<!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif=
+]-->
+							</div>
+						</div>
+					</div>
+					<div style=3D"background-color:transparent;">
+						<div class=3D"block-grid " style=3D"min-width: 320px; max-width: 6=
+00px; overflow-wrap: break-word; word-wrap: break-word; word-break: brea=
+k-word; Margin: 0 auto; background-color: transparent;">
+							<div style=3D"border-collapse: collapse;display: table;width: 100=
+%;background-color:transparent;">
+								<!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr><=
+td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0" style=3D"width:600px"><tr class=3D"layout-full-width" style=3D"backg=
+round-color:transparent"><![endif]-->
+								<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"=
+background-color:transparent;width:600px; border-top: 0px solid transpar=
+ent; border-left: 0px solid transparent; border-bottom: 0px solid transp=
+arent; border-right: 0px solid transparent;" valign=3D"top"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=
+=3D"padding-right: 20px; padding-left: 20px; padding-top:30px; padding-b=
+ottom:10px;"><![endif]-->
+								<div class=3D"col num12" style=3D"min-width: 320px; max-width: 6=
+00px; display: table-cell; vertical-align: top; width: 600px;">
+									<div class=3D"col_cont" style=3D"width:100% !important;">
+										<!--[if (!mso)&(!IE)]><!-->
+										<div style=3D"border-top:0px solid transparent; border-left:0p=
+x solid transparent; border-bottom:0px solid transparent; border-right:0=
+px solid transparent; padding-top:30px; padding-bottom:10px; padding-rig=
+ht: 20px; padding-left: 20px;">
+											<!--<![endif]-->
+											<div class=3D"img-container center fullwidthOnMobile fixedwid=
+th" align=3D"center" style=3D"padding-right: 0px;padding-left: 0px;">
+												<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0"><tr style=3D"line-height:0px"><td style=3D"paddi=
+ng-right: 0px;padding-left: 0px;" align=3D"center"><![endif]--><img clas=
+s=3D"center fullwidthOnMobile fixedwidth" align=3D"center" border=3D"0" =
+src=3D"https://images.newsletters.cnn.com/images/3dfe4d97843b307b4fa50e5=
+53d3f9467/5%20Things%20Dark%20Mode%20Headers/5Things_HeadlinesDarkMode_0=
+1.png" alt=3D"1" title=3D"1" style=3D"text-decoration: none; -ms-interpo=
+lation-mode: bicubic; height: auto; border: 0; width: 100%; max-width: 3=
+92px; display: block;" width=3D"392">
+												<!--[if mso]></td></tr></table><![endif]-->
+											</div>
+											<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left=
+: 0px; padding-top: 10px; padding-bottom: 0px; font-family: Arial, sans-=
+serif"><![endif]-->
+											<div style=3D"color:#202020;font-family:Helvetica Neue, Helve=
+tica, Arial, sans-serif;line-height:2;padding-top:10px;padding-right:0px=
+;padding-bottom:0px;padding-left:0px;">
+												<div class=3D"txtTinyMce-wrapper" style=3D"font-family: Helv=
+etica Neue, Helvetica, Arial, sans-serif; font-size: 12px; line-height: =
+2; color: #202020; mso-line-height-alt: 24px;">
+													<p style=3D"font-size: 28px; line-height: 2; text-align: ce=
+nter; word-break: break-word; font-family: Helvetica Neue, Helvetica, Ar=
+ial, sans-serif; mso-line-height-alt: 56px; margin: 0;"><span style=3D"f=
+ont-size: 28px;">Spa shootings</span></p>
+													<p style=3D"font-size: 12px; line-height: 2; word-break: br=
+eak-word; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; mso=
+-line-height-alt: 24px; margin: 0;">=C2=A0</p>
+													<p style=3D"font-size: 16px; line-height: 2; word-break: br=
+eak-word; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; mso=
+-line-height-alt: 32px; margin: 0;"><span style=3D"font-size: 16px;">Eig=
+ht people <a href=3D"https://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW=
+1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwi=
+Y3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2Fy=
+eW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg=
+4MSxjbjEsaHR0cHM6Ly93d3cuY25uLmNvbS8yMDIxLzAzLzE3L3VzL21ldHJvLWF0bGFudGE=
+tc2hvb3RpbmdzLXdlZG5lc2RheS9pbmRleC5odG1s/qP3V0bV90ZXJtPTE2MTU5NzYxNDYxM=
+jEwNDY1ZGFmM2MyNDEmdXRtX3NvdXJjZT1jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG5lc2Rhe=
+SUyQytNYXJjaCsxNyUyQysyMDIxJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPTE2M=
+TU5NzYxNDYxMjImYnRfZWU9aklrclo1c2xkWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQzJOZjRxZ=
+zBQUlZ3WWNsVWE1amFMNUtPa2t1a2lFb3JQbXphJmJ0X3RzPTE2MTU5NzYxNDYxMjI/s4f00=
+3f3213" target=3D"_blank" style=3D"text-decoration: none; color: #f63339=
+;" rel=3D"noopener" data-location=3D"t4">were killed at three metro Atla=
+nta spas</a> in the span of about an hour yesterday. We still don't know=
+ a lot about the victims, but four have been described as being of Korea=
+n ethnicity, according to South Korea's foreign ministry. Earlier, Atlan=
+ta's police chief had said at least four were female and appeared to be =
+Asian. A 21-year-old suspect was taken into custody after a car chase, a=
+nd police believe he was responsible for the three attacks. Authorities =
+are <a href=3D"https://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVm=
+YWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOi=
+Jjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbn=
+VmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjb=
+jEsaHR0cHM6Ly93d3cuY25uLmNvbS8yMDIxLzAzLzE2L3VzL21ldHJvLWF0bGFudGEtc3BhL=
+XNob290aW5ncy13aGF0LXdlLWtub3cvaW5kZXguaHRtbA/qP3V0bV90ZXJtPTE2MTU5NzYxN=
+DYxMjEwNDY1ZGFmM2MyNDEmdXRtX3NvdXJjZT1jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG5lc=
+2RheSUyQytNYXJjaCsxNyUyQysyMDIxJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduP=
+TE2MTU5NzYxNDYxMjImYnRfZWU9aklrclo1c2xkWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQzJOZ=
+jRxZzBQUlZ3WWNsVWE1amFMNUtPa2t1a2lFb3JQbXphJmJ0X3RzPTE2MTU5NzYxNDYxMjI/s=
+458eb91a8e" target=3D"_blank" style=3D"text-decoration: none; color: #f6=
+3339;" rel=3D"noopener" data-location=3D"t5">still investigating the mot=
+ive behind the shootings</a>, among other questions. But already, the at=
+tacks have sparked fears among Asian Americans, who have seen <a href=3D=
+"https://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY2=
+9t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1=
+Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcu=
+Y29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly9=
+3d3cuY25uLmNvbS8yMDIxLzAzLzE2L3VzL2FzaWFuLWFtZXJpY2Fucy1oYXRlLWluY2lkZW5=
+0cy1yZXBvcnQvaW5kZXguaHRtbA/qP3V0bV90ZXJtPTE2MTU5NzYxNDYxMjEwNDY1ZGFmM2M=
+yNDEmdXRtX3NvdXJjZT1jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG5lc2RheSUyQytNYXJjaCs=
+xNyUyQysyMDIxJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPTE2MTU5NzYxNDYxMjI=
+mYnRfZWU9aklrclo1c2xkWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQzJOZjRxZzBQUlZ3WWNsVWE=
+1amFMNUtPa2t1a2lFb3JQbXphJmJ0X3RzPTE2MTU5NzYxNDYxMjI/s7a5fe76819" target=
+=3D"_blank" style=3D"text-decoration: none; color: #f63339;" rel=3D"noop=
+ener" data-location=3D"t6">incidents of violence and hate against them</=
+a> rise since the coronavirus pandemic began. Officials in some cities a=
+re increasing police presence in Asian communities as a precaution.</spa=
+n></p>
+													<p style=3D"font-size: 12px; line-height: 2; word-break: br=
+eak-word; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; mso=
+-line-height-alt: 24px; margin: 0;">=C2=A0</p>
+												</div>
+											</div>
+											<!--[if mso]></td></tr></table><![endif]-->
+											<div class=3D"img-container center fullwidthOnMobile fixedwid=
+th" align=3D"center" style=3D"padding-right: 0px;padding-left: 0px;">
+												<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0"><tr style=3D"line-height:0px"><td style=3D"paddi=
+ng-right: 0px;padding-left: 0px;" align=3D"center"><![endif]-->
+												<div style=3D"font-size:1px;line-height:30px">=C2=A0</div>
+<img class=3D"center fullwidthOnMobile fixedwidth" align=3D"center" bord=
+er=3D"0" src=3D"https://images.newsletters.cnn.com/images/3dfe4d97843b30=
+7b4fa50e553d3f9467/5%20Things%20Dark%20Mode%20Headers/5Things_HeadlinesD=
+arkMode_02.png" alt=3D"2" title=3D"2" style=3D"text-decoration: none; -m=
+s-interpolation-mode: bicubic; height: auto; border: 0; width: 100%; max=
+-width: 392px; display: block;" width=3D"392">
+												<!--[if mso]></td></tr></table><![endif]-->
+											</div>
+											<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left=
+: 0px; padding-top: 10px; padding-bottom: 0px; font-family: Arial, sans-=
+serif"><![endif]-->
+											<div style=3D"color:#202020;font-family:Helvetica Neue, Helve=
+tica, Arial, sans-serif;line-height:2;padding-top:10px;padding-right:0px=
+;padding-bottom:0px;padding-left:0px;">
+												<div class=3D"txtTinyMce-wrapper" style=3D"font-family: Helv=
+etica Neue, Helvetica, Arial, sans-serif; line-height: 2; font-size: 12p=
+x; color: #202020; mso-line-height-alt: 24px;">
+													<p style=3D"line-height: 2; font-size: 28px; text-align: ce=
+nter; word-break: break-word; font-family: Helvetica Neue, Helvetica, Ar=
+ial, sans-serif; mso-line-height-alt: 56px; margin: 0;"><span style=3D"c=
+olor: #202020; font-size: 28px;"><span style=3D"font-size: 28px;">Corona=
+virus</span></span></p>
+													<p style=3D"line-height: 2; font-size: 12px; text-align: le=
+ft; word-break: break-word; font-family: Helvetica Neue, Helvetica, Aria=
+l, sans-serif; mso-line-height-alt: 24px; margin: 0;">=C2=A0</p>
+													<p style=3D"line-height: 2; font-size: 16px; text-align: le=
+ft; word-break: break-word; font-family: Helvetica Neue, Helvetica, Aria=
+l, sans-serif; mso-line-height-alt: 32px; margin: 0;"><span style=3D"fon=
+t-size: 16px;"><span style=3D"color: #202020; font-size: 16px;"><span st=
+yle=3D"font-size: 16px;">The US is facing a <a href=3D"https://e.newslet=
+ters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNj=
+E1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYj=
+I4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX=
+2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d3cuY25uLmNvbS8yM=
+DIxLzAzLzE3L2hlYWx0aC91cy1jb3JvbmF2aXJ1cy13ZWRuZXNkYXkvaW5kZXguaHRtbA/qP=
+3V0bV90ZXJtPTE2MTU5NzYxNDYxMjEwNDY1ZGFmM2MyNDEmdXRtX3NvdXJjZT1jbm5fRml2Z=
+StUaGluZ3MrZm9yK1dlZG5lc2RheSUyQytNYXJjaCsxNyUyQysyMDIxJnV0bV9tZWRpdW09Z=
+W1haWwmdXRtX2NhbXBhaWduPTE2MTU5NzYxNDYxMjImYnRfZWU9aklrclo1c2xkWWlHT0ZOc=
+VBOdlhzZnV3aSUyRnJIQzJOZjRxZzBQUlZ3WWNsVWE1amFMNUtPa2t1a2lFb3JQbXphJmJ0X=
+3RzPTE2MTU5NzYxNDYxMjI/s0d3e147774" target=3D"_blank" style=3D"text-deco=
+ration: none; color: #f63339;" rel=3D"noopener" data-location=3D"t7">tou=
+gh race between Covid-19 vaccines and variants</a>. Vaccinations are qui=
+ckly ramping up, and they have a great shot of winning out. But contagio=
+us variants are spreading across the country and could threaten another =
+surge. The CDC says <a href=3D"https://e.newsletters.cnn.com/click/EaGVs=
+ZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZj=
+NjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsIn=
+JkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyM=
+DIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d3cuY25uLmNvbS8yMDIxLzAzLzE3L2hlYWx0aC9jY=
+WxpZm9ybmlhLXZhcmlhbnRzLW9mLWNvbmNlcm4tY2RjL2luZGV4Lmh0bWw/qP3V0bV90ZXJt=
+PTE2MTU5NzYxNDYxMjEwNDY1ZGFmM2MyNDEmdXRtX3NvdXJjZT1jbm5fRml2ZStUaGluZ3Mr=
+Zm9yK1dlZG5lc2RheSUyQytNYXJjaCsxNyUyQysyMDIxJnV0bV9tZWRpdW09ZW1haWwmdXRt=
+X2NhbXBhaWduPTE2MTU5NzYxNDYxMjImYnRfZWU9aklrclo1c2xkWWlHT0ZOcVBOdlhzZnV3=
+aSUyRnJIQzJOZjRxZzBQUlZ3WWNsVWE1amFMNUtPa2t1a2lFb3JQbXphJmJ0X3RzPTE2MTU5=
+NzYxNDYxMjI/sca6e7816d7" target=3D"_blank" style=3D"text-decoration: non=
+e; color: #f63339;" rel=3D"noopener" data-location=3D"t8">two coronaviru=
+s strains first detected in California</a> are officially "variants of c=
+oncern." The variants may be about 20% more transmissible, and there are=
+ concerns that some treatments won't be as effective against them. But t=
+he CDC hasn't said vaccines would stop working against them. Also compli=
+cating the situation: <a href=3D"https://e.newsletters.cnn.com/click/EaG=
+VsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRh=
+ZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIs=
+InJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTc=
+yMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d3cuY25uLmNvbS8yMDIxLzAzLzE3L2hlYWx0aC9=
+zdC1wYXRyaWNrcy1kYXktcGFydGllcy1jb3ZpZC12YXJpYW50cy9pbmRleC5odG1s/qP3V0b=
+V90ZXJtPTE2MTU5NzYxNDYxMjEwNDY1ZGFmM2MyNDEmdXRtX3NvdXJjZT1jbm5fRml2ZStUa=
+GluZ3MrZm9yK1dlZG5lc2RheSUyQytNYXJjaCsxNyUyQysyMDIxJnV0bV9tZWRpdW09ZW1ha=
+WwmdXRtX2NhbXBhaWduPTE2MTU5NzYxNDYxMjImYnRfZWU9aklrclo1c2xkWWlHT0ZOcVBOd=
+lhzZnV3aSUyRnJIQzJOZjRxZzBQUlZ3WWNsVWE1amFMNUtPa2t1a2lFb3JQbXphJmJ0X3RzP=
+TE2MTU5NzYxNDYxMjI/sf248325b05" target=3D"_blank" style=3D"text-decorati=
+on: none; color: #f63339;" rel=3D"noopener" data-location=3D"t9">Some st=
+ates are easing restrictions</a> before the virus' spread is fully conta=
+ined.</span></span></span></p>
+													<p style=3D"line-height: 2; font-size: 12px; text-align: le=
+ft; word-break: break-word; font-family: Helvetica Neue, Helvetica, Aria=
+l, sans-serif; mso-line-height-alt: 24px; margin: 0;">=C2=A0</p>
+												</div>
+											</div>
+											<!--[if mso]></td></tr></table><![endif]-->
+											<div class=3D"img-container center fullwidthOnMobile fixedwid=
+th" align=3D"center" style=3D"padding-right: 0px;padding-left: 0px;">
+												<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0"><tr style=3D"line-height:0px"><td style=3D"paddi=
+ng-right: 0px;padding-left: 0px;" align=3D"center"><![endif]-->
+												<div style=3D"font-size:1px;line-height:30px">=C2=A0</div>
+<img class=3D"center fullwidthOnMobile fixedwidth" align=3D"center" bord=
+er=3D"0" src=3D"https://images.newsletters.cnn.com/images/3dfe4d97843b30=
+7b4fa50e553d3f9467/5%20Things%20Dark%20Mode%20Headers/5Things_HeadlinesD=
+arkMode_03.png" alt=3D"3" title=3D"3" style=3D"text-decoration: none; -m=
+s-interpolation-mode: bicubic; height: auto; border: 0; width: 100%; max=
+-width: 420px; display: block;" width=3D"420">
+												<!--[if mso]></td></tr></table><![endif]-->
+											</div>
+											<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left=
+: 0px; padding-top: 10px; padding-bottom: 0px; font-family: Arial, sans-=
+serif"><![endif]-->
+											<div style=3D"color:#202020;font-family:Helvetica Neue, Helve=
+tica, Arial, sans-serif;line-height:2;padding-top:10px;padding-right:0px=
+;padding-bottom:0px;padding-left:0px;">
+												<div class=3D"txtTinyMce-wrapper" style=3D"font-family: Helv=
+etica Neue, Helvetica, Arial, sans-serif; font-size: 12px; line-height: =
+2; color: #202020; mso-line-height-alt: 24px;">
+													<p style=3D"font-size: 28px; line-height: 2; text-align: ce=
+nter; word-break: break-word; font-family: Helvetica Neue, Helvetica, Ar=
+ial, sans-serif; mso-line-height-alt: 56px; margin: 0;"><span style=3D"f=
+ont-size: 28px;">2020 election</span></p>
+													<p style=3D"font-size: 14px; line-height: 2; text-align: le=
+ft; word-break: break-word; font-family: Helvetica Neue, Helvetica, Aria=
+l, sans-serif; mso-line-height-alt: 28px; margin: 0;">=C2=A0</p>
+													<p style=3D"font-size: 16px; line-height: 2; text-align: le=
+ft; word-break: break-word; font-family: Helvetica Neue, Helvetica, Aria=
+l, sans-serif; mso-line-height-alt: 32px; margin: 0;"><span style=3D"fon=
+t-size: 16px;">A <a href=3D"https://e.newsletters.cnn.com/click/EaGVsZW5=
+AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjM=
+jQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkI=
+joiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIx=
+MzgyMDg4MSxjbjEsaHR0cHM6Ly93d3cuY25uLmNvbS8yMDIxLzAzLzE2L3BvbGl0aWNzL3Vz=
+LWVsZWN0aW9uLWludGVsLXJlcG9ydC9pbmRleC5odG1s/qP3V0bV90ZXJtPTE2MTU5NzYxND=
+YxMjEwNDY1ZGFmM2MyNDEmdXRtX3NvdXJjZT1jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG5lc2=
+RheSUyQytNYXJjaCsxNyUyQysyMDIxJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPT=
+E2MTU5NzYxNDYxMjImYnRfZWU9aklrclo1c2xkWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQzJOZj=
+RxZzBQUlZ3WWNsVWE1amFMNUtPa2t1a2lFb3JQbXphJmJ0X3RzPTE2MTU5NzYxNDYxMjI/s9=
+054a9790a" target=3D"_blank" style=3D"text-decoration: none; color: #f63=
+339;" rel=3D"noopener" data-location=3D"t10">US intelligence report</a> =
+has determined that Russia attempted to interfere in the 2020 election t=
+o help Donald Trump and hurt Joe Biden. The report also describes a smal=
+ler, covert influence campaign by Iran. One of the biggest bombshells of=
+ the report confirms what we had assumed last year: Trump and his closes=
+t allies publicly=C2=A0<a href=3D"https://e.newsletters.cnn.com/click/Ea=
+GVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWR=
+hZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSI=
+sInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMT=
+cyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d3cuY25uLmNvbS8yMDIwLzEwLzE1L3BvbGl0aW=
+NzL3J1ZHktZ2l1bGlhbmktcnVzc2lhbi1pbnRlbGxpZ2VuY2UtbWlzaW5mb3JtYXRpb24tb3=
+BlcmF0aW9uLXRydW1wL2luZGV4Lmh0bWw/qP3V0bV90ZXJtPTE2MTU5NzYxNDYxMjEwNDY1Z=
+GFmM2MyNDEmdXRtX3NvdXJjZT1jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG5lc2RheSUyQytNY=
+XJjaCsxNyUyQysyMDIxJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPTE2MTU5NzYxN=
+DYxMjImYnRfZWU9aklrclo1c2xkWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQzJOZjRxZzBQUlZ3W=
+WNsVWE1amFMNUtPa2t1a2lFb3JQbXphJmJ0X3RzPTE2MTU5NzYxNDYxMjI/s654cc6cef1" =
+target=3D"_blank" rel=3D"noopener" style=3D"text-decoration: none; color=
+: #f63339;" data-location=3D"t11">embraced Russia's disinformation campa=
+ign=C2=A0</a>against Biden, met with Kremlin-linked figures who were par=
+t of the effort and <a href=3D"https://e.newsletters.cnn.com/click/EaGVs=
+ZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZj=
+NjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsIn=
+JkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyM=
+DIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d3cuY25uLmNvbS8yMDIwLzA4LzE3L3BvbGl0aWNzL=
+3RydW1wLXJldHdlZXRzLWtub3duLXJ1c3NpYW4tZGlzaW5mb3JtYXRpb24tYmlkZW4tZGVya=
+2FjaC9pbmRleC5odG1s/qP3V0bV90ZXJtPTE2MTU5NzYxNDYxMjEwNDY1ZGFmM2MyNDEmdXR=
+tX3NvdXJjZT1jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG5lc2RheSUyQytNYXJjaCsxNyUyQys=
+yMDIxJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPTE2MTU5NzYxNDYxMjImYnRfZWU=
+9aklrclo1c2xkWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQzJOZjRxZzBQUlZ3WWNsVWE1amFMNUt=
+Pa2t1a2lFb3JQbXphJmJ0X3RzPTE2MTU5NzYxNDYxMjI/s3ded79cda3" target=3D"_bla=
+nk" rel=3D"noopener" style=3D"text-decoration: none; color: #f63339;" da=
+ta-location=3D"t12">promoted their conspiracy theories</a>. <a href=3D"h=
+ttps://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t=
+/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2=
+E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY2=
+9tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d=
+3cuY25uLmNvbS8yMDIxLzAzLzE3L3BvbGl0aWNzL3RydW1wLXJ1c3NpYS1lbGVjdGlvbnMva=
+W5kZXguaHRtbA/qP3V0bV90ZXJtPTE2MTU5NzYxNDYxMjEwNDY1ZGFmM2MyNDEmdXRtX3Nvd=
+XJjZT1jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG5lc2RheSUyQytNYXJjaCsxNyUyQysyMDIxJ=
+nV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPTE2MTU5NzYxNDYxMjImYnRfZWU9aklrc=
+lo1c2xkWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQzJOZjRxZzBQUlZ3WWNsVWE1amFMNUtPa2t1a=
+2lFb3JQbXphJmJ0X3RzPTE2MTU5NzYxNDYxMjI/s048468b69d" target=3D"_blank" re=
+l=3D"noopener" style=3D"text-decoration: none; color: #f63339;" data-loc=
+ation=3D"t13">CNN's Stephen Collinson</a> writes that the finding unders=
+cores a fundamental truth: "The gravest threat to US democracy comes fro=
+m within."=C2=A0</span></p>
+													<p style=3D"font-size: 14px; line-height: 2; text-align: le=
+ft; word-break: break-word; font-family: Helvetica Neue, Helvetica, Aria=
+l, sans-serif; mso-line-height-alt: 28px; margin: 0;">=C2=A0</p>
+												</div>
+											</div>
+											<!--[if mso]></td></tr></table><![endif]-->
+											<div class=3D"img-container center fullwidthOnMobile fixedwid=
+th" align=3D"center" style=3D"padding-right: 0px;padding-left: 0px;">
+												<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0"><tr style=3D"line-height:0px"><td style=3D"paddi=
+ng-right: 0px;padding-left: 0px;" align=3D"center"><![endif]-->
+												<div style=3D"font-size:1px;line-height:30px">=C2=A0</div>
+<img class=3D"center fullwidthOnMobile fixedwidth" align=3D"center" bord=
+er=3D"0" src=3D"https://images.newsletters.cnn.com/images/3dfe4d97843b30=
+7b4fa50e553d3f9467/5%20Things%20Dark%20Mode%20Headers/5Things_HeadlinesD=
+arkMode_04.png" alt=3D"4" title=3D"4" style=3D"text-decoration: none; -m=
+s-interpolation-mode: bicubic; height: auto; border: 0; width: 100%; max=
+-width: 448px; display: block;" width=3D"448">
+												<!--[if mso]></td></tr></table><![endif]-->
+											</div>
+											<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left=
+: 0px; padding-top: 10px; padding-bottom: 0px; font-family: Arial, sans-=
+serif"><![endif]-->
+											<div style=3D"color:#202020;font-family:Helvetica Neue, Helve=
+tica, Arial, sans-serif;line-height:2;padding-top:10px;padding-right:0px=
+;padding-bottom:0px;padding-left:0px;">
+												<div class=3D"txtTinyMce-wrapper" style=3D"font-family: Helv=
+etica Neue, Helvetica, Arial, sans-serif; font-size: 12px; line-height: =
+2; color: #202020; mso-line-height-alt: 24px;">
+													<p style=3D"font-size: 28px; line-height: 2; text-align: ce=
+nter; word-break: break-word; font-family: Helvetica Neue, Helvetica, Ar=
+ial, sans-serif; mso-line-height-alt: 56px; margin: 0;"><span style=3D"c=
+olor: #202020; font-size: 28px;"><span style=3D"font-size: 28px;">Gov. C=
+uomo</span></span></p>
+													<p style=3D"font-size: 14px; line-height: 2; text-align: le=
+ft; word-break: break-word; font-family: Helvetica Neue, Helvetica, Aria=
+l, sans-serif; mso-line-height-alt: 28px; margin: 0;">=C2=A0</p>
+													<p style=3D"font-size: 16px; line-height: 2; text-align: le=
+ft; word-break: break-word; font-family: Helvetica Neue, Helvetica, Aria=
+l, sans-serif; mso-line-height-alt: 32px; margin: 0;"><span style=3D"col=
+or: #202020; font-size: 16px;"><span style=3D"font-size: 16px;">New York=
+ Gov. Andrew Cuomo is <a href=3D"https://e.newsletters.cnn.com/click/EaG=
+VsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRh=
+ZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIs=
+InJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTc=
+yMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d3cuY25uLmNvbS8yMDIxLzAzLzE2L3BvbGl0aWN=
+zL2xpbmRzZXktYm95bGFuLW5ldy15b3JrLWFnLWludmVzdGlnYXRvcnMtY3VvbW8vaW5kZXg=
+uaHRtbA/qP3V0bV90ZXJtPTE2MTU5NzYxNDYxMjEwNDY1ZGFmM2MyNDEmdXRtX3NvdXJjZT1=
+jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG5lc2RheSUyQytNYXJjaCsxNyUyQysyMDIxJnV0bV9=
+tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPTE2MTU5NzYxNDYxMjImYnRfZWU9aklrclo1c2x=
+kWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQzJOZjRxZzBQUlZ3WWNsVWE1amFMNUtPa2t1a2lFb3J=
+QbXphJmJ0X3RzPTE2MTU5NzYxNDYxMjI/s3adcf8658f" target=3D"_blank" style=3D=
+"text-decoration: none; color: #f63339;" rel=3D"noopener" data-location=3D=
+"t14">facing more and more scrutiny by the day</a>. Over the weekend, in=
+vestigators met with the first woman to <a href=3D"https://e.newsletters=
+.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OT=
+c2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zj=
+c4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfT=
+mV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d3cuY25uLmNvbS8yMDIxL=
+zAyLzI1L3BvbGl0aWNzL2FuZHJldy1jdW9tby1saW5kc2V5LWJveWxhbi1hbGxlZ2F0aW9uL=
+2luZGV4Lmh0bWw/qP3V0bV90ZXJtPTE2MTU5NzYxNDYxMjEwNDY1ZGFmM2MyNDEmdXRtX3Nv=
+dXJjZT1jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG5lc2RheSUyQytNYXJjaCsxNyUyQysyMDIx=
+JnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPTE2MTU5NzYxNDYxMjImYnRfZWU9aklr=
+clo1c2xkWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQzJOZjRxZzBQUlZ3WWNsVWE1amFMNUtPa2t1=
+a2lFb3JQbXphJmJ0X3RzPTE2MTU5NzYxNDYxMjI/scc0de290ce" target=3D"_blank" s=
+tyle=3D"text-decoration: none; color: #f63339;" rel=3D"noopener" data-lo=
+cation=3D"t15">publicly accuse the governor of sexual harassment</a>. Ot=
+her women have made similar allegations against him, and <a href=3D"http=
+s://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/Ce=
+yJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M=
+2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tI=
+n0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d3cu=
+Y25uLmNvbS8yMDIxLzAzLzE1L3BvbGl0aWNzL2NoYXJsb3R0ZS1iZW5uZXR0LWludmVzdGln=
+YXRvcnMvaW5kZXguaHRtbA/qP3V0bV90ZXJtPTE2MTU5NzYxNDYxMjEwNDY1ZGFmM2MyNDEm=
+dXRtX3NvdXJjZT1jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG5lc2RheSUyQytNYXJjaCsxNyUy=
+QysyMDIxJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPTE2MTU5NzYxNDYxMjImYnRf=
+ZWU9aklrclo1c2xkWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQzJOZjRxZzBQUlZ3WWNsVWE1amFM=
+NUtPa2t1a2lFb3JQbXphJmJ0X3RzPTE2MTU5NzYxNDYxMjI/sf628d7c435" target=3D"_=
+blank" style=3D"text-decoration: none; color: #f63339;" rel=3D"noopener"=
+ data-location=3D"t16">investigations into those claims</a> continue to =
+ramp up. Cuomo is also dealing with a separate problem involving an alle=
+ged cover-up of the number of <a href=3D"https://e.newsletters.cnn.com/c=
+lick/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIx=
+MDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1=
+NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJ=
+BTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d3cuY25uLmNvbS8yMDIxLzAyLzE1L3V=
+zL25ldy15b3JrLWN1b21vLWNvdmlkL2luZGV4Lmh0bWw/qP3V0bV90ZXJtPTE2MTU5NzYxND=
+YxMjEwNDY1ZGFmM2MyNDEmdXRtX3NvdXJjZT1jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG5lc2=
+RheSUyQytNYXJjaCsxNyUyQysyMDIxJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPT=
+E2MTU5NzYxNDYxMjImYnRfZWU9aklrclo1c2xkWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQzJOZj=
+RxZzBQUlZ3WWNsVWE1amFMNUtPa2t1a2lFb3JQbXphJmJ0X3RzPTE2MTU5NzYxNDYxMjI/s3=
+f8bc0a53b" target=3D"_blank" rel=3D"noopener" style=3D"text-decoration: =
+none; color: #f63339;" data-location=3D"t17">Covid-19 deaths in the stat=
+e's long-term care facilities</a>. He now faces increasing pressure to r=
+esign, even from prominent members of his own party. President Biden <a =
+href=3D"https://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJ=
+pbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tN=
+zIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0d=
+XJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0=
+cHM6Ly93d3cuY25uLmNvbS8yMDIxLzAzLzE2L3BvbGl0aWNzL2JpZGVuLWN1b21vL2luZGV4=
+Lmh0bWw/qP3V0bV90ZXJtPTE2MTU5NzYxNDYxMjEwNDY1ZGFmM2MyNDEmdXRtX3NvdXJjZT1=
+jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG5lc2RheSUyQytNYXJjaCsxNyUyQysyMDIxJnV0bV9=
+tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPTE2MTU5NzYxNDYxMjImYnRfZWU9aklrclo1c2x=
+kWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQzJOZjRxZzBQUlZ3WWNsVWE1amFMNUtPa2t1a2lFb3J=
+QbXphJmJ0X3RzPTE2MTU5NzYxNDYxMjI/s3fcca33288" target=3D"_blank" style=3D=
+"text-decoration: none; color: #f63339;" rel=3D"noopener" data-location=3D=
+"t18">recently said</a> Cuomo should resign if an investigation confirms=
+ the sexual harassment allegations against him. Cuomo <a href=3D"https:/=
+/e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJt=
+aWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3=
+Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/=
+HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d3cuY25=
+uLmNvbS8yMDIxLzAzLzEzL3BvbGl0aWNzL2FuZHJldy1jdW9tby1jaHVjay1zY2h1bWVyLWt=
+pcnN0ZW4tZ2lsbGlicmFuZC9pbmRleC5odG1s/qP3V0bV90ZXJtPTE2MTU5NzYxNDYxMjEwN=
+DY1ZGFmM2MyNDEmdXRtX3NvdXJjZT1jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG5lc2RheSUyQ=
+ytNYXJjaCsxNyUyQysyMDIxJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPTE2MTU5N=
+zYxNDYxMjImYnRfZWU9aklrclo1c2xkWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQzJOZjRxZzBQU=
+lZ3WWNsVWE1amFMNUtPa2t1a2lFb3JQbXphJmJ0X3RzPTE2MTU5NzYxNDYxMjI/s184bc74c=
+6b" target=3D"_blank" style=3D"text-decoration: none; color: #f63339;" r=
+el=3D"noopener" data-location=3D"t19">has denied</a> "inappropriately to=
+uching" anyone and has said he never meant to make anyone feel uncomfort=
+able.</span></span></p>
+													<p style=3D"font-size: 14px; line-height: 2; text-align: le=
+ft; word-break: break-word; font-family: Helvetica Neue, Helvetica, Aria=
+l, sans-serif; mso-line-height-alt: 28px; margin: 0;">=C2=A0</p>
+												</div>
+											</div>
+											<!--[if mso]></td></tr></table><![endif]-->
+											<div class=3D"img-container center fullwidthOnMobile fixedwid=
+th" align=3D"center" style=3D"padding-right: 0px;padding-left: 0px;">
+												<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0"><tr style=3D"line-height:0px"><td style=3D"paddi=
+ng-right: 0px;padding-left: 0px;" align=3D"center"><![endif]-->
+												<div style=3D"font-size:1px;line-height:30px">=C2=A0</div>
+<img class=3D"center fullwidthOnMobile fixedwidth" align=3D"center" bord=
+er=3D"0" src=3D"https://images.newsletters.cnn.com/images/3dfe4d97843b30=
+7b4fa50e553d3f9467/5%20Things%20Dark%20Mode%20Headers/5Things_HeadlinesD=
+arkMode_05.png" alt=3D"5" title=3D"5" style=3D"text-decoration: none; -m=
+s-interpolation-mode: bicubic; height: auto; border: 0; width: 100%; max=
+-width: 420px; display: block;" width=3D"420">
+												<!--[if mso]></td></tr></table><![endif]-->
+											</div>
+											<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left=
+: 0px; padding-top: 0px; padding-bottom: 10px; font-family: Arial, sans-=
+serif"><![endif]-->
+											<div style=3D"color:#202020;font-family:Helvetica Neue, Helve=
+tica, Arial, sans-serif;line-height:2;padding-top:0px;padding-right:0px;=
+padding-bottom:10px;padding-left:0px;">
+												<div class=3D"txtTinyMce-wrapper" style=3D"font-family: Helv=
+etica Neue, Helvetica, Arial, sans-serif; font-size: 12px; line-height: =
+2; color: #202020; mso-line-height-alt: 24px;">
+													<p style=3D"font-size: 26px; line-height: 2; text-align: ce=
+nter; word-break: break-word; font-family: Helvetica Neue, Helvetica, Ar=
+ial, sans-serif; mso-line-height-alt: 52px; margin: 0;"><span style=3D"c=
+olor: #202020; font-size: 26px;"><span style=3D"font-size: 26px;">Japan<=
+/span></span></p>
+													<p style=3D"font-size: 14px; line-height: 2; text-align: ce=
+nter; word-break: break-word; font-family: Helvetica Neue, Helvetica, Ar=
+ial, sans-serif; mso-line-height-alt: 28px; margin: 0;">=C2=A0</p>
+													<p style=3D"font-size: 16px; line-height: 2; text-align: le=
+ft; word-break: break-word; font-family: Helvetica Neue, Helvetica, Aria=
+l, sans-serif; mso-line-height-alt: 32px; margin: 0;"><span style=3D"col=
+or: #202020; font-size: 16px;"><span style=3D"font-size: 16px;">A Japane=
+se court has ruled that <a href=3D"https://e.newsletters.cnn.com/click/E=
+aGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NW=
+RhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMS=
+IsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzM=
+TcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d3cuY25uLmNvbS8yMDIxLzAzLzE3L2FzaWEva=
+mFwYW4tc2FtZS1zZXgtbWFycmlhZ2UtaW50bC1obmsvaW5kZXguaHRtbA/qP3V0bV90ZXJtP=
+TE2MTU5NzYxNDYxMjEwNDY1ZGFmM2MyNDEmdXRtX3NvdXJjZT1jbm5fRml2ZStUaGluZ3MrZ=
+m9yK1dlZG5lc2RheSUyQytNYXJjaCsxNyUyQysyMDIxJnV0bV9tZWRpdW09ZW1haWwmdXRtX=
+2NhbXBhaWduPTE2MTU5NzYxNDYxMjImYnRfZWU9aklrclo1c2xkWWlHT0ZOcVBOdlhzZnV3a=
+SUyRnJIQzJOZjRxZzBQUlZ3WWNsVWE1amFMNUtPa2t1a2lFb3JQbXphJmJ0X3RzPTE2MTU5N=
+zYxNDYxMjI/sc88b50c930" target=3D"_blank" style=3D"text-decoration: none=
+; color: #f63339;" rel=3D"noopener" data-location=3D"t20">the country's =
+failure to recognize same-sex marriage is unconstitutional</a>. It's a l=
+andmark ruling that could usher in a new era of marriage equality in Jap=
+an. Homosexuality has been legal in Japan since 1880, and the country is=
+ relatively liberal compared with some other Asian nations. But Japan do=
+es not recognize same-sex unions nationwide. This ruling alone won't leg=
+alize same-sex marriage in the country -- that would need a Supreme Cour=
+t ruling, which could take several years. Still, it's a significant step=
+.</span></span></p>
+													<p style=3D"font-size: 14px; line-height: 2; text-align: le=
+ft; word-break: break-word; font-family: Helvetica Neue, Helvetica, Aria=
+l, sans-serif; mso-line-height-alt: 28px; margin: 0;">=C2=A0</p>
+												</div>
+											</div>
+											<!--[if mso]></td></tr></table><![endif]-->
+											<!--[if (!mso)&(!IE)]><!-->
+										</div>
+										<!--<![endif]-->
+									</div>
+								</div>
+								<!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+								<!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif=
+]-->
+							</div>
+						</div>
+					</div>
+					<div style=3D"background-color:transparent;">
+						<div class=3D"block-grid " style=3D"min-width: 320px; max-width: 6=
+00px; overflow-wrap: break-word; word-wrap: break-word; word-break: brea=
+k-word; Margin: 0 auto; background-color: transparent;">
+							<div style=3D"border-collapse: collapse;display: table;width: 100=
+%;background-color:transparent;">
+								<!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr><=
+td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0" style=3D"width:600px"><tr class=3D"layout-full-width" style=3D"backg=
+round-color:transparent"><![endif]-->
+								<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"=
+background-color:transparent;width:600px; border-top: 0px solid transpar=
+ent; border-left: 0px solid transparent; border-bottom: 0px solid transp=
+arent; border-right: 0px solid transparent;" valign=3D"top"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=
+=3D"padding-right: 20px; padding-left: 20px; padding-top:0px; padding-bo=
+ttom:10px;background-color:#f2f2f2;"><![endif]-->
+								<div class=3D"col num12" style=3D"min-width: 320px; max-width: 6=
+00px; display: table-cell; vertical-align: top; background-color: #f2f2f=
+2; width: 600px;">
+									<div class=3D"col_cont" style=3D"width:100% !important;">
+										<!--[if (!mso)&(!IE)]><!-->
+										<div style=3D"border-top:0px solid transparent; border-left:0p=
+x solid transparent; border-bottom:0px solid transparent; border-right:0=
+px solid transparent; padding-top:0px; padding-bottom:10px; padding-righ=
+t: 20px; padding-left: 20px;">
+											<!--<![endif]-->
+											<div class=3D"img-container center fixedwidth" align=3D"cente=
+r" style=3D"padding-right: 0px;padding-left: 0px;">
+												<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0"><tr style=3D"line-height:0px"><td style=3D"paddi=
+ng-right: 0px;padding-left: 0px;" align=3D"center"><![endif]-->
+												<div style=3D"font-size:1px;line-height:20px">=C2=A0</div>
+<img class=3D"center fixedwidth" align=3D"center" border=3D"0" src=3D"ht=
+tps://images.newsletters.cnn.com/images/3dfe4d97843b307b4fa50e553d3f9467=
+/5-things-weekday/5Things_RedBar.png" alt=3D"-----" title=3D"-----" styl=
+e=3D"text-decoration: none; -ms-interpolation-mode: bicubic; height: aut=
+o; border: 0; width: 100%; max-width: 364px; display: block;" width=3D"3=
+64">
+												<!--[if mso]></td></tr></table><![endif]-->
+											</div>
+											<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left=
+: 0px; padding-top: 5px; padding-bottom: 0px; font-family: Arial, sans-s=
+erif"><![endif]-->
+											<div style=3D"color:#202020;font-family:Helvetica Neue, Helve=
+tica, Arial, sans-serif;line-height:1.8;padding-top:5px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+												<div class=3D"txtTinyMce-wrapper" style=3D"font-family: Helv=
+etica Neue, Helvetica, Arial, sans-serif; font-size: 12px; line-height: =
+1.8; color: #202020; mso-line-height-alt: 22px;">
+													<div style=3D"font-size: 12px; line-height: 1.8; mso-line-h=
+eight-alt: 22px;">
+														<p style=3D"font-size: 16px; line-height: 1.8; text-align:=
+ center; word-break: break-word; font-family: Helvetica Neue, Helvetica,=
+ Arial, sans-serif; mso-line-height-alt: 29px; margin: 0;"><span style=3D=
+"font-size: 16px;"><em>Paid Partner Content</em></span></p>
+													</div>
+												</div>
+											</div>
+											<!--[if mso]></td></tr></table><![endif]-->
+											<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left=
+: 0px; padding-top: 0px; padding-bottom: 0px; font-family: Arial, sans-s=
+erif"><![endif]-->
+											<div style=3D"color:#202020;font-family:Helvetica Neue, Helve=
+tica, Arial, sans-serif;line-height:2;padding-top:0px;padding-right:0px;=
+padding-bottom:0px;padding-left:0px;">
+												<div class=3D"txtTinyMce-wrapper" style=3D"font-family: Helv=
+etica Neue, Helvetica, Arial, sans-serif; font-size: 12px; line-height: =
+2; color: #202020; mso-line-height-alt: 24px;">
+													<div style=3D"font-size: 12px; line-height: 2; mso-line-hei=
+ght-alt: 24px;">
+														<p style=3D"line-height: 2; word-break: break-word; font-f=
+amily: Helvetica Neue, Helvetica, Arial, sans-serif; mso-line-height-alt=
+: 24px; margin: 0;"><strong><span style=3D"font-size: 16px;">Meet The Be=
+d, by Thuma</span></strong></p>
+														<p style=3D"line-height: 2; word-break: break-word; font-f=
+amily: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 16px; ms=
+o-line-height-alt: 32px; margin: 0;"><span style=3D"font-size: 16px;">Th=
+uma combines elevated design, quality craftsmanship, and modern convenie=
+nce. Made from 100% real, upcycled wood, <a href=3D"https://e.newsletter=
+s.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1O=
+Tc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Z=
+jc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lf=
+TmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d3cudGh1bWEuY28v/qP3=
+V0bV9zb3VyY2U9c3BvbnNvcmVkX2NvbnRlbnQmdXRtX21lZGl1bT1yZWZlcnJhbCZ1dG1fY2=
+FtcGFpZ249Y25uLW1hcmNoLTIwMjE/s753e44e773" target=3D"_blank" style=3D"te=
+xt-decoration: none; color: #f63339;" rel=3D"noopener" data-location=3D"=
+t21">The Bed</a> is Greenguard certified and comes with a lifetime warra=
+nty.</span></p>
+														<p style=3D"line-height: 2; word-break: break-word; font-f=
+amily: Helvetica Neue, Helvetica, Arial, sans-serif; mso-line-height-alt=
+: 24px; margin: 0;">=C2=A0</p>
+														<p style=3D"line-height: 2; word-break: break-word; font-f=
+amily: Helvetica Neue, Helvetica, Arial, sans-serif; mso-line-height-alt=
+: 24px; margin: 0;"><strong><span style=3D"font-size: 16px;">Tired of Be=
+ing Tired?</span></strong></p>
+														<p style=3D"line-height: 2; word-break: break-word; font-f=
+amily: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 16px; ms=
+o-line-height-alt: 32px; margin: 0;"><span style=3D"font-size: 16px;">Ac=
+hieve your goal of better sleep with ingredients designed to help you fa=
+ll and stay asleep, wake up feeling rested with time released B12. <a hr=
+ef=3D"https://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpb=
+mcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzI=
+yNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJ=
+pbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cD=
+ovL2JpdC5seS8zODdDSDE2/s1677c0598c" target=3D"_blank" style=3D"text-deco=
+ration: none; color: #f63339;" rel=3D"noopener" data-location=3D"t22">Sa=
+ve 20% on ultimate sleep here with code DOZE20.</a></span></p>
+														<p style=3D"line-height: 2; word-break: break-word; font-f=
+amily: Helvetica Neue, Helvetica, Arial, sans-serif; mso-line-height-alt=
+: 24px; margin: 0;">=C2=A0</p>
+														<p style=3D"line-height: 2; word-break: break-word; font-f=
+amily: Helvetica Neue, Helvetica, Arial, sans-serif; mso-line-height-alt=
+: 24px; margin: 0;"><strong><span style=3D"font-size: 16px;">Calculate y=
+our new refi payment in minutes. See if you can save</span></strong></p>=
+
+														<p style=3D"line-height: 2; word-break: break-word; font-f=
+amily: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 16px; ms=
+o-line-height-alt: 32px; margin: 0;"><span style=3D"font-size: 16px;">Le=
+nders are competing for your business, which means you get the most comp=
+etitive offers. <a href=3D"https://e.newsletters.cnn.com/click/EaGVsZW5A=
+Z2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMj=
+QxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIj=
+oiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxM=
+zgyMDg4MSxjbjEsaHR0cHM6Ly93d3cubGVuZGluZ3RyZWUuY29tLw/qP3NwbGl0dGVyaWQ9Y=
+29udGVudC1tb3J0Z2FnZSZsb2FuLXR5cGU9cmVmaW5hbmNlJmVzb3VyY2VpZD02MzQ4NzY2J=
+mNwcm9kdWN0PXJlZmkmY3NvdXJjZT1jbm4mY2NoYW5uZWw9Y29udGVudCZtdGFpZD1GMTQ5N=
+SZyY29kZT0xMDAwNSZjdHlwZT1lbWFpbCZjbWV0aG9kPXJlZmlmb3JtJmNjYW1wYWlnbj01d=
+GhpbmdzX2VtYWlsXzAxMjcyMSZjY3JlYXRpdmU9Y2FsY21pbnNhdmVfbm9uZV90ZXh0JmNjb=
+250ZW50PW5vbmUmcGxhY2VtZW50X25hbWU9ZW1haWwmYWRfcG9zaXRpb249dGV4dCZhZF9oZ=
+WFkbGluZT1jYWxjbWluc2F2ZSZhZF9pbWFnZV9uYW1lPW5vbmVfdGV4dA/s901d9bdfaa" t=
+arget=3D"_blank" style=3D"text-decoration: none; color: #f63339;" rel=3D=
+"noopener" data-location=3D"t23">Choose the loan that works best for you=
+.=C2=A0</a></span></p>
+													</div>
+												</div>
+											</div>
+											<!--[if mso]></td></tr></table><![endif]-->
+											<!--[if (!mso)&(!IE)]><!-->
+										</div>
+										<!--<![endif]-->
+									</div>
+								</div>
+								<!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+								<!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif=
+]-->
+							</div>
+						</div>
+					</div>
+					<div style=3D"background-color:transparent;">
+						<div class=3D"block-grid " style=3D"min-width: 320px; max-width: 6=
+00px; overflow-wrap: break-word; word-wrap: break-word; word-break: brea=
+k-word; Margin: 0 auto; background-color: transparent;">
+							<div style=3D"border-collapse: collapse;display: table;width: 100=
+%;background-color:transparent;">
+								<!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr><=
+td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0" style=3D"width:600px"><tr class=3D"layout-full-width" style=3D"backg=
+round-color:transparent"><![endif]-->
+								<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"=
+background-color:transparent;width:600px; border-top: 0px solid transpar=
+ent; border-left: 0px solid transparent; border-bottom: 0px solid transp=
+arent; border-right: 0px solid transparent;" valign=3D"top"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=
+=3D"padding-right: 20px; padding-left: 20px; padding-top:5px; padding-bo=
+ttom:5px;"><![endif]-->
+								<div class=3D"col num12" style=3D"min-width: 320px; max-width: 6=
+00px; display: table-cell; vertical-align: top; width: 600px;">
+									<div class=3D"col_cont" style=3D"width:100% !important;">
+										<!--[if (!mso)&(!IE)]><!-->
+										<div style=3D"border-top:0px solid transparent; border-left:0p=
+x solid transparent; border-bottom:0px solid transparent; border-right:0=
+px solid transparent; padding-top:5px; padding-bottom:5px; padding-right=
+: 20px; padding-left: 20px;">
+											<!--<![endif]-->
+											<div class=3D"img-container center fixedwidth" align=3D"cente=
+r" style=3D"padding-right: 0px;padding-left: 0px;">
+												<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0"><tr style=3D"line-height:0px"><td style=3D"paddi=
+ng-right: 0px;padding-left: 0px;" align=3D"center"><![endif]-->
+												<div style=3D"font-size:1px;line-height:30px">=C2=A0</div>
+<img class=3D"center fixedwidth" align=3D"center" border=3D"0" src=3D"ht=
+tps://images.newsletters.cnn.com/images/3dfe4d97843b307b4fa50e553d3f9467=
+/5%20Things%20Dark%20Mode%20Headers/5%20Things%20Updated%20Weekday%20Dar=
+k%20Mode/5Things_WeekDay_HeadlinesDM-BreakfastBrowse.png" alt=3D"breakfa=
+st browse" title=3D"breakfast browse" style=3D"text-decoration: none; -m=
+s-interpolation-mode: bicubic; height: auto; border: 0; width: 100%; max=
+-width: 364px; display: block;" width=3D"364">
+												<!--[if mso]></td></tr></table><![endif]-->
+											</div>
+											<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left=
+: 0px; padding-top: 5px; padding-bottom: 0px; font-family: Arial, sans-s=
+erif"><![endif]-->
+											<div style=3D"color:#202020;font-family:Helvetica Neue, Helve=
+tica, Arial, sans-serif;line-height:1.8;padding-top:5px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+												<div class=3D"txtTinyMce-wrapper" style=3D"font-family: Helv=
+etica Neue, Helvetica, Arial, sans-serif; font-size: 12px; line-height: =
+1.8; color: #202020; mso-line-height-alt: 22px;">
+													<p style=3D"font-size: 14px; line-height: 1.8; text-align: =
+center; word-break: break-word; font-family: Helvetica Neue, Helvetica, =
+Arial, sans-serif; mso-line-height-alt: 25px; margin: 0;"><span style=3D=
+"font-size: 14px;"><em><span style=3D"color: #202020; font-size: 14px;">=
+People are talking about these. Read up. Join in.</span></em></span></p>=
+
+												</div>
+											</div>
+											<!--[if mso]></td></tr></table><![endif]-->
+											<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left=
+: 0px; padding-top: 20px; padding-bottom: 10px; font-family: Arial, sans=
+-serif"><![endif]-->
+											<div style=3D"color:#202020;font-family:Helvetica Neue, Helve=
+tica, Arial, sans-serif;line-height:2;padding-top:20px;padding-right:0px=
+;padding-bottom:10px;padding-left:0px;">
+												<div class=3D"txtTinyMce-wrapper" style=3D"font-family: Helv=
+etica Neue, Helvetica, Arial, sans-serif; font-size: 12px; line-height: =
+2; color: #202020; mso-line-height-alt: 24px;">
+													<p style=3D"font-size: 12px; line-height: 2; text-align: le=
+ft; word-break: break-word; font-family: Helvetica Neue, Helvetica, Aria=
+l, sans-serif; mso-line-height-alt: 24px; margin: 0;"><strong><span styl=
+e=3D"font-size: 16px; color: #202020;">Elliot Page is the first trans ma=
+n to appear on the cover of Time=C2=A0</span></strong><br><span style=3D=
+"font-size: 16px; color: #202020;">It's the Canadian actor's <a href=3D"=
+https://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29=
+t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y=
+2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY=
+29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93=
+d3cuY25uLmNvbS9zdHlsZS9hcnRpY2xlL2VsbGlvdC1wYWdlLXRpbWUtbWFnYXppbmUtY292=
+ZXItdHJhbnNnZW5kZXItbWFuL2luZGV4Lmh0bWw/qP3V0bV90ZXJtPTE2MTU5NzYxNDYxMjE=
+wNDY1ZGFmM2MyNDEmdXRtX3NvdXJjZT1jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG5lc2RheSU=
+yQytNYXJjaCsxNyUyQysyMDIxJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPTE2MTU=
+5NzYxNDYxMjImYnRfZWU9aklrclo1c2xkWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQzJOZjRxZzB=
+QUlZ3WWNsVWE1amFMNUtPa2t1a2lFb3JQbXphJmJ0X3RzPTE2MTU5NzYxNDYxMjI/scb5445=
+dd4a" target=3D"_blank" style=3D"text-decoration: none; color: #f63339;"=
+ rel=3D"noopener" data-location=3D"t24">first major interview</a> since =
+publicly disclosing his gender identity last year.</span></p>
+													<p style=3D"font-size: 12px; line-height: 2; word-break: br=
+eak-word; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; mso=
+-line-height-alt: 24px; margin: 0;">=C2=A0</p>
+													<p style=3D"font-size: 12px; line-height: 2; word-break: br=
+eak-word; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; mso=
+-line-height-alt: 24px; margin: 0;"><strong><span style=3D"font-size: 16=
+px; color: #202020;">Tiger Woods is recovering at home after his Februar=
+y car crash</span></strong><br><span style=3D"font-size: 16px; color: #2=
+02020;">The golf legend <a href=3D"https://e.newsletters.cnn.com/click/E=
+aGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NW=
+RhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMS=
+IsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzM=
+TcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d3cuY25uLmNvbS8yMDIxLzAzLzE2L3VzL3RpZ=
+2VyLXdvb2RzLWhvbWUtYWZ0ZXItd3JlY2svaW5kZXguaHRtbA/qP3V0bV90ZXJtPTE2MTU5N=
+zYxNDYxMjEwNDY1ZGFmM2MyNDEmdXRtX3NvdXJjZT1jbm5fRml2ZStUaGluZ3MrZm9yK1dlZ=
+G5lc2RheSUyQytNYXJjaCsxNyUyQysyMDIxJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBha=
+WduPTE2MTU5NzYxNDYxMjImYnRfZWU9aklrclo1c2xkWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQ=
+zJOZjRxZzBQUlZ3WWNsVWE1amFMNUtPa2t1a2lFb3JQbXphJmJ0X3RzPTE2MTU5NzYxNDYxM=
+jI/s61228d507d" target=3D"_blank" style=3D"text-decoration: none; color:=
+ #f63339;" rel=3D"noopener" data-location=3D"t25">thanked hospital staff=
+</a> in a recent social media post.</span></p>
+													<p style=3D"font-size: 12px; line-height: 2; word-break: br=
+eak-word; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; mso=
+-line-height-alt: 24px; margin: 0;">=C2=A0</p>
+													<p style=3D"font-size: 12px; line-height: 2; word-break: br=
+eak-word; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; mso=
+-line-height-alt: 24px; margin: 0;"><strong><span style=3D"font-size: 16=
+px; color: #202020;">Lightning may have sparked life on Earth<br></span>=
+</strong><span style=3D"font-size: 16px; color: #202020;">That finding c=
+ould have implications in </span><span style=3D"font-size: 16px; color: =
+#202020;"><a href=3D"https://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW=
+1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwi=
+Y3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2Fy=
+eW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg=
+4MSxjbjEsaHR0cHM6Ly93d3cuY25uLmNvbS8yMDIxLzAzLzE2L3dvcmxkL2xpZ2h0bmluZy1=
+lYXJseS1lYXJ0aC1saWZlLXNjbi10cm5kL2luZGV4Lmh0bWw/qP3V0bV90ZXJtPTE2MTU5Nz=
+YxNDYxMjEwNDY1ZGFmM2MyNDEmdXRtX3NvdXJjZT1jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG=
+5lc2RheSUyQytNYXJjaCsxNyUyQysyMDIxJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaW=
+duPTE2MTU5NzYxNDYxMjImYnRfZWU9aklrclo1c2xkWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQz=
+JOZjRxZzBQUlZ3WWNsVWE1amFMNUtPa2t1a2lFb3JQbXphJmJ0X3RzPTE2MTU5NzYxNDYxMj=
+I/sb9e46ac6b1" target=3D"_blank" rel=3D"noopener" style=3D"text-decorati=
+on: none; color: #f63339;" data-location=3D"t26">the search for life bey=
+ond this planet</a>.</span></p>
+													<p style=3D"font-size: 12px; line-height: 2; word-break: br=
+eak-word; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; mso=
+-line-height-alt: 24px; margin: 0;">=C2=A0</p>
+													<p style=3D"font-size: 12px; line-height: 2; word-break: br=
+eak-word; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; mso=
+-line-height-alt: 24px; margin: 0;"><strong><span style=3D"font-size: 16=
+px; color: #202020;">A man with autism asks future employers to 'take a =
+chance on me' in a heartfelt, handwritten viral letter</span></strong><b=
+r><span style=3D"font-size: 16px; color: #202020;">He's since received t=
+housands of <a href=3D"https://e.newsletters.cnn.com/click/EaGVsZW5AZ2Fy=
+eW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIi=
+wiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2=
+FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyM=
+Dg4MSxjbjEsaHR0cHM6Ly93d3cuY25uLmNvbS8yMDIxLzAzLzE2L3VzL21hbi1hdXRpc20tb=
+Glua2VkaW4tY292ZXItbGV0dGVyLXRybmQvaW5kZXguaHRtbA/qP3V0bV90ZXJtPTE2MTU5N=
+zYxNDYxMjEwNDY1ZGFmM2MyNDEmdXRtX3NvdXJjZT1jbm5fRml2ZStUaGluZ3MrZm9yK1dlZ=
+G5lc2RheSUyQytNYXJjaCsxNyUyQysyMDIxJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBha=
+WduPTE2MTU5NzYxNDYxMjImYnRfZWU9aklrclo1c2xkWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQ=
+zJOZjRxZzBQUlZ3WWNsVWE1amFMNUtPa2t1a2lFb3JQbXphJmJ0X3RzPTE2MTU5NzYxNDYxM=
+jI/s7848a2b3b1" target=3D"_blank" style=3D"text-decoration: none; color:=
+ #f63339;" rel=3D"noopener" data-location=3D"t27">comments, connections,=
+ potential mentors and even job offers</a>.</span></p>
+													<p style=3D"font-size: 12px; line-height: 2; word-break: br=
+eak-word; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; mso=
+-line-height-alt: 24px; margin: 0;">=C2=A0</p>
+													<p style=3D"font-size: 16px; line-height: 2; word-break: br=
+eak-word; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; mso=
+-line-height-alt: 32px; margin: 0;"><span style=3D"font-size: 16px; colo=
+r: #202020;"><strong>Here are the foods with the most and least pesticid=
+es</strong><br>Spoiler alert: Strawberries continue to top <a href=3D"ht=
+tps://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/=
+CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E=
+4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29=
+tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d3=
+cuY25uLmNvbS8yMDIxLzAzLzE3L2hlYWx0aC9kaXJ0eS1kb3plbi1mb29kcy0yMDIxLXdlbG=
+xuZXNzL2luZGV4Lmh0bWw/qP3V0bV90ZXJtPTE2MTU5NzYxNDYxMjEwNDY1ZGFmM2MyNDEmd=
+XRtX3NvdXJjZT1jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG5lc2RheSUyQytNYXJjaCsxNyUyQ=
+ysyMDIxJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPTE2MTU5NzYxNDYxMjImYnRfZ=
+WU9aklrclo1c2xkWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQzJOZjRxZzBQUlZ3WWNsVWE1amFMN=
+UtPa2t1a2lFb3JQbXphJmJ0X3RzPTE2MTU5NzYxNDYxMjI/sb748e40c1f" target=3D"_b=
+lank" style=3D"text-decoration: none; color: #f63339;" rel=3D"noopener" =
+data-location=3D"t28">the "Dirty Dozen" list</a>.</span></p>
+													<p style=3D"font-size: 12px; line-height: 2; word-break: br=
+eak-word; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; mso=
+-line-height-alt: 24px; margin: 0;">=C2=A0</p>
+												</div>
+											</div>
+											<!--[if mso]></td></tr></table><![endif]-->
+											<!--[if (!mso)&(!IE)]><!-->
+										</div>
+										<!--<![endif]-->
+									</div>
+								</div>
+								<!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+								<!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif=
+]-->
+							</div>
+						</div>
+					</div>
+					<div style=3D"background-color:transparent;">
+						<div class=3D"block-grid " style=3D"min-width: 320px; max-width: 6=
+00px; overflow-wrap: break-word; word-wrap: break-word; word-break: brea=
+k-word; Margin: 0 auto; background-color: #F2F2F2;">
+							<div style=3D"border-collapse: collapse;display: table;width: 100=
+%;background-color:#F2F2F2;">
+								<!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr><=
+td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0" style=3D"width:600px"><tr class=3D"layout-full-width" style=3D"backg=
+round-color:#F2F2F2"><![endif]-->
+								<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"=
+background-color:#F2F2F2;width:600px; border-top: 0px solid transparent;=
+ border-left: 0px solid #FFFFFF; border-bottom: 0px solid transparent; b=
+order-right: 0px solid #FFFFFF;" valign=3D"top"><table width=3D"100%" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-=
+right: 40px; padding-left: 40px; padding-top:40px; padding-bottom:40px;"=
+><![endif]-->
+								<div class=3D"col num12" style=3D"min-width: 320px; max-width: 6=
+00px; display: table-cell; vertical-align: top; width: 600px;">
+									<div class=3D"col_cont" style=3D"width:100% !important;">
+										<!--[if (!mso)&(!IE)]><!-->
+										<div style=3D"border-top:0px solid transparent; border-left:0p=
+x solid #FFFFFF; border-bottom:0px solid transparent; border-right:0px s=
+olid #FFFFFF; padding-top:40px; padding-bottom:40px; padding-right: 40px=
+; padding-left: 40px;">
+											<!--<![endif]-->
+											<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left=
+: 0px; padding-top: 0px; padding-bottom: 20px; font-family: Arial, sans-=
+serif"><![endif]-->
+											<div style=3D"color:#f63339;font-family:Helvetica Neue, Helve=
+tica, Arial, sans-serif;line-height:1.2;padding-top:0px;padding-right:0p=
+x;padding-bottom:20px;padding-left:0px;">
+												<div class=3D"txtTinyMce-wrapper" style=3D"font-family: Helv=
+etica Neue, Helvetica, Arial, sans-serif; font-size: 12px; line-height: =
+1.2; color: #f63339; mso-line-height-alt: 14px;">
+													<p style=3D"font-size: 34px; line-height: 1.2; text-align: =
+center; word-break: break-word; font-family: Helvetica Neue, Helvetica, =
+Arial, sans-serif; mso-line-height-alt: 41px; margin: 0;"><span style=3D=
+"font-size: 34px; color: #f63339;">50 million</span></p>
+												</div>
+											</div>
+											<!--[if mso]></td></tr></table><![endif]-->
+											<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left=
+: 0px; padding-top: 0px; padding-bottom: 0px; font-family: Arial, sans-s=
+erif"><![endif]-->
+											<div style=3D"color:#202020;font-family:Helvetica Neue, Helve=
+tica, Arial, sans-serif;line-height:2;padding-top:0px;padding-right:0px;=
+padding-bottom:0px;padding-left:0px;">
+												<div class=3D"txtTinyMce-wrapper" style=3D"font-family: Helv=
+etica Neue, Helvetica, Arial, sans-serif; font-size: 12px; line-height: =
+2; color: #202020; mso-line-height-alt: 24px;">
+													<p style=3D"font-size: 16px; line-height: 2; text-align: le=
+ft; word-break: break-word; font-family: Helvetica Neue, Helvetica, Aria=
+l, sans-serif; mso-line-height-alt: 32px; margin: 0;"><span style=3D"fon=
+t-size: 16px;">That's at least how many people this week are <a href=3D"=
+https://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29=
+t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y=
+2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY=
+29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93=
+d3cuY25uLmNvbS8yMDIxLzAzLzE2L3dlYXRoZXIvdG9ybmFkby1zZXZlcmUtd2VhdGhlci1z=
+b3V0aC9pbmRleC5odG1s/qP3V0bV90ZXJtPTE2MTU5NzYxNDYxMjEwNDY1ZGFmM2MyNDEmdX=
+RtX3NvdXJjZT1jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG5lc2RheSUyQytNYXJjaCsxNyUyQy=
+syMDIxJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPTE2MTU5NzYxNDYxMjImYnRfZW=
+U9aklrclo1c2xkWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQzJOZjRxZzBQUlZ3WWNsVWE1amFMNU=
+tPa2t1a2lFb3JQbXphJmJ0X3RzPTE2MTU5NzYxNDYxMjI/s067bd65440" target=3D"_bl=
+ank" style=3D"text-decoration: none; color: #f63339;" rel=3D"noopener" d=
+ata-location=3D"t29">under the threat of severe weather</a>, from the so=
+uthern Plains through the Southeast. A rare high risk threat has been is=
+sued for a possible tornado outbreak this afternoon and evening from the=
+ lower Mississippi Valley through Alabama.</span></p>
+												</div>
+											</div>
+											<!--[if mso]></td></tr></table><![endif]-->
+											<!--[if (!mso)&(!IE)]><!-->
+										</div>
+										<!--<![endif]-->
+									</div>
+								</div>
+								<!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+								<!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif=
+]-->
+							</div>
+						</div>
+					</div>
+					<div style=3D"background-color:transparent;">
+						<div class=3D"block-grid " style=3D"min-width: 320px; max-width: 6=
+00px; overflow-wrap: break-word; word-wrap: break-word; word-break: brea=
+k-word; Margin: 0 auto; background-color: transparent;">
+							<div style=3D"border-collapse: collapse;display: table;width: 100=
+%;background-color:transparent;">
+								<!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr><=
+td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0" style=3D"width:600px"><tr class=3D"layout-full-width" style=3D"backg=
+round-color:transparent"><![endif]-->
+								<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"=
+background-color:transparent;width:600px; border-top: 0px solid transpar=
+ent; border-left: 0px solid transparent; border-bottom: 0px solid transp=
+arent; border-right: 0px solid transparent;" valign=3D"top"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=
+=3D"padding-right: 0px; padding-left: 0px; padding-top:10px; padding-bot=
+tom:10px;"><![endif]-->
+								<div class=3D"col num12" style=3D"min-width: 320px; max-width: 6=
+00px; display: table-cell; vertical-align: top; width: 600px;">
+									<div class=3D"col_cont" style=3D"width:100% !important;">
+										<!--[if (!mso)&(!IE)]><!-->
+										<div style=3D"border-top:0px solid transparent; border-left:0p=
+x solid transparent; border-bottom:0px solid transparent; border-right:0=
+px solid transparent; padding-top:10px; padding-bottom:10px; padding-rig=
+ht: 0px; padding-left: 0px;">
+											<!--<![endif]-->
+											<div class=3D"img-container center  autowidth " align=3D"cent=
+er">
+												<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0"><tr style=3D"line-height:0px"><td style=3D"" ali=
+gn=3D"center"><![endif]--><img class=3D"center  autowidth " align=3D"cen=
+ter" border=3D"0" src=3D"https://images.newsletters.cnn.com/images/3dfe4=
+d97843b307b4fa50e553d3f9467/5-things-weekday/pixel.gif" alt=3D"Image" ti=
+tle=3D"Image" style=3D"text-decoration: none; -ms-interpolation-mode: bi=
+cubic; height: auto; border: 0; width: 100%; max-width: 10px; display: b=
+lock;" width=3D"10">
+												<!--[if mso]></td></tr></table><![endif]-->
+											</div>
+											<!--[if (!mso)&(!IE)]><!-->
+										</div>
+										<!--<![endif]-->
+									</div>
+								</div>
+								<!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+								<!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif=
+]-->
+							</div>
+						</div>
+					</div>
+					<div style=3D"background-color:transparent;">
+						<div class=3D"block-grid " style=3D"min-width: 320px; max-width: 6=
+00px; overflow-wrap: break-word; word-wrap: break-word; word-break: brea=
+k-word; Margin: 0 auto; background-color: #F2F2F2;">
+							<div style=3D"border-collapse: collapse;display: table;width: 100=
+%;background-color:#F2F2F2;">
+								<!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr><=
+td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0" style=3D"width:600px"><tr class=3D"layout-full-width" style=3D"backg=
+round-color:#F2F2F2"><![endif]-->
+								<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"=
+background-color:#F2F2F2;width:600px; border-top: 0px solid transparent;=
+ border-left: 0px solid #FFFFFF; border-bottom: 0px solid transparent; b=
+order-right: 0px solid #FFFFFF;" valign=3D"top"><table width=3D"100%" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-=
+right: 40px; padding-left: 40px; padding-top:40px; padding-bottom:40px;"=
+><![endif]-->
+								<div class=3D"col num12" style=3D"min-width: 320px; max-width: 6=
+00px; display: table-cell; vertical-align: top; width: 600px;">
+									<div class=3D"col_cont" style=3D"width:100% !important;">
+										<!--[if (!mso)&(!IE)]><!-->
+										<div style=3D"border-top:0px solid transparent; border-left:0p=
+x solid #FFFFFF; border-bottom:0px solid transparent; border-right:0px s=
+olid #FFFFFF; padding-top:40px; padding-bottom:40px; padding-right: 40px=
+; padding-left: 40px;">
+											<!--<![endif]-->
+											<div class=3D"img-container center  autowidth " align=3D"cent=
+er" style=3D"padding-right: 0px;padding-left: 0px;">
+												<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0"><tr style=3D"line-height:0px"><td style=3D"paddi=
+ng-right: 0px;padding-left: 0px;" align=3D"center"><![endif]--><img clas=
+s=3D"center  autowidth " align=3D"center" border=3D"0" src=3D"https://im=
+ages.newsletters.cnn.com/images/3dfe4d97843b307b4fa50e553d3f9467/5-thing=
+s-weekday/23aff9b4-627d-4d4e-81e1-52fbf6ae83cf.png" alt=3D"Image" title=3D=
+"Image" style=3D"text-decoration: none; -ms-interpolation-mode: bicubic;=
+ height: auto; border: 0; width: 100%; max-width: 50px; display: block;"=
+ width=3D"50">
+												<div style=3D"font-size:1px;line-height:20px">=C2=A0</div>
+												<!--[if mso]></td></tr></table><![endif]-->
+											</div>
+											<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left=
+: 0px; padding-top: 0px; padding-bottom: 0px; font-family: Arial, sans-s=
+erif"><![endif]-->
+											<div style=3D"color:#202020;font-family:Helvetica Neue, Helve=
+tica, Arial, sans-serif;line-height:2;padding-top:0px;padding-right:0px;=
+padding-bottom:0px;padding-left:0px;">
+												<div class=3D"txtTinyMce-wrapper" style=3D"font-family: Helv=
+etica Neue, Helvetica, Arial, sans-serif; font-size: 12px; line-height: =
+2; color: #202020; mso-line-height-alt: 24px;">
+													<p style=3D"font-size: 24px; line-height: 2; text-align: ce=
+nter; word-break: break-word; font-family: Helvetica Neue, Helvetica, Ar=
+ial, sans-serif; mso-line-height-alt: 48px; margin: 0;"><span style=3D"f=
+ont-size: 24px; color: #202020;">I can say quite clearly: Don't come.</s=
+pan></p>
+													<p style=3D"font-size: 14px; line-height: 2; text-align: ce=
+nter; word-break: break-word; font-family: Helvetica Neue, Helvetica, Ar=
+ial, sans-serif; mso-line-height-alt: 28px; margin: 0;">=C2=A0</p>
+													<p style=3D"font-size: 16px; line-height: 2; text-align: ce=
+nter; word-break: break-word; font-family: Helvetica Neue, Helvetica, Ar=
+ial, sans-serif; mso-line-height-alt: 32px; margin: 0;"><span style=3D"f=
+ont-size: 16px;"><strong>President Biden</strong>, <a href=3D"https://e.=
+newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQ=
+iOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2I=
+yNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWk=
+hfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d3cuY25uLm=
+NvbS8yMDIxLzAzLzE2L3BvbGl0aWNzL2pvZS1iaWRlbi1taWdyYW50LWNoaWxkcmVuLWJvcm=
+Rlci1pbW1pZ3JhdGlvbi9pbmRleC5odG1s/qP3V0bV90ZXJtPTE2MTU5NzYxNDYxMjEwNDY1=
+ZGFmM2MyNDEmdXRtX3NvdXJjZT1jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG5lc2RheSUyQytN=
+YXJjaCsxNyUyQysyMDIxJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPTE2MTU5NzYx=
+NDYxMjImYnRfZWU9aklrclo1c2xkWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQzJOZjRxZzBQUlZ3=
+WWNsVWE1amFMNUtPa2t1a2lFb3JQbXphJmJ0X3RzPTE2MTU5NzYxNDYxMjI/s15c6ff8431"=
+ target=3D"_blank" style=3D"text-decoration: none; color: #f63339;" rel=3D=
+"noopener" data-location=3D"t30">discouraging would-be migrants from lea=
+ving for the US</a> as his administration scrambles to respond to <a hre=
+f=3D"https://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbm=
+cuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIy=
+NGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJp=
+bmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cDo=
+vL3d3dy5jbm4uY29tLzIwMjEvMDMvMTYvcG9saXRpY3Mvam9lLWJpZGVuLWltbWlncmF0aW9=
+uLWJvcmRlci9pbmRleC5odG1s/qP3V0bV90ZXJtPTE2MTU5NzYxNDYxMjEwNDY1ZGFmM2MyN=
+DEmdXRtX3NvdXJjZT1jbm5fRml2ZStUaGluZ3MrZm9yK1dlZG5lc2RheSUyQytNYXJjaCsxN=
+yUyQysyMDIxJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPTE2MTU5NzYxNDYxMjImY=
+nRfZWU9aklrclo1c2xkWWlHT0ZOcVBOdlhzZnV3aSUyRnJIQzJOZjRxZzBQUlZ3WWNsVWE1a=
+mFMNUtPa2t1a2lFb3JQbXphJmJ0X3RzPTE2MTU5NzYxNDYxMjI/s1cd4eac116" target=3D=
+"_blank" rel=3D"noopener" style=3D"text-decoration: none; color: #f63339=
+;" data-location=3D"t31">a surge of unaccompanied children at the border=
+</a></span></p>
+												</div>
+											</div>
+											<!--[if mso]></td></tr></table><![endif]-->
+											<!--[if (!mso)&(!IE)]><!-->
+										</div>
+										<!--<![endif]-->
+									</div>
+								</div>
+								<!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+								<!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif=
+]-->
+							</div>
+						</div>
+					</div>
+					<div style=3D"background-color:transparent;">
+						<div class=3D"block-grid " style=3D"min-width: 320px; max-width: 6=
+00px; overflow-wrap: break-word; word-wrap: break-word; word-break: brea=
+k-word; Margin: 0 auto; background-color: transparent;">
+							<div style=3D"border-collapse: collapse;display: table;width: 100=
+%;background-color:transparent;">
+								<!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr><=
+td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0" style=3D"width:600px"><tr class=3D"layout-full-width" style=3D"backg=
+round-color:transparent"><![endif]-->
+								<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"=
+background-color:transparent;width:600px; border-top: 0px solid transpar=
+ent; border-left: 0px solid transparent; border-bottom: 0px solid transp=
+arent; border-right: 0px solid transparent;" valign=3D"top"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=
+=3D"padding-right: 20px; padding-left: 20px; padding-top:5px; padding-bo=
+ttom:5px;"><![endif]-->
+								<div class=3D"col num12" style=3D"min-width: 320px; max-width: 6=
+00px; display: table-cell; vertical-align: top; width: 600px;">
+									<div class=3D"col_cont" style=3D"width:100% !important;">
+										<!--[if (!mso)&(!IE)]><!-->
+										<div style=3D"border-top:0px solid transparent; border-left:0p=
+x solid transparent; border-bottom:0px solid transparent; border-right:0=
+px solid transparent; padding-top:5px; padding-bottom:5px; padding-right=
+: 20px; padding-left: 20px;">
+											<!--<![endif]-->
+											<div class=3D"img-container center fixedwidth" align=3D"cente=
+r" style=3D"padding-right: 0px;padding-left: 0px;">
+												<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0"><tr style=3D"line-height:0px"><td style=3D"paddi=
+ng-right: 0px;padding-left: 0px;" align=3D"center"><![endif]-->
+												<div style=3D"font-size:1px;line-height:30px">=C2=A0</div>
+<img class=3D"center fixedwidth" align=3D"center" border=3D"0" src=3D"ht=
+tps://images.newsletters.cnn.com/images/3dfe4d97843b307b4fa50e553d3f9467=
+/5%20Things%20Dark%20Mode%20Headers/5%20Things%20Updated%20Weekday%20Dar=
+k%20Mode/5Things_WeekDay_HeadlinesDM-PickOfTheDay.png" alt=3D"sponsor co=
+ntent" title=3D"sponsor content" style=3D"text-decoration: none; -ms-int=
+erpolation-mode: bicubic; height: auto; border: 0; width: 100%; max-widt=
+h: 364px; display: block;" width=3D"364">
+												<!--[if mso]></td></tr></table><![endif]-->
+											</div>
+											<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left=
+: 0px; padding-top: 5px; padding-bottom: 10px; font-family: Arial, sans-=
+serif"><![endif]-->
+											<div style=3D"color:#202020;font-family:Helvetica Neue, Helve=
+tica, Arial, sans-serif;line-height:1.8;padding-top:5px;padding-right:0p=
+x;padding-bottom:10px;padding-left:0px;">
+												<div class=3D"txtTinyMce-wrapper" style=3D"font-family: Helv=
+etica Neue, Helvetica, Arial, sans-serif; font-size: 12px; line-height: =
+1.8; color: #202020; mso-line-height-alt: 22px;">
+													<div style=3D"font-size: 12px; line-height: 1.8; mso-line-h=
+eight-alt: 22px;">
+														<p style=3D"font-size: 14px; line-height: 1.8; text-align:=
+ center; word-break: break-word; font-family: Helvetica Neue, Helvetica,=
+ Arial, sans-serif; mso-line-height-alt: 25px; margin: 0;"><span style=3D=
+"font-size: 14px;"><em>Brought to you by CNN Underscored</em></span></p>=
+
+													</div>
+												</div>
+											</div>
+											<!--[if mso]></td></tr></table><![endif]-->
+											<div class=3D"img-container center  autowidth  fullwidth" ali=
+gn=3D"center" style=3D"padding-right: 0px;padding-left: 0px;">
+												<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0"><tr style=3D"line-height:0px"><td style=3D"paddi=
+ng-right: 0px;padding-left: 0px;" align=3D"center"><![endif]--><a href=3D=
+"https://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY2=
+9t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1=
+Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcu=
+Y29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly9=
+3d3cuY25uLmNvbS8yMDIxLzAzLzEyL2Nubi11bmRlcnNjb3JlZC9iZXN0LXdvcmstZnJvbS1=
+ob21lLWVhcmJ1ZHMtaGVhZHBob25lcy9pbmRleC5odG1s/qP2lpZD11bmRlcnNjb3JlZDVUa=
+GluZ3MwMzE3MjEmdXRtX3Rlcm09MTYxNTk3NjE0NjEyMTA0NjVkYWYzYzI0MSZ1dG1fc291c=
+mNlPWNubl9GaXZlK1RoaW5ncytmb3IrV2VkbmVzZGF5JTJDK01hcmNoKzE3JTJDKzIwMjEmd=
+XRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249MTYxNTk3NjE0NjEyMiZidF9lZT1qSWtyW=
+jVzbGRZaUdPRk5xUE52WHNmdXdpJTJGckhDMk5mNHFnMFBSVndZY2xVYTVqYUw1S09ra3Vra=
+UVvclBtemEmYnRfdHM9MTYxNTk3NjE0NjEyMg/s13d7d21f72" target=3D"_blank" sty=
+le=3D"outline:none" tabindex=3D"-1" data-location=3D"t32"><img class=3D"=
+center  autowidth  fullwidth" align=3D"center" border=3D"0" src=3D"https=
+://images.newsletters.cnn.com/images/3dfe4d97843b307b4fa50e553d3f9467/21=
+0312161419-best-wfh-headphones-lead-super-169.jpg" alt=3D"Image" title=3D=
+"Image" style=3D"text-decoration: none; -ms-interpolation-mode: bicubic;=
+ height: auto; border: 0; width: 100%; max-width: 560px; display: block;=
+" width=3D"560"></a>
+												<!--[if mso]></td></tr></table><![endif]-->
+											</div>
+											<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left=
+: 0px; padding-top: 15px; padding-bottom: 10px; font-family: Arial, sans=
+-serif"><![endif]-->
+											<div style=3D"color:#202020;font-family:Helvetica Neue, Helve=
+tica, Arial, sans-serif;line-height:2;padding-top:15px;padding-right:0px=
+;padding-bottom:10px;padding-left:0px;">
+												<div class=3D"txtTinyMce-wrapper" style=3D"font-family: Helv=
+etica Neue, Helvetica, Arial, sans-serif; font-size: 13px; line-height: =
+2; color: #202020; mso-line-height-alt: 26px; mso-ansi-font-size: 14px;"=
+>
+													<div style=3D"font-size: 13px; line-height: 2; mso-line-hei=
+ght-alt: 26px; mso-ansi-font-size: 14px;">
+														<p style=3D"line-height: 2; word-break: break-word; font-f=
+amily: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 16px; ms=
+o-line-height-alt: 32px; margin: 0;"><span style=3D"font-size: 16px;"><s=
+trong>The best work-from-home earbuds and headphones</strong></span></p>=
+
+														<p style=3D"line-height: 2; word-break: break-word; font-f=
+amily: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 16px; ms=
+o-line-height-alt: 32px; margin: 0;"><span style=3D"font-size: 16px;">Af=
+ter a year of working from home, the importance of calls has reached a n=
+ew height. So we tested a range of earbuds and headphones to see which c=
+ould deliver clear voice pickup, enough comfort to wear day in and day o=
+ut and offer multiple connectivity options. <a href=3D"https://e.newslet=
+ters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNj=
+E1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYj=
+I4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX=
+2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d3cuY25uLmNvbS8yM=
+DIxLzAzLzEyL2Nubi11bmRlcnNjb3JlZC9iZXN0LXdvcmstZnJvbS1ob21lLWVhcmJ1ZHMta=
+GVhZHBob25lcy9pbmRleC5odG1s/qP2lpZD11bmRlcnNjb3JlZDVUaGluZ3MwMzE3MjEmdXR=
+tX3Rlcm09MTYxNTk3NjE0NjEyMTA0NjVkYWYzYzI0MSZ1dG1fc291cmNlPWNubl9GaXZlK1R=
+oaW5ncytmb3IrV2VkbmVzZGF5JTJDK01hcmNoKzE3JTJDKzIwMjEmdXRtX21lZGl1bT1lbWF=
+pbCZ1dG1fY2FtcGFpZ249MTYxNTk3NjE0NjEyMiZidF9lZT1qSWtyWjVzbGRZaUdPRk5xUE5=
+2WHNmdXdpJTJGckhDMk5mNHFnMFBSVndZY2xVYTVqYUw1S09ra3VraUVvclBtemEmYnRfdHM=
+9MTYxNTk3NjE0NjEyMg/s13d7d21f72" target=3D"_blank" style=3D"text-decorat=
+ion: none; color: #f63339;" rel=3D"noopener" data-location=3D"t33">Ultim=
+ately, three options stood out.</a> <br></span></p>
+													</div>
+												</div>
+											</div>
+											<!--[if mso]></td></tr></table><![endif]-->
+											<!--[if (!mso)&(!IE)]><!-->
+										</div>
+										<!--<![endif]-->
+									</div>
+								</div>
+								<!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+								<!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif=
+]-->
+							</div>
+						</div>
+					</div>
+					<div style=3D"background-color:transparent;">
+						<div class=3D"block-grid " style=3D"min-width: 320px; max-width: 6=
+00px; overflow-wrap: break-word; word-wrap: break-word; word-break: brea=
+k-word; Margin: 0 auto; background-color: transparent;">
+							<div style=3D"border-collapse: collapse;display: table;width: 100=
+%;background-color:transparent;">
+								<!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr><=
+td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0" style=3D"width:600px"><tr class=3D"layout-full-width" style=3D"backg=
+round-color:transparent"><![endif]-->
+								<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"=
+background-color:transparent;width:600px; border-top: 0px solid transpar=
+ent; border-left: 0px solid transparent; border-bottom: 0px solid transp=
+arent; border-right: 0px solid transparent;" valign=3D"top"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=
+=3D"padding-right: 20px; padding-left: 20px; padding-top:40px; padding-b=
+ottom:30px;"><![endif]-->
+								<div class=3D"col num12" style=3D"min-width: 320px; max-width: 6=
+00px; display: table-cell; vertical-align: top; width: 600px;">
+									<div class=3D"col_cont" style=3D"width:100% !important;">
+										<!--[if (!mso)&(!IE)]><!-->
+										<div style=3D"border-top:0px solid transparent; border-left:0p=
+x solid transparent; border-bottom:0px solid transparent; border-right:0=
+px solid transparent; padding-top:40px; padding-bottom:30px; padding-rig=
+ht: 20px; padding-left: 20px;">
+											<!--<![endif]-->
+											<div class=3D"img-container center fixedwidth" align=3D"cente=
+r" style=3D"padding-right: 0px;padding-left: 0px;">
+												<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0"><tr style=3D"line-height:0px"><td style=3D"paddi=
+ng-right: 0px;padding-left: 0px;" align=3D"center"><![endif]--><img clas=
+s=3D"center fixedwidth" align=3D"center" border=3D"0" src=3D"https://ima=
+ges.newsletters.cnn.com/images/3dfe4d97843b307b4fa50e553d3f9467/5%20Thin=
+gs%20Dark%20Mode%20Headers/5%20Things%20Updated%20Weekday%20Dark%20Mode/=
+5Things_WeekDay_HeadlinesDM-AndFinally.png" alt=3D"and finally..." title=
+=3D"and finally..." style=3D"text-decoration: none; -ms-interpolation-mo=
+de: bicubic; height: auto; border: 0; width: 100%; max-width: 364px; dis=
+play: block;" width=3D"364">
+												<div style=3D"font-size:1px;line-height:20px">=C2=A0</div>
+												<!--[if mso]></td></tr></table><![endif]-->
+											</div>
+											<!--[if (mso)|(IE)]><table width=3D"560" align=3D"center" cel=
+lpadding=3D"0" cellspacing=3D"0" role=3D"presentation"><tr><td><![endif]=
+-->
+											<div class=3D"video-block" align=3D"center" style=3D"max-widt=
+h:560px;min-width:280px;padding-top:0px;padding-bottom:0px;padding-left:=
+0px;padding-right:0px;">
+												<!--[if !vml]><!--><a class=3D"video-preview" href=3D"https:=
+//e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJ=
+taWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E=
+3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0=
+/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d3cueW=
+91dHViZS5jb20vd2F0Y2g/qP3Y9SmNFNnQzWnB5YUU/s76d33fa4e2" target=3D"_blank=
+" style=3D"background-color:#5b5f66;background-image:radial-gradient(cir=
+cle at center, #5b5f66, #1d1f21);display:block;text-decoration:none;" da=
+ta-location=3D"t34">
+													<div>
+														<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" wi=
+dth=3D"100%" background=3D"https://img.youtube.com/vi/JcE6t3ZpyaE/maxres=
+default.jpg" role=3D"presentation" style=3D"table-layout: fixed; vertica=
+l-align: top; border-spacing: 0; border-collapse: collapse; mso-table-ls=
+pace: 0pt; mso-table-rspace: 0pt; background-image: url(https://img.yout=
+ube.com/vi/JcE6t3ZpyaE/maxresdefault.jpg); background-size: cover; min-h=
+eight: 158px; min-width: 280px;" valign=3D"top">
+															<tr style=3D"vertical-align: top;" valign=3D"top">
+																<td width=3D"25%" style=3D"word-break: break-word; verti=
+cal-align: top;" valign=3D"top"><img src=3D"https://beefree.io/img-host/=
+video_ratio_16-9.gif" alt width=3D"100%" border=3D"0" style=3D"text-deco=
+ration: none; -ms-interpolation-mode: bicubic; border: 0; height: auto; =
+opacity: 0; visibility: hidden; display: block;"></td>
+																<td width=3D"50%" align=3D"center" valign=3D"middle" sty=
+le=3D"word-break: break-word; vertical-align: middle;">
+																	<div class=3D"play-button_outer" style=3D"display:inlin=
+e-block;vertical-align:middle;background-color:#ffffff;border:3px solid =
+#ffffff;height:59px;width:59px;border-radius:100%;">
+																		<div style=3D"padding:14.75px 22.69230769230769px;">
+																			<div class=3D"play-button_inner" style=3D"border-styl=
+e:solid;border-width:15px 0 15px 20px;display:block;font-size:0;height:0=
+;width:0;border-color:transparent transparent transparent #000000;">=C2=A0=
+</div>
+																		</div>
+																	</div>
+																</td>
+																<td width=3D"25%" style=3D"word-break: break-word; verti=
+cal-align: top;" valign=3D"top">=C2=A0</td>
+															</tr>
+														</table>
+													</div>
+												</a>
+												<!--<![endif]-->
+												<!--[if vml]>
+<v:group xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schema=
+s-microsoft-com:office:word" coordsize=3D"560,315" coordorigin=3D"0,0" h=
+ref=3D"https://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJp=
+bmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNz=
+IyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dX=
+JpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0c=
+HM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/qP3Y9SmNFNnQzWnB5YUU/s76d33fa4e2" sty=
+le=3D"width:560px;height:315px;">
+<v:rect fill=3D"t" stroked=3D"f" style=3D"position:absolute;width:560;he=
+ight:315;">
+<v:fill src=3D"https://img.youtube.com/vi/JcE6t3ZpyaE/maxresdefault.jpg"=
+ type=3D"frame"/>
+</v:rect>
+<v:oval fill=3D"t" strokecolor=3D"#ffffff" strokeweight=3D"3px" style=3D=
+"position:absolute;left:251;top:128;width:59;height:59">
+<v:fill color=3D"#ffffff" opacity=3D"100%" />
+</v:oval>
+<v:shape coordsize=3D"24,32" path=3D"m,l,32,24,16,xe" fillcolor=3D"#0000=
+00" stroked=3D"f" style=3D"position:absolute;left:272;top:143;width:21;h=
+eight:30;" />
+</v:group>
+<![endif]-->
+											</div>
+											<!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+											<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left=
+: 0px; padding-top: 20px; padding-bottom: 0px; font-family: Arial, sans-=
+serif"><![endif]-->
+											<div style=3D"color:#202020;font-family:Helvetica Neue, Helve=
+tica, Arial, sans-serif;line-height:2;padding-top:20px;padding-right:0px=
+;padding-bottom:0px;padding-left:0px;">
+												<div class=3D"txtTinyMce-wrapper" style=3D"font-family: Helv=
+etica Neue, Helvetica, Arial, sans-serif; font-size: 12px; line-height: =
+2; color: #202020; mso-line-height-alt: 24px;">
+													<p style=3D"font-size: 16px; line-height: 2; word-break: br=
+eak-word; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; mso=
+-line-height-alt: 32px; margin: 0;"><span style=3D"font-size: 16px; colo=
+r: #202020;"><strong>Beneath the surface</strong></span></p>
+													<p style=3D"font-size: 16px; line-height: 2; word-break: br=
+eak-word; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; mso=
+-line-height-alt: 32px; margin: 0;"><span style=3D"font-size: 16px; colo=
+r: #202020;">Venture into the underground for a tour of the world's long=
+est art gallery and other hidden wonders. (<a href=3D"https://e.newslett=
+ers.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE=
+1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI=
+4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2=
+lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d3cueW91dHViZS5jb2=
+0vd2F0Y2g/qP3Y9SmNFNnQzWnB5YUUmYWJfY2hhbm5lbD1HcmVhdEJpZ1N0b3J5/sb7b3cd0=
+381" target=3D"_blank" style=3D"text-decoration: none; color: #f63339;" =
+rel=3D"noopener" data-location=3D"t35">Click here to view</a>.)</span></=
+p>
+												</div>
+											</div>
+											<!--[if mso]></td></tr></table><![endif]-->
+											<!--[if (!mso)&(!IE)]><!-->
+										</div>
+										<!--<![endif]-->
+									</div>
+								</div>
+								<!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+								<!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif=
+]-->
+							</div>
+						</div>
+					</div>
+					<div style=3D"background-color:transparent;">
+						<div class=3D"block-grid " style=3D"min-width: 320px; max-width: 6=
+00px; overflow-wrap: break-word; word-wrap: break-word; word-break: brea=
+k-word; Margin: 0 auto; background-color: transparent;">
+							<div style=3D"border-collapse: collapse;display: table;width: 100=
+%;background-color:transparent;">
+								<!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr><=
+td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0" style=3D"width:600px"><tr class=3D"layout-full-width" style=3D"backg=
+round-color:transparent"><![endif]-->
+								<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"=
+background-color:transparent;width:600px; border-top: 0px solid transpar=
+ent; border-left: 0px solid transparent; border-bottom: 0px solid transp=
+arent; border-right: 0px solid transparent;" valign=3D"top"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=
+=3D"padding-right: 20px; padding-left: 20px; padding-top:0px; padding-bo=
+ttom:30px;"><![endif]-->
+								<div class=3D"col num12" style=3D"min-width: 320px; max-width: 6=
+00px; display: table-cell; vertical-align: top; width: 600px;">
+									<div class=3D"col_cont" style=3D"width:100% !important;">
+										<!--[if (!mso)&(!IE)]><!-->
+										<div style=3D"border-top:0px solid transparent; border-left:0p=
+x solid transparent; border-bottom:0px solid transparent; border-right:0=
+px solid transparent; padding-top:0px; padding-bottom:30px; padding-righ=
+t: 20px; padding-left: 20px;">
+											<!--<![endif]-->
+											<div style=3D"font-size:16px;text-align:center;font-family:He=
+lvetica Neue, Helvetica, Arial, sans-serif">
+												<div class=3D"mcnTextContent" style=3D"word-break: break-wor=
+d;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150=
+%;text-align: left;">
+													<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0"=
+ border=3D"0" style=3D"display: none;border-collapse: collapse;mso-table=
+-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-te=
+xt-size-adjust: 100%;">
+														<tbody>
+															<tr>
+																<td style=3D"mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D"https://li.cn=
+n.com/imp?s=3D125559700&amp;li=3D&amp;e=3Dhelen@garymanufacturing.com&am=
+p;p=3D382087" width=3D"2" height=3D"6" border=3D"0" style=3D"border: 0;h=
+eight: auto !important;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;"></td>
+																<td style=3D"mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D"https://li.cn=
+n.com/imp?s=3D125559701&amp;li=3D&amp;e=3Dhelen@garymanufacturing.com&am=
+p;p=3D382087" width=3D"2" height=3D"6" border=3D"0" style=3D"border: 0;h=
+eight: auto !important;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;"></td>
+																<td style=3D"mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D"https://li.cn=
+n.com/imp?s=3D125559702&amp;li=3D&amp;e=3Dhelen@garymanufacturing.com&am=
+p;p=3D382087" width=3D"2" height=3D"6" border=3D"0" style=3D"border: 0;h=
+eight: auto !important;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;"></td>
+																<td style=3D"mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D"https://li.cn=
+n.com/imp?s=3D125559703&amp;li=3D&amp;e=3Dhelen@garymanufacturing.com&am=
+p;p=3D382087" width=3D"2" height=3D"6" border=3D"0" style=3D"border: 0;h=
+eight: auto !important;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;"></td>
+																<td style=3D"mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D"https://li.cn=
+n.com/imp?s=3D125559704&amp;li=3D&amp;e=3Dhelen@garymanufacturing.com&am=
+p;p=3D382087" width=3D"2" height=3D"6" border=3D"0" style=3D"border: 0;h=
+eight: auto !important;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;"></td>
+																<td style=3D"mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D"https://li.cn=
+n.com/imp?s=3D125559705&amp;li=3D&amp;e=3Dhelen@garymanufacturing.com&am=
+p;p=3D382087" width=3D"2" height=3D"6" border=3D"0" style=3D"border: 0;h=
+eight: auto !important;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;"></td>
+																<td style=3D"mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D"https://li.cn=
+n.com/imp?s=3D125559706&amp;li=3D&amp;e=3Dhelen@garymanufacturing.com&am=
+p;p=3D382087" width=3D"2" height=3D"6" border=3D"0" style=3D"border: 0;h=
+eight: auto !important;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;"></td>
+																<td style=3D"mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D"https://li.cn=
+n.com/imp?s=3D125559707&amp;li=3D&amp;e=3Dhelen@garymanufacturing.com&am=
+p;p=3D382087" width=3D"2" height=3D"6" border=3D"0" style=3D"border: 0;h=
+eight: auto !important;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;"></td>
+																<td style=3D"mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D"https://li.cn=
+n.com/imp?s=3D125559708&amp;li=3D&amp;e=3Dhelen@garymanufacturing.com&am=
+p;p=3D382087" width=3D"2" height=3D"6" border=3D"0" style=3D"border: 0;h=
+eight: auto !important;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;"></td>
+																<td style=3D"mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D"https://li.cn=
+n.com/imp?s=3D125559709&amp;li=3D&amp;e=3Dhelen@garymanufacturing.com&am=
+p;p=3D382087" width=3D"2" height=3D"6" border=3D"0" style=3D"border: 0;h=
+eight: auto !important;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;"></td>
+																<td style=3D"mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D"https://li.cn=
+n.com/imp?s=3D125559710&amp;li=3D&amp;e=3Dhelen@garymanufacturing.com&am=
+p;p=3D382087" width=3D"2" height=3D"6" border=3D"0" style=3D"border: 0;h=
+eight: auto !important;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;"></td>
+																<td style=3D"mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D"https://li.cn=
+n.com/imp?s=3D125559711&amp;li=3D&amp;e=3Dhelen@garymanufacturing.com&am=
+p;p=3D382087" width=3D"2" height=3D"6" border=3D"0" style=3D"border: 0;h=
+eight: auto !important;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;"></td>
+																<td style=3D"mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D"https://li.cn=
+n.com/imp?s=3D125559712&amp;li=3D&amp;e=3Dhelen@garymanufacturing.com&am=
+p;p=3D382087" width=3D"2" height=3D"6" border=3D"0" style=3D"border: 0;h=
+eight: auto !important;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;"></td>
+																<td style=3D"mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D"https://li.cn=
+n.com/imp?s=3D125559713&amp;li=3D&amp;e=3Dhelen@garymanufacturing.com&am=
+p;p=3D382087" width=3D"2" height=3D"6" border=3D"0" style=3D"border: 0;h=
+eight: auto !important;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;"></td>
+																<td style=3D"mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D"https://li.cn=
+n.com/imp?s=3D125559714&amp;li=3D&amp;e=3Dhelen@garymanufacturing.com&am=
+p;p=3D382087" width=3D"2" height=3D"6" border=3D"0" style=3D"border: 0;h=
+eight: auto !important;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;"></td>
+																<td style=3D"mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D"https://li.cn=
+n.com/imp?s=3D125559715&amp;li=3D&amp;e=3Dhelen@garymanufacturing.com&am=
+p;p=3D382087" width=3D"2" height=3D"6" border=3D"0" style=3D"border: 0;h=
+eight: auto !important;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;"></td>
+																<td style=3D"mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D"https://li.cn=
+n.com/imp?s=3D125559716&amp;li=3D&amp;e=3Dhelen@garymanufacturing.com&am=
+p;p=3D382087" width=3D"2" height=3D"6" border=3D"0" style=3D"border: 0;h=
+eight: auto !important;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;"></td>
+																<td style=3D"mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D"https://li.cn=
+n.com/imp?s=3D125559717&amp;li=3D&amp;e=3Dhelen@garymanufacturing.com&am=
+p;p=3D382087" width=3D"2" height=3D"6" border=3D"0" style=3D"border: 0;h=
+eight: auto !important;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;"></td>
+																<td style=3D"mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D"https://li.cn=
+n.com/imp?s=3D125559718&amp;li=3D&amp;e=3Dhelen@garymanufacturing.com&am=
+p;p=3D382087" width=3D"2" height=3D"6" border=3D"0" style=3D"border: 0;h=
+eight: auto !important;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;"></td>
+																<td style=3D"mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D"https://li.cn=
+n.com/imp?s=3D125559719&amp;li=3D&amp;e=3Dhelen@garymanufacturing.com&am=
+p;p=3D382087" width=3D"2" height=3D"6" border=3D"0" style=3D"border: 0;h=
+eight: auto !important;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;"></td>
+															</tr>
+														</tbody>
+													</table>
+													<table align=3D"center" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;m=
+so-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust=
+: 100%;">
+														<tbody>
+															<tr>
+																<td colspan=3D"2" style=3D"mso-line-height-rule: exactly=
+;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><a href=3D"=
+https://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29=
+t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y=
+2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY=
+29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly9s=
+aS5jbm4uY29tL2NsaWNr/qP3M9NjgyNzE5JmxpPSZlPWhlbGVuQGdhcnltYW51ZmFjdHVyaW=
+5nLmNvbSZwPTM4MjA4NyZ1dG1fdGVybT0xNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxJnV0bV=
+9zb3VyY2U9Y25uX0ZpdmUrVGhpbmdzK2ZvcitXZWRuZXNkYXklMkMrTWFyY2grMTclMkMrMj=
+AyMSZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj0xNjE1OTc2MTQ2MTIyJmJ0X2VlPW=
+pJa3JaNXNsZFlpR09GTnFQTnZYc2Z1d2klMkZySEMyTmY0cWcwUFJWd1ljbFVhNWphTDVLT2=
+trdWtpRW9yUG16YSZidF90cz0xNjE1OTc2MTQ2MTIy/s79df6e7164" style=3D"mso-lin=
+e-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adju=
+st: 100%;color: #f63339;font-weight: normal;text-decoration: none;" data=
+-location=3D"t36"><img src=3D"https://li.cnn.com/imp?s=3D682719&amp;li=3D=
+&amp;e=3Dhelen@garymanufacturing.com&amp;p=3D382087" border=3D"0" width=3D=
+"560" style=3D"width: 100%;max-width: 560px !important;border: 0;height:=
+ auto !important;outline: none;text-decoration: none;-ms-interpolation-m=
+ode: bicubic;"></a></td>
+															</tr>
+															<tr>
+																<td align=3D"left" style=3D"mso-line-height-rule: exactl=
+y;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><a style=3D=
+"display: block;max-width: 116px;max-height: 15px;padding-bottom: 15px;m=
+so-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-siz=
+e-adjust: 100%;color: #f63339;font-weight: normal;text-decoration: none;=
+" href=3D"https://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0d=
+XJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4=
+tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN=
+0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaH=
+R0cHM6Ly9saS5jbm4uY29tL2NsaWNr/qP3M9NjgyNzIwJmxpPSZlPWhlbGVuQGdhcnltYW51=
+ZmFjdHVyaW5nLmNvbSZwPTM4MjA4NyZ1dG1fdGVybT0xNjE1OTc2MTQ2MTIxMDQ2NWRhZjNj=
+MjQxJnV0bV9zb3VyY2U9Y25uX0ZpdmUrVGhpbmdzK2ZvcitXZWRuZXNkYXklMkMrTWFyY2gr=
+MTclMkMrMjAyMSZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj0xNjE1OTc2MTQ2MTIy=
+JmJ0X2VlPWpJa3JaNXNsZFlpR09GTnFQTnZYc2Z1d2klMkZySEMyTmY0cWcwUFJWd1ljbFVh=
+NWphTDVLT2trdWtpRW9yUG16YSZidF90cz0xNjE1OTc2MTQ2MTIy/s2d7c5e2af7" data-l=
+ocation=3D"t37"><img src=3D"https://li.cnn.com/imp?s=3D682720&amp;li=3D&=
+amp;e=3Dhelen@garymanufacturing.com&amp;p=3D382087" border=3D"0" style=3D=
+"border: 0;height: auto !important;outline: none;text-decoration: none;-=
+ms-interpolation-mode: bicubic;"></a></td>
+																<td align=3D"right" style=3D"mso-line-height-rule: exact=
+ly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><a style=3D=
+"display: block;max-width: 19px;max-height: 15px;padding-bottom: 15px;ms=
+o-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size=
+-adjust: 100%;color: #f63339;font-weight: normal;text-decoration: none;"=
+ href=3D"https://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dX=
+JpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4t=
+NzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0=
+dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR=
+0cHM6Ly9saS5jbm4uY29tL2NsaWNr/qP3M9NjgyNzIyJmxpPSZlPWhlbGVuQGdhcnltYW51Z=
+mFjdHVyaW5nLmNvbSZwPTM4MjA4NyZ1dG1fdGVybT0xNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjM=
+jQxJnV0bV9zb3VyY2U9Y25uX0ZpdmUrVGhpbmdzK2ZvcitXZWRuZXNkYXklMkMrTWFyY2grM=
+TclMkMrMjAyMSZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj0xNjE1OTc2MTQ2MTIyJ=
+mJ0X2VlPWpJa3JaNXNsZFlpR09GTnFQTnZYc2Z1d2klMkZySEMyTmY0cWcwUFJWd1ljbFVhN=
+WphTDVLT2trdWtpRW9yUG16YSZidF90cz0xNjE1OTc2MTQ2MTIy/s8ca032f437" data-lo=
+cation=3D"t38"><img src=3D"https://li.cnn.com/imp?s=3D682722&amp;li=3D&a=
+mp;e=3Dhelen@garymanufacturing.com&amp;p=3D382087" border=3D"0" style=3D=
+"border: 0;height: auto !important;outline: none;text-decoration: none;-=
+ms-interpolation-mode: bicubic;"></a></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<!--[if (!mso)&(!IE)]><!-->
+										</div>
+										<!--<![endif]-->
+									</div>
+								</div>
+								<!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+								<!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif=
+]-->
+							</div>
+						</div>
+					</div>
+					<div style=3D"background-color:transparent;">
+						<div class=3D"block-grid " style=3D"min-width: 320px; max-width: 6=
+00px; overflow-wrap: break-word; word-wrap: break-word; word-break: brea=
+k-word; Margin: 0 auto; background-color: transparent;">
+							<div style=3D"border-collapse: collapse;display: table;width: 100=
+%;background-color:transparent;">
+								<!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr><=
+td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0" style=3D"width:600px"><tr class=3D"layout-full-width" style=3D"backg=
+round-color:transparent"><![endif]-->
+								<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"=
+background-color:transparent;width:600px; border-top: 0px solid transpar=
+ent; border-left: 0px solid transparent; border-bottom: 0px solid transp=
+arent; border-right: 0px solid transparent;" valign=3D"top"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=
+=3D"padding-right: 20px; padding-left: 20px; padding-top:0px; padding-bo=
+ttom:20px;"><![endif]-->
+								<div class=3D"col num12" style=3D"min-width: 320px; max-width: 6=
+00px; display: table-cell; vertical-align: top; width: 600px;">
+									<div class=3D"col_cont" style=3D"width:100% !important;">
+										<!--[if (!mso)&(!IE)]><!-->
+										<div style=3D"border-top:0px solid transparent; border-left:0p=
+x solid transparent; border-bottom:0px solid transparent; border-right:0=
+px solid transparent; padding-top:0px; padding-bottom:20px; padding-righ=
+t: 20px; padding-left: 20px;">
+											<!--<![endif]-->
+											<div style=3D"font-size:16px;text-align:center;font-family:He=
+lvetica Neue, Helvetica, Arial, sans-serif">
+												<div class=3D"our-class">
+													<table align=3D"center" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" class=3D"mcnShareContent">
+														<tbody>
+															<tr>
+																<td align=3D"center" valign=3D"top" class=3D"mcnShareCon=
+tentItemContainer" style=3D"padding-top:9px;">
+																	<table align=3D"center" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0">
+																		<tbody>
+																			<tr>
+																				<td align=3D"left" valign=3D"top">
+
+
+
+																					<table align=3D"left" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0">
+																						<tbody>
+																							<tr>
+																								<td valign=3D"top" style=3D"padding-right:9px; p=
+adding-bottom:9px;" class=3D"mcnShareContentItemContainer">
+																									<table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" width class=3D"mcnShareContentItem" style=3D"border-collapse: s=
+eparate; border-radius: 0px;">
+																										<tbody>
+																											<tr>
+																												<td align=3D"left" valign=3D"middle" style=3D=
+"padding-top:5px; padding-right:9px; padding-bottom:5px; padding-left:9p=
+x;">
+																													<table align=3D"left" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" width>
+																														<tbody>
+																															<tr>
+																																<td align=3D"center" valign=3D"middle" w=
+idth=3D"24" class=3D"mcnShareIconContent">
+																																	<a href=3D"https://e.newsletters.cnn.co=
+m/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2M=
+TIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1Z=
+jQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19O=
+REJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cDovL3d3dy5mYWNlYm9vay5jb20vc2hhcmVy=
+L3NoYXJlci5waHA/qP3U9aHR0cHM6Ly92aWV3Lm5ld3NsZXR0ZXJzLmNubi5jb20vbWVzc2F=
+nZXMvMTYxNTk3NjE0NjEyMTA0NjVkYWYzYzI0MS9yYXc/s97fffc0986" target=3D"_bla=
+nk" data-location=3D"t39"><img border=3D"0" src=3D"https://app-rsrc.getb=
+ee.io/public/resources/social-networks-icon-sets/t-outline-circle-defaul=
+t-gray/facebook@2x.png" style=3D"display:block;" height=3D"24" alt=3D"Fa=
+cebook" title=3D"Facebook" width=3D"24"></a>
+																																</td>
+																																<td align=3D"left" valign=3D"middle" cla=
+ss=3D"mcnShareTextContent" style=3D"padding-left:5px;padding-top:5px;">
+																																	<a href=3D"https://e.newsletters.cnn.co=
+m/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2M=
+TIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1Z=
+jQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19O=
+REJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cDovL3d3dy5mYWNlYm9vay5jb20vc2hhcmVy=
+L3NoYXJlci5waHA/qP3U9aHR0cHM6Ly92aWV3Lm5ld3NsZXR0ZXJzLmNubi5jb20vbWVzc2F=
+nZXMvMTYxNTk3NjE0NjEyMTA0NjVkYWYzYzI0MS9yYXc/s97fffc0986" target style=3D=
+"color: #BBB7B7;font-family: Arial;font-size: 16px;font-weight: normal;t=
+ext-align: center;text-decoration: none;" data-location=3D"t40">Share</a=
+>
+																																</td>
+																															</tr>
+																														</tbody>
+																													</table>
+																												</td>
+																											</tr>
+																										</tbody>
+																									</table>
+																								</td>
+																								<td valign=3D"top" style=3D"padding-right:0; pad=
+ding-bottom:9px;" class=3D"mcnShareContentItemContainer">
+																									<table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" width class=3D"mcnShareContentItem" style=3D"border-collapse: s=
+eparate; border-radius: 0px;">
+																										<tbody>
+																											<tr>
+																												<td align=3D"left" valign=3D"middle" style=3D=
+"padding-top:5px; padding-right:9px; padding-bottom:5px; padding-left:9p=
+x;">
+																													<table align=3D"left" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" width>
+																														<tbody>
+																															<tr>
+																																<td align=3D"center" valign=3D"middle" w=
+idth=3D"24" class=3D"mcnShareIconContent">
+																																	<a href=3D"https://e.newsletters.cnn.co=
+m/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2M=
+TIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1Z=
+jQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19O=
+REJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cDovL3R3aXR0ZXIuY29tL2ludGVudC90d2Vl=
+dA/qP3RleHQ9OiUyMGh0dHBzOi8vdmlldy5uZXdzbGV0dGVycy5jbm4uY29tL21lc3NhZ2Vz=
+LzE2MTU5NzYxNDYxMjEwNDY1ZGFmM2MyNDEvcmF3/s9291d4d36e" target=3D"_blank" =
+data-location=3D"t41"><img alt=3D"Twitter" title=3D"Twitter" border=3D"0=
+" src=3D"https://app-rsrc.getbee.io/public/resources/social-networks-ico=
+n-sets/t-outline-circle-default-gray/twitter@2x.png" style=3D"display:bl=
+ock;" height=3D"24" width=3D"24"></a>
+																																</td>
+																																<td align=3D"left" valign=3D"middle" cla=
+ss=3D"mcnShareTextContent" style=3D"padding-left:5px;padding-top:5px;">
+																																	<a href=3D"https://e.newsletters.cnn.co=
+m/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2M=
+TIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1Z=
+jQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19O=
+REJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cDovL3R3aXR0ZXIuY29tL2ludGVudC90d2Vl=
+dA/qP3RleHQ9OiUyMGh0dHBzOi8vdmlldy5uZXdzbGV0dGVycy5jbm4uY29tL21lc3NhZ2Vz=
+LzE2MTU5NzYxNDYxMjEwNDY1ZGFmM2MyNDEvcmF3/s9291d4d36e" target style=3D"co=
+lor: #BBB7B7;font-family: Arial;font-size: 16px;font-weight: normal;text=
+-align: center;text-decoration: none;" data-location=3D"t42">Tweet</a>
+																																</td>
+																															</tr>
+																														</tbody>
+																													</table>
+																												</td>
+																											</tr>
+																										</tbody>
+																									</table>
+																								</td>
+																							</tr>
+																						</tbody>
+																					</table>
+
+
+
+
+
+
+
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class=3D"button-container" align=3D"center" style=3D"pad=
+ding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;"=
+>
+												<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0" style=3D"border-spacing: 0; border-collapse: col=
+lapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td style=3D"pad=
+ding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left:=
+ 10px" align=3D"center"><v:roundrect xmlns:v=3D"urn:schemas-microsoft-co=
+m:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"https:/=
+/e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJt=
+aWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3=
+Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/=
+HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d3cuY25=
+uLmNvbS9uZXdzbGV0dGVycw/qP3NvdXJjZT1ubF9mb290ZXI/se34d612559" style=3D"h=
+eight:46.5pt;width:435pt;v-text-anchor:middle;" arcsize=3D"0%" stroke=3D=
+"false" fillcolor=3D"#f63339"><w:anchorlock/><v:textbox inset=3D"0,0,0,0=
+"><center style=3D"color:#ffffff; font-family:Arial, sans-serif; font-si=
+ze:13px"><![endif]--><a href=3D"https://e.newsletters.cnn.com/click/EaGV=
+sZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZ=
+jNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsI=
+nJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcy=
+MDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d3cuY25uLmNvbS9uZXdzbGV0dGVycw/qP3NvdXJj=
+ZT1ubF9mb290ZXImdXRtX3Rlcm09MTYxNTk3NjE0NjEyMTA0NjVkYWYzYzI0MSZ1dG1fc291=
+cmNlPWNubl9GaXZlK1RoaW5ncytmb3IrV2VkbmVzZGF5JTJDK01hcmNoKzE3JTJDKzIwMjEm=
+dXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249MTYxNTk3NjE0NjEyMiZidF9lZT1qSWty=
+WjVzbGRZaUdPRk5xUE52WHNmdXdpJTJGckhDMk5mNHFnMFBSVndZY2xVYTVqYUw1S09ra3Vr=
+aUVvclBtemEmYnRfdHM9MTYxNTk3NjE0NjEyMg/sa089c2d1a5" target=3D"_blank" st=
+yle=3D"-webkit-text-size-adjust: none; text-decoration: none; display: b=
+lock; color: #ffffff; background-color: #f63339; border-radius: 0px; -we=
+bkit-border-radius: 0px; -moz-border-radius: 0px; width: 100%; width: ca=
+lc(100% - 2px); border-top: 1px solid #f63339; border-right: 1px solid #=
+f63339; border-bottom: 1px solid #f63339; border-left: 1px solid #f63339=
+; padding-top: 15px; padding-bottom: 15px; font-family: Arial, 'Helvetic=
+a Neue', Helvetica, sans-serif; text-align: center; mso-border-alt: none=
+; word-break: keep-all;" data-location=3D"t43"><span style=3D"padding-le=
+ft:20px;padding-right:20px;font-size:13px;display:inline-block;letter-sp=
+acing:undefined;"><span style=3D"font-size: 16px; line-height: 2; word-b=
+reak: break-word; font-family: Arial, 'Helvetica Neue', Helvetica, sans-=
+serif; mso-line-height-alt: 32px;"><span style=3D"font-size: 13px; line-=
+height: 26px;" data-mce-style=3D"font-size: 13px; line-height: 26px;">AL=
+L CNN NEWSLETTERS</span></span></span></a>
+												<!--[if mso]></center></v:textbox></v:roundrect></td></tr></=
+table><![endif]-->
+											</div>
+											<!--[if (!mso)&(!IE)]><!-->
+										</div>
+										<!--<![endif]-->
+									</div>
+								</div>
+								<!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+								<!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif=
+]-->
+							</div>
+						</div>
+					</div>
+					<div style=3D"background-color:#f63339;">
+						<div class=3D"block-grid " style=3D"min-width: 320px; max-width: 6=
+00px; overflow-wrap: break-word; word-wrap: break-word; word-break: brea=
+k-word; Margin: 0 auto; background-color: transparent;">
+							<div style=3D"border-collapse: collapse;display: table;width: 100=
+%;background-color:transparent;">
+								<!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"background-color:#f63339;"><tr><td a=
+lign=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"width:600px"><tr class=3D"layout-full-width" style=3D"backgroun=
+d-color:transparent"><![endif]-->
+								<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"=
+background-color:transparent;width:600px; border-top: 0px solid transpar=
+ent; border-left: 0px solid transparent; border-bottom: 0px solid transp=
+arent; border-right: 0px solid transparent;" valign=3D"top"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=
+=3D"padding-right: 0px; padding-left: 0px; padding-top:0px; padding-bott=
+om:0px;"><![endif]-->
+								<div class=3D"col num12" style=3D"min-width: 320px; max-width: 6=
+00px; display: table-cell; vertical-align: top; width: 600px;">
+									<div class=3D"col_cont" style=3D"width:100% !important;">
+										<!--[if (!mso)&(!IE)]><!-->
+										<div style=3D"border-top:0px solid transparent; border-left:0p=
+x solid transparent; border-bottom:0px solid transparent; border-right:0=
+px solid transparent; padding-top:0px; padding-bottom:0px; padding-right=
+: 0px; padding-left: 0px;">
+											<!--<![endif]-->
+											<div style=3D"font-size:16px;text-align:center;font-family:He=
+lvetica Neue, Helvetica, Arial, sans-serif">
+												<div class=3D"our-class">
+													<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" sty=
+le=3D"border-collapse:collapse; border:none; font-size:0px; line-height:=
+0px; height:1px;" width=3D"100%">
+														<tr>
+															<td style=3D"font-size:0px; line-height:0px; height:1px;"=
+ height=3D"1"><img src=3D"https://images.newsletters.cnn.com/images/3dfe=
+4d97843b307b4fa50e553d3f9467/editor_images/spacer.gif" alt border=3D"0" =
+height=3D"1" width=3D"1" style=3D"display:block;"></td>
+														</tr>
+													</table>
+												</div>
+											</div>
+											<!--[if (!mso)&(!IE)]><!-->
+										</div>
+										<!--<![endif]-->
+									</div>
+								</div>
+								<!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+								<!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif=
+]-->
+							</div>
+						</div>
+					</div>
+					<div style=3D"background-color:#fafafa;">
+						<div class=3D"block-grid " style=3D"min-width: 320px; max-width: 6=
+00px; overflow-wrap: break-word; word-wrap: break-word; word-break: brea=
+k-word; Margin: 0 auto; background-color: #fafafa;">
+							<div style=3D"border-collapse: collapse;display: table;width: 100=
+%;background-color:#fafafa;">
+								<!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"background-color:#fafafa;"><tr><td a=
+lign=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"width:600px"><tr class=3D"layout-full-width" style=3D"backgroun=
+d-color:#fafafa"><![endif]-->
+								<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"=
+background-color:#fafafa;width:600px; border-top: 0px solid transparent;=
+ border-left: 0px solid transparent; border-bottom: 0px solid transparen=
+t; border-right: 0px solid transparent;" valign=3D"top"><table width=3D"=
+100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"=
+padding-right: 20px; padding-left: 20px; padding-top:20px; padding-botto=
+m:20px;"><![endif]-->
+								<div class=3D"col num12" style=3D"min-width: 320px; max-width: 6=
+00px; display: table-cell; vertical-align: top; width: 600px;">
+									<div class=3D"col_cont" style=3D"width:100% !important;">
+										<!--[if (!mso)&(!IE)]><!-->
+										<div style=3D"border-top:0px solid transparent; border-left:0p=
+x solid transparent; border-bottom:0px solid transparent; border-right:0=
+px solid transparent; padding-top:20px; padding-bottom:20px; padding-rig=
+ht: 20px; padding-left: 20px;">
+											<!--<![endif]-->
+											<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left=
+: 0px; padding-top: 0px; padding-bottom: 0px; font-family: Arial, sans-s=
+erif"><![endif]-->
+											<div style=3D"color:#202020;font-family:'Helvetica Neue', Hel=
+vetica, Arial, sans-serif;line-height:1.8;padding-top:0px;padding-right:=
+0px;padding-bottom:0px;padding-left:0px;">
+												<div class=3D"txtTinyMce-wrapper" style=3D"line-height: 1.8;=
+ font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:=
+ 12px; color: #202020; mso-line-height-alt: 22px;">
+													<p style=3D"font-size: 12px; line-height: 1.8; text-align: =
+center; word-break: break-word; font-family: Helvetica Neue, Helvetica, =
+Arial, sans-serif; mso-line-height-alt: 22px; margin: 0;"><span style=3D=
+"font-size: 12px;">You are receiving this email because you subscribed t=
+o CNN's 5 Things newsletter.</span></p>
+													<p style=3D"font-size: 12px; line-height: 1.8; text-align: =
+center; word-break: break-word; font-family: Helvetica Neue, Helvetica, =
+Arial, sans-serif; mso-line-height-alt: 22px; margin: 0;"><span style=3D=
+"font-size: 12px; color: #202020;"><a style=3D"text-decoration: none; co=
+lor: #f63339;" href=3D"https://e.newsletters.cnn.com/click/EaGVsZW5AZ2Fy=
+eW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIi=
+wiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2=
+FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyM=
+Dg4MSxjbjEsaHR0cHM6Ly9mb3JtLmNubi5jb20vdW5zdWJzY3JpYmU/qP2VuY2F1PTMyYjlr=
+MnNRQVdYQzZHN3g2akxYTWxkdk1EYVo0alhxYktwJTJGJTJGYno3RU03TXdib0hMMnNUNWxx=
+SkhZSUklMEFPZHFJJTBBJnNpZD1maXZlX3RoaW5ncyZ1dG1fdGVybT0xNjE1OTc2MTQ2MTIx=
+MDQ2NWRhZjNjMjQxJnV0bV9zb3VyY2U9Y25uX0ZpdmUrVGhpbmdzK2ZvcitXZWRuZXNkYXkl=
+MkMrTWFyY2grMTclMkMrMjAyMSZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj0xNjE1=
+OTc2MTQ2MTIyJmJ0X2VlPWpJa3JaNXNsZFlpR09GTnFQTnZYc2Z1d2klMkZySEMyTmY0cWcw=
+UFJWd1ljbFVhNWphTDVLT2trdWtpRW9yUG16YSZidF90cz0xNjE1OTc2MTQ2MTIy/sd8ff0d=
+f503" target=3D"_blank" rel=3D"noopener" data-location=3D"t44">Unsubscri=
+be from this newsletter</a></span><span style=3D"font-size: 12px;">=C2=A0=
+</span></p>
+													<p style=3D"font-size: 12px; line-height: 1.8; text-align: =
+center; word-break: break-word; font-family: Helvetica Neue, Helvetica, =
+Arial, sans-serif; mso-line-height-alt: 22px; margin: 0;">=C2=A0</p>
+													<p style=3D"font-size: 12px; line-height: 1.8; text-align: =
+center; word-break: break-word; font-family: Helvetica Neue, Helvetica, =
+Arial, sans-serif; mso-line-height-alt: 22px; margin: 0;">Want to easily=
+ manage your newsletter subscriptions? <a style=3D"text-decoration: none=
+; color: #f63339;" href=3D"https://e.newsletters.cnn.com/click/EaGVsZW5A=
+Z2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMj=
+QxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIj=
+oiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxM=
+zgyMDg4MSxjbjEsaHR0cHM6Ly93d3cuY25uLmNvbS9hY2NvdW50L3JlZ2lzdGVy/qP3NvdXJ=
+jZT1ubF9mb290ZXImdXRtX3Rlcm09MTYxNTk3NjE0NjEyMTA0NjVkYWYzYzI0MSZ1dG1fc29=
+1cmNlPWNubl9GaXZlK1RoaW5ncytmb3IrV2VkbmVzZGF5JTJDK01hcmNoKzE3JTJDKzIwMjE=
+mdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249MTYxNTk3NjE0NjEyMiZidF9lZT1qSWt=
+yWjVzbGRZaUdPRk5xUE52WHNmdXdpJTJGckhDMk5mNHFnMFBSVndZY2xVYTVqYUw1S09ra3V=
+raUVvclBtemEmYnRfdHM9MTYxNTk3NjE0NjEyMg/sefc7f2190c" target=3D"_blank" r=
+el=3D"noopener" data-location=3D"t45">Create your account.</a></p>
+													<p style=3D"font-size: 12px; line-height: 1.8; text-align: =
+center; word-break: break-word; font-family: Helvetica Neue, Helvetica, =
+Arial, sans-serif; mso-line-height-alt: 22px; margin: 0;">=C2=A0</p>
+													<p style=3D"font-size: 12px; line-height: 1.8; text-align: =
+center; word-break: break-word; font-family: Helvetica Neue, Helvetica, =
+Arial, sans-serif; mso-line-height-alt: 22px; margin: 0;"><span style=3D=
+"font-size: 12px; color: #202020;">Like what you see? Don't like what yo=
+u see?<a style=3D"text-decoration: none; color: #f63339;" title=3D"5thin=
+gs@cnn.com" href=3D"mailto:5things@cnn.com?subject=3DFeedback" target=3D=
+"_blank" rel=3D"noopener" data-location=3D"t46"> Let us know</a>. We're =
+all about self improvement.</span></p>
+													<p style=3D"font-size: 12px; line-height: 1.8; text-align: =
+center; word-break: break-word; font-family: Helvetica Neue, Helvetica, =
+Arial, sans-serif; mso-line-height-alt: 22px; margin: 0;"><span style=3D=
+"font-size: 12px; color: #202020;">Did a friend forward you this newslet=
+ter? <a style=3D"text-decoration: none; color: #f63339;" href=3D"https:/=
+/e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbnVmYWN0dXJpbmcuY29t/CeyJt=
+aWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3QiOiJjbm4tNzIyNGI1Y2E4M2E3=
+Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1hbnVmYWN0dXJpbmcuY29tIn0/=
+HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSxjbjEsaHR0cHM6Ly93d3cuY25=
+uLmNvbS9zcGVjaWFscy81LXRoaW5ncw/qP3NvdXJjZT1ubF9mb290ZXJfZm9yd2FyZCZ1dG1=
+fdGVybT0xNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxJnV0bV9zb3VyY2U9Y25uX0ZpdmUrVGh=
+pbmdzK2ZvcitXZWRuZXNkYXklMkMrTWFyY2grMTclMkMrMjAyMSZ1dG1fbWVkaXVtPWVtYWl=
+sJnV0bV9jYW1wYWlnbj0xNjE1OTc2MTQ2MTIyJmJ0X2VlPWpJa3JaNXNsZFlpR09GTnFQTnZ=
+Yc2Z1d2klMkZySEMyTmY0cWcwUFJWd1ljbFVhNWphTDVLT2trdWtpRW9yUG16YSZidF90cz0=
+xNjE1OTc2MTQ2MTIy/s155403fe67" target=3D"_blank" rel=3D"noopener" data-l=
+ocation=3D"t47">Sign yourself up</a>!</span></p>
+												</div>
+											</div>
+											<!--[if mso]></td></tr></table><![endif]-->
+											<table class=3D"social_icons" cellpadding=3D"0" cellspacing=3D=
+"0" width=3D"100%" role=3D"presentation" style=3D"table-layout: fixed; v=
+ertical-align: top; border-spacing: 0; border-collapse: collapse; mso-ta=
+ble-lspace: 0pt; mso-table-rspace: 0pt;" valign=3D"top">
+												<tbody>
+													<tr style=3D"vertical-align: top;" valign=3D"top">
+														<td style=3D"word-break: break-word; vertical-align: top; =
+padding-top: 20px; padding-right: 0px; padding-bottom: 20px; padding-lef=
+t: 0px;" valign=3D"top">
+															<table class=3D"social_table" align=3D"center" cellpaddin=
+g=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"table-layout: f=
+ixed; vertical-align: top; border-spacing: 0; border-collapse: collapse;=
+ mso-table-tspace: 0; mso-table-rspace: 0; mso-table-bspace: 0; mso-tabl=
+e-lspace: 0;" valign=3D"top">
+																<tbody>
+																	<tr style=3D"vertical-align: top; display: inline-block=
+; text-align: center;" align=3D"center" valign=3D"top">
+																		<td style=3D"word-break: break-word; vertical-align: t=
+op; padding-bottom: 5px; padding-right: 10px; padding-left: 0;" valign=3D=
+"top"><a href=3D"https://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbn=
+VmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3Qi=
+OiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1h=
+bnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSx=
+jbjEsaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL2Nubg/s6d5c3b870f" target=3D"_blan=
+k" data-location=3D"t48"><img width=3D"32" height=3D"32" src=3D"https://=
+d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets=
+/t-outline-circle-dark-gray/facebook@2x.png" alt=3D"Facebook" title=3D"F=
+acebook" style=3D"text-decoration: none; -ms-interpolation-mode: bicubic=
+; height: auto; border: 0; display: block;"></a></td>
+																		<td style=3D"word-break: break-word; vertical-align: t=
+op; padding-bottom: 5px; padding-right: 10px; padding-left: 0;" valign=3D=
+"top"><a href=3D"https://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbn=
+VmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3Qi=
+OiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1h=
+bnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSx=
+jbjEsaHR0cHM6Ly90d2l0dGVyLmNvbS9jbm4/sab573d5041" target=3D"_blank" data=
+-location=3D"t49"><img width=3D"32" height=3D"32" src=3D"https://d2fi4ri=
+5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/t-outl=
+ine-circle-dark-gray/twitter@2x.png" alt=3D"Twitter" title=3D"Twitter" s=
+tyle=3D"text-decoration: none; -ms-interpolation-mode: bicubic; height: =
+auto; border: 0; display: block;"></a></td>
+																		<td style=3D"word-break: break-word; vertical-align: t=
+op; padding-bottom: 5px; padding-right: 10px; padding-left: 0;" valign=3D=
+"top"><a href=3D"https://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbn=
+VmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3Qi=
+OiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1h=
+bnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSx=
+jbjEsaHR0cHM6Ly9pbnN0YWdyYW0uY29tL2Nubg/s66001c5fec" target=3D"_blank" d=
+ata-location=3D"t50"><img width=3D"32" height=3D"32" src=3D"https://d2fi=
+4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/t-o=
+utline-circle-dark-gray/instagram@2x.png" alt=3D"Instagram" title=3D"Ins=
+tagram" style=3D"text-decoration: none; -ms-interpolation-mode: bicubic;=
+ height: auto; border: 0; display: block;"></a></td>
+																		<td style=3D"word-break: break-word; vertical-align: t=
+op; padding-bottom: 5px; padding-right: 10px; padding-left: 0;" valign=3D=
+"top"><a href=3D"https://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbn=
+VmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3Qi=
+OiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1h=
+bnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSx=
+jbjEsaHR0cHM6Ly9vcGVuLnNwb3RpZnkuY29tL3Nob3cvMXhHU0xEZ1ZZeEx5Ym1YcHVpNnd=
+3bw/qP3NpPXUyZFcwZEhCUUNLQzZ0MjVnUmxBY2c/s24c6f68612" target=3D"_blank" =
+data-location=3D"t51"><img width=3D"32" height=3D"32" src=3D"https://d2f=
+i4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/t-=
+outline-circle-dark-gray/spotify@2x.png" alt=3D"Spotify" title=3D"Spotif=
+y" style=3D"text-decoration: none; -ms-interpolation-mode: bicubic; heig=
+ht: auto; border: 0; display: block;"></a></td>
+																		<td style=3D"word-break: break-word; vertical-align: t=
+op; padding-bottom: 5px; padding-right: 10px; padding-left: 0;" valign=3D=
+"top"><a href=3D"https://e.newsletters.cnn.com/click/EaGVsZW5AZ2FyeW1hbn=
+VmYWN0dXJpbmcuY29t/CeyJtaWQiOiIxNjE1OTc2MTQ2MTIxMDQ2NWRhZjNjMjQxIiwiY3Qi=
+OiJjbm4tNzIyNGI1Y2E4M2E3Y2IyNGVmYjI4Zjc4ZGY1ZjQ1NDItMSIsInJkIjoiZ2FyeW1h=
+bnVmYWN0dXJpbmcuY29tIn0/HWkhfQ05OX2lfTmV3c19OREJBTjAzMTcyMDIxMzgyMDg4MSx=
+jbjEsaHR0cHM6Ly93d3cuY25uLmNvbS9zcGVjaWFscy81LXRoaW5ncw/qP3V0bV90ZXJtPTE=
+2MTU5NzYxNDYxMjEwNDY1ZGFmM2MyNDEmdXRtX3NvdXJjZT1jbm5fRml2ZStUaGluZ3MrZm9=
+yK1dlZG5lc2RheSUyQytNYXJjaCsxNyUyQysyMDIxJnV0bV9tZWRpdW09ZW1haWwmdXRtX2N=
+hbXBhaWduPTE2MTU5NzYxNDYxMjImYnRfZWU9aklrclo1c2xkWWlHT0ZOcVBOdlhzZnV3aSU=
+yRnJIQzJOZjRxZzBQUlZ3WWNsVWE1amFMNUtPa2t1a2lFb3JQbXphJmJ0X3RzPTE2MTU5NzY=
+xNDYxMjI/s01792c53c2" target=3D"_blank" data-location=3D"t52"><img width=
+=3D"32" height=3D"32" src=3D"https://d2fi4ri5dhpqd1.cloudfront.net/publi=
+c/resources/social-networks-icon-sets/t-outline-circle-dark-gray/website=
+@2x.png" alt=3D"Web Site" title=3D"Web Site" style=3D"text-decoration: n=
+one; -ms-interpolation-mode: bicubic; height: auto; border: 0; display: =
+block;"></a></td>
+																	</tr>
+																</tbody>
+															</table>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left=
+: 0px; padding-top: 0px; padding-bottom: 0px; font-family: Arial, sans-s=
+erif"><![endif]-->
+											<div style=3D"color:#202020;font-family:'Helvetica Neue', Hel=
+vetica, Arial, sans-serif;line-height:1.2;padding-top:0px;padding-right:=
+0px;padding-bottom:0px;padding-left:0px;">
+												<div class=3D"txtTinyMce-wrapper" style=3D"font-family: 'Hel=
+vetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; line-height=
+: 1.2; color: #202020; mso-line-height-alt: 14px;">
+													<p style=3D"font-size: 14px; line-height: 1.2; text-align: =
+center; word-break: break-word; font-family: Helvetica Neue, Helvetica, =
+Arial, sans-serif; mso-line-height-alt: 17px; margin: 0;"><strong><span =
+style=3D"font-size: 12px;">Our mailing address is:</span></strong><br><s=
+pan style=3D"font-size: 12px;">One CNN Center Atlanta, GA 30303</span></=
+p>
+													<p style=3D"font-size: 14px; line-height: 1.2; text-align: =
+center; word-break: break-word; font-family: Helvetica Neue, Helvetica, =
+Arial, sans-serif; mso-line-height-alt: 17px; margin: 0;">=C2=A0</p>
+													<p style=3D"font-size: 14px; line-height: 1.2; text-align: =
+center; word-break: break-word; font-family: Helvetica Neue, Helvetica, =
+Arial, sans-serif; mso-line-height-alt: 17px; margin: 0;"><em><span styl=
+e=3D"font-size: 12px;">Copyright =C2=A9 2021 Cable News Network, Inc., A=
+ll rights reserved.</span></em></p>
+												</div>
+											</div>
+											<!--[if mso]></td></tr></table><![endif]-->
+											<!--[if (!mso)&(!IE)]><!-->
+										</div>
+										<!--<![endif]-->
+									</div>
+								</div>
+								<!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+								<!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif=
+]-->
+							</div>
+						</div>
+					</div>
+					<!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<!--[if (IE)]></div><![endif]-->
+</body>
+
+</html>
+
+--==5c1d2a8100ea06d7dae4e41eb89d6a3a--
+
+--------------------------140efc8d841da7c9--
+

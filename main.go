@@ -19,10 +19,11 @@ import (
 var cfg ConfigOptions
 
 type ConfigOptions struct {
-	SnfPort    string `env:"SNIFFERFY_SNFPORT" env-default:"9001"`
-	HttpPort   string `env:"SNIFFERFY_HTTPPORT" env-default:"8080"`
-	WorkingDir string `env:"SNIFFERFY_WORKINGDIR" env-default:"/usr/share/snf-server/storage/"`
-	LogLevel   string `env:"SNIFFERFY_LOGLEVEL" env-default:"info"`
+	SnfPort    string `env:"SNFPORT" env-default:"9001"`
+	SnfHost    string `env:"SNFHOST" env-default:"127.0.0.1"`
+	HttpPort   string `env:"HTTPPORT" env-default:"8080"`
+	WorkingDir string `env:"WORKINGDIR" env-default:"/usr/share/snf-server/storage/"`
+	LogLevel   string `env:"LOGLEVEL" env-default:"info"`
 }
 
 type XciResult struct {
@@ -121,7 +122,7 @@ type XciResult struct {
 }
 
 func httpHealth(w http.ResponseWriter, r *http.Request) {
-	_, err := connInit()
+	conn, err := connInit()
 	if err != nil {
 		log.Error(err)
 		writeHttpError(w, fmt.Sprintf("%v", err))
@@ -132,7 +133,9 @@ func httpHealth(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	result := "{\"result\": alive}"
 
+	log.Debug(result)
 	io.WriteString(w, result)
+	defer conn.Close()
 }
 
 func httpScan(w http.ResponseWriter, r *http.Request) {
@@ -169,7 +172,7 @@ func httpScan(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	tmpFile.Write(fileBytes)
-	log.Debug("saved file %+v as %+v, %+v bytes", handler.Filename, tmpFile.Name(), handler.Size)
+	log.Debug("saved file ", handler.Filename, "as ", tmpFile.Name(), "size: ", handler.Size, " bytes")
 
 	result, err := snifferScan(tmpFile.Name(), ip, l, x)
 
@@ -184,11 +187,13 @@ func httpScan(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusOK)
 		io.WriteString(w, result)
+		os.Remove(tmpFile.Name())
 		return
 	} else {
+		log.Error(err)
 		writeHttpError(w, fmt.Sprintf("%v", err))
+		os.Remove(tmpFile.Name())
 	}
-
 	defer os.Remove(tmpFile.Name())
 }
 
@@ -197,6 +202,7 @@ func httpTestIp(w http.ResponseWriter, r *http.Request) {
 	ip := r.FormValue("ip")
 
 	if ip == "" {
+		log.Error("must include ip to search")
 		writeHttpError(w, fmt.Sprintf("must include ip to search"))
 		return
 	}
@@ -326,7 +332,9 @@ func sendXci(cmd string) ([]byte, error) {
 }
 
 func connInit() (net.Conn, error) {
-	tcpAddr, err := net.ResolveTCPAddr("tcp", "localhost:"+cfg.SnfPort)
+	log.Debug(cfg.SnfHost + ":" + cfg.SnfPort)
+
+	tcpAddr, err := net.ResolveTCPAddr("tcp", cfg.SnfHost+":"+cfg.SnfPort)
 	c, err := net.DialTCP("tcp", nil, tcpAddr)
 
 	if err != nil {

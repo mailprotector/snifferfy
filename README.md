@@ -1,16 +1,20 @@
 # snifferfy
 A simple web proxy for sniffer written in go
-
 ## How it works
 Snifferfy sets up a web server that translates multipart form POSTs into sniffer XCI calls and returns json-formatted results to the web client.
 
 ![alt text](assets/snifferfy.png "diagram")
 
+# Build
+`env GOOS=linux GOARCH=amd64 go build -o bin/snifferfy_0.0.1_linux_amd64`
+
+
+# Run
 ## Configuration
-* `SNIFFERFY_SNFPORT` (default: 9001)
-* `SNIFFERFY_HTTPPORT` (default: 8080)
-* `SNIFFERFY_WORKINGDIR` (default: /usr/share/snf-server/storage/)
-* `SNIFFERFY_LOGLEVEL` (default: info)
+* `SNFPORT` (default: 9001)
+* `HTTPPORT` (default: 8080)
+* `WORKINGDIR` (default: /usr/share/snf-server/storage/)
+* `LOGLEVEL` (default: info)
 
 ## Endpoints
 
