@@ -139,22 +139,19 @@ func httpHealth(w http.ResponseWriter, r *http.Request) {
 }
 
 func httpScan(w http.ResponseWriter, r *http.Request) {
-	r.ParseMultipartForm(10 << 20)
-	log.Debug("raw form data: ", r)
-	l := r.FormValue("logEnable")
-	x := r.FormValue("xhdrEnable")
-	ip := r.FormValue("ip")
+	l := r.Header.Get("logEnable")
+	x := r.Header.Get("xhdrEnable")
+	ip := r.Header.Get("ip")
 
 	l = setDefault(l, "yes")
 	x = setDefault(x, "no")
 
-	file, handler, err := r.FormFile("file")
+	reqBody, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		log.Error(err)
 		writeHttpError(w, fmt.Sprintf("%v", err))
 		return
 	}
-	defer file.Close()
 
 	tmpFile, err := ioutil.TempFile(cfg.WorkingDir, "*")
 
@@ -165,22 +162,11 @@ func httpScan(w http.ResponseWriter, r *http.Request) {
 	}
 	defer tmpFile.Close()
 
-	fileBytes, err := ioutil.ReadAll(file)
-	if err != nil {
-		log.Error(err)
-		writeHttpError(w, fmt.Sprintf("%v", err))
-		return
-	}
-	tmpFile.Write(fileBytes)
-	log.Debug("saved file ", handler.Filename, "as ", tmpFile.Name(), "size: ", handler.Size, " bytes")
+	tmpFile.Write(reqBody)
+	log.Debug("writing file ", tmpFile.Name(), " size: ", len(reqBody))
+	log.Debug("ip: ", ip)
 
 	result, err := snifferScan(tmpFile.Name(), ip, l, x)
-
-	if err != nil {
-		log.Error(err)
-		writeHttpError(w, fmt.Sprintf("%v", err))
-		return
-	}
 
 	if result != "" {
 		log.Info(result)
@@ -188,23 +174,26 @@ func httpScan(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusOK)
 		io.WriteString(w, result)
 		os.Remove(tmpFile.Name())
+		log.Debug("deleted temp file: ", tmpFile.Name())
 		return
 	} else {
 		log.Error(err)
 		writeHttpError(w, fmt.Sprintf("%v", err))
 		os.Remove(tmpFile.Name())
+		log.Debug("deleted temp file: ", tmpFile.Name())
 	}
 	defer os.Remove(tmpFile.Name())
 }
 
 func httpTestIp(w http.ResponseWriter, r *http.Request) {
-	r.ParseMultipartForm(10 << 20)
-	ip := r.FormValue("ip")
+	ip := r.Header.Get("ip")
 
 	if ip == "" {
 		log.Error("must include ip to search")
 		writeHttpError(w, fmt.Sprintf("must include ip to search"))
 		return
+	} else {
+		log.Debug("testing ip: ", ip)
 	}
 
 	result, err := snifferTestIp(ip)
@@ -222,8 +211,7 @@ func httpTestIp(w http.ResponseWriter, r *http.Request) {
 }
 
 func httpStatus(w http.ResponseWriter, r *http.Request) {
-	r.ParseMultipartForm(10 << 20)
-	interval := r.FormValue("interval")
+	interval := r.Header.Get("interval")
 
 	if (interval != "second") && (interval != "minute") && (interval != "hour") {
 		writeHttpError(w, fmt.Sprintf("must include interval"))
