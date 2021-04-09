@@ -28,14 +28,14 @@ type ConfigOptions struct {
 
 type XciResult struct {
 	IpResult struct {
-		Ip          string `xml:"ip,attr"`
-		Type        string `xml:"type,attr"`
-		Range       string `xml:"range,attr"`
-		Code        int    `xml:"code,attr"`
-		Probability int    `xml:"p,attr"`
-		Confidence  int    `xml:"c,attr"`
-		Bad         int    `xml:"b,attr"`
-		Good        int    `xml:"g,attr"`
+		Ip          string     `xml:"ip,attr"`
+		Type        string     `xml:"type,attr"`
+		Range       string     `xml:"range,attr"`
+		Code        int    	   `xml:"code,attr"`
+		Probability float32    `xml:"p,attr"`
+		Confidence  float32    `xml:"c,attr"`
+		Bad         int        `xml:"b,attr"`
+		Good        int        `xml:"g,attr"`
 	} `xml:"xci>gbudb>result"`
 	ScanResult struct {
 		Code int    `xml:"code,attr"`
