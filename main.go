@@ -28,14 +28,14 @@ type ConfigOptions struct {
 
 type XciResult struct {
 	IpResult struct {
-		Ip          string     `xml:"ip,attr"`
-		Type        string     `xml:"type,attr"`
-		Range       string     `xml:"range,attr"`
-		Code        int    	   `xml:"code,attr"`
-		Probability float32    `xml:"p,attr"`
-		Confidence  float32    `xml:"c,attr"`
-		Bad         int        `xml:"b,attr"`
-		Good        int        `xml:"g,attr"`
+		Ip          string  `xml:"ip,attr"`
+		Type        string  `xml:"type,attr"`
+		Range       string  `xml:"range,attr"`
+		Code        int     `xml:"code,attr"`
+		Probability float32 `xml:"p,attr"`
+		Confidence  float32 `xml:"c,attr"`
+		Bad         int     `xml:"b,attr"`
+		Good        int     `xml:"g,attr"`
 	} `xml:"xci>gbudb>result"`
 	ScanResult struct {
 		Code int    `xml:"code,attr"`
@@ -340,20 +340,23 @@ func connWrite(xci string, c net.Conn) {
 }
 
 func connRead(c net.Conn) (int, []byte) {
-	buffer := make([]byte, 4096)
+	buffer := make([]byte, 8192)
 	totalBytes := 0
 
 	for {
 		n, err := c.Read(buffer)
-		totalBytes += n
-		log.Debug("connread totalBytes:", totalBytes)
+		if n == 0 {
+			break
+		}
 		if err != nil {
 			if err != io.EOF {
 				log.Error("read from snf-server failed: ", err.Error())
 			}
 			break
 		}
+		totalBytes += n
 	}
+	log.Debug("connread totalBytes:", totalBytes)
 	return totalBytes, buffer
 }
 
