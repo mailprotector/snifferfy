@@ -3,20 +3,19 @@ version: "3.8"
 services:
   app:
     build: .
-    depends_on:
-      - sniffer
+    platform: linux/amd64
     ports:
-      - "8080:8080"
+      - "39001:8080"
     volumes:
       - storage:/usr/share/snf-server/storage/
   sniffer:
-    image: sniffer:latest
+    image: public.ecr.aws/mailprotector/sniffer:latest
+    platform: linux/amd64
     volumes:
       - storage:/usr/share/snf-server/storage/
     environment:
-      - LICENSE='ouqpmlwq'
-      - AUTH='gfbyrubr83kga2i5'
-    expose:
-      - "9001"
+      - LICENSE=ouqpmlwq
+      - AUTH=gfbyrubr83kga2i5
+    network_mode: "service:app"
 volumes:
   storage:
