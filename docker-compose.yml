@@ -3,9 +3,11 @@ version: "3.8"
 services:
   app:
     build: .
+    environment:
+      - HTTPPORT=8081
     platform: linux/amd64
     ports:
-      - "39001:8080"
+      - "39001:8081"
     volumes:
       - storage:/usr/share/snf-server/storage/
   sniffer:

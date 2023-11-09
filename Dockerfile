@@ -16,4 +16,4 @@ COPY --from=build /build/app .
 RUN apk --no-cache add curl
 
 ENTRYPOINT ["./app"]
-EXPOSE 8080
+EXPOSE 8081

@@ -168,21 +168,19 @@ func httpScan(w http.ResponseWriter, r *http.Request) {
 
 	result, err := snifferScan(tmpFile.Name(), ip, l, x)
 
+	os.Remove(tmpFile.Name())
+	log.Debug("deleted temp file: ", tmpFile.Name())
+
 	if result != "" {
 		log.Info(result)
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusOK)
 		io.WriteString(w, result)
-		os.Remove(tmpFile.Name())
-		log.Debug("deleted temp file: ", tmpFile.Name())
 		return
 	} else {
 		log.Error(err)
 		writeHttpError(w, fmt.Sprintf("%v", err))
-		os.Remove(tmpFile.Name())
-		log.Debug("deleted temp file: ", tmpFile.Name())
 	}
-	defer os.Remove(tmpFile.Name())
 }
 
 func httpTestIp(w http.ResponseWriter, r *http.Request) {
