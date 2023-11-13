@@ -19,11 +19,12 @@ import (
 var cfg ConfigOptions
 
 type ConfigOptions struct {
-	SnfPort    string `env:"SNFPORT" env-default:"9001"`
-	SnfHost    string `env:"SNFHOST" env-default:"127.0.0.1"`
-	HttpPort   string `env:"HTTPPORT" env-default:"8080"`
-	WorkingDir string `env:"WORKINGDIR" env-default:"/usr/share/snf-server/storage/"`
-	LogLevel   string `env:"LOGLEVEL" env-default:"info"`
+	SnfPort    string  `env:"SNFPORT" env-default:"9001"`
+	SnfHost    string  `env:"SNFHOST" env-default:"127.0.0.1"`
+	SnfTimeout float32 `env:"SNFTIMEOUT" env-default:"5"`
+	HttpPort   string  `env:"HTTPPORT" env-default:"8080"`
+	WorkingDir string  `env:"WORKINGDIR" env-default:"/usr/share/snf-server/storage/"`
+	LogLevel   string  `env:"LOGLEVEL" env-default:"info"`
 }
 
 type XciResult struct {
@@ -320,8 +321,8 @@ func sendXci(cmd string) ([]byte, error) {
 func connInit() (net.Conn, error) {
 	log.Debug(cfg.SnfHost + ":" + cfg.SnfPort)
 
-	tcpAddr, err := net.ResolveTCPAddr("tcp", cfg.SnfHost+":"+cfg.SnfPort)
-	c, err := net.DialTCP("tcp", nil, tcpAddr)
+	d := net.Dialer{Timeout: time.Second * 5}
+	c, err := d.Dial("tcp", cfg.SnfHost+":"+cfg.SnfPort)
 
 	if err != nil {
 		return nil, err
@@ -338,7 +339,7 @@ func connWrite(xci string, c net.Conn) {
 }
 
 func connRead(c net.Conn) (int, []byte) {
-	buffer := make([]byte, 8192)
+	buffer := make([]byte, 16384)
 	totalBytes := 0
 
 	for {
