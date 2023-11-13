@@ -339,7 +339,7 @@ func connWrite(xci string, c net.Conn) {
 }
 
 func connRead(c net.Conn) (int, []byte) {
-	buffer := make([]byte, 16384)
+	buffer := make([]byte, 65536)
 	totalBytes := 0
 
 	for {
