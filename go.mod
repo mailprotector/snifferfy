@@ -9,4 +9,5 @@ require (
 	golang.org/x/sys v0.0.0-20210223095934-7937bea0104d // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	olympos.io/encoding/edn v0.0.0-20201019073823-d3554ca0b0a3 // indirect
+	github.com/google/uuid v1.3.0
 )

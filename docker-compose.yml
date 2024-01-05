@@ -5,6 +5,7 @@ services:
     build: .
     environment:
       - HTTPPORT=8081
+      - LOGLEVEL=debug
     platform: linux/amd64
     ports:
       - "39001:8081"

@@ -5,12 +5,12 @@ import (
 	"encoding/xml"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"net"
 	"net/http"
 	"os"
 	"time"
 
+	"github.com/google/uuid"
 	"github.com/gorilla/mux"
 	"github.com/ilyakaznacheev/cleanenv"
 	log "github.com/sirupsen/logrus"
@@ -123,10 +123,13 @@ type XciResult struct {
 }
 
 func httpHealth(w http.ResponseWriter, r *http.Request) {
-	conn, err := connInit()
+	uuid := uuid.New()
+	reqId := uuid.String()
+	_, err := snifferReport(reqId, "5")
+
 	if err != nil {
-		log.Error(err)
-		writeHttpError(w, fmt.Sprintf("%v", err))
+		writeLogLine("error", "httpHealth", reqId, err.Error())
+		writeHttpError(reqId, w, fmt.Sprintf("%v", err))
 		return
 	}
 
@@ -134,118 +137,136 @@ func httpHealth(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	result := "{\"result\": alive}"
 
-	log.Debug(result)
+	writeLogLine("debug", "httpHealth", reqId, result)
 	io.WriteString(w, result)
-	defer conn.Close()
 }
 
 func httpScan(w http.ResponseWriter, r *http.Request) {
+	uuid := uuid.New()
+	reqId := uuid.String()
 	l := r.Header.Get("logEnable")
 	x := r.Header.Get("xhdrEnable")
 	ip := r.Header.Get("ip")
+	id := r.Header.Get("requestId")
 
 	l = setDefault(l, "yes")
 	x = setDefault(x, "no")
 
-	reqBody, err := ioutil.ReadAll(r.Body)
+	if id != "" {
+		reqId = id
+	}
+
+	reqBody, err := io.ReadAll(r.Body)
+
 	if err != nil {
-		log.Error(err)
-		writeHttpError(w, fmt.Sprintf("%v", err))
+		writeLogLine("error", "httpScan", reqId, err.Error())
+		writeHttpError(reqId, w, fmt.Sprintf("%v", err.Error()))
 		return
 	}
 
-	tmpFile, err := ioutil.TempFile(cfg.WorkingDir, "*")
+	tmpFile, err := os.CreateTemp(cfg.WorkingDir, "*")
 
 	if err != nil {
-		log.Error(err)
-		writeHttpError(w, fmt.Sprintf("%v", err))
+		writeLogLine("error", "httpScan", reqId, err.Error())
+		writeHttpError(reqId, w, fmt.Sprintf("%v", err.Error()))
 		return
 	}
-	defer tmpFile.Close()
 
 	tmpFile.Write(reqBody)
-	log.Debug("writing file ", tmpFile.Name(), " size: ", len(reqBody))
-	log.Debug("ip: ", ip)
+	tmpFile.Close()
+	writeLogLine("debug", "httpScan", reqId, fmt.Sprintf("{\"file_write\":\"%v\"}", tmpFile.Name()))
+	writeLogLine("debug", "httpScan", reqId, fmt.Sprintf("{\"ip\":\"%v\"}", ip))
 
-	result, err := snifferScan(tmpFile.Name(), ip, l, x)
+	result, err := snifferScan(reqId, tmpFile.Name(), ip, l, x)
 
+	writeLogLine("debug", "httpScan", reqId, fmt.Sprintf("{\"file_delete\":\"%v\"}", tmpFile.Name()))
 	os.Remove(tmpFile.Name())
-	log.Debug("deleted temp file: ", tmpFile.Name())
 
 	if result != "" {
-		log.Info(result)
+		writeLogLine("info", "httpScan", reqId, result)
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusOK)
 		io.WriteString(w, result)
 		return
 	} else {
-		log.Error(err)
-		writeHttpError(w, fmt.Sprintf("%v", err))
+		writeLogLine("error", "httpScan", reqId, err.Error())
+		writeHttpError(reqId, w, fmt.Sprintf("%v", err.Error()))
 	}
 }
 
 func httpTestIp(w http.ResponseWriter, r *http.Request) {
+	uuid := uuid.New()
+	reqId := uuid.String()
 	ip := r.Header.Get("ip")
+	id := r.Header.Get("requestId")
+
+	if id != "" {
+		reqId = id
+	}
 
 	if ip == "" {
-		log.Error("must include ip to search")
-		writeHttpError(w, fmt.Sprintf("must include ip to search"))
+		writeLogLine("error", "httpTestIp", reqId, "must include ip to search")
+		writeHttpError(reqId, w, fmt.Sprintf("must include ip to search"))
 		return
 	} else {
-		log.Debug("testing ip: ", ip)
+		writeLogLine("debug", "httpTestIp", reqId, fmt.Sprintf("{\"ip\":\"%v\"}", ip))
 	}
 
-	result, err := snifferTestIp(ip)
+	result, err := snifferTestIp(reqId, ip)
 
 	if err != nil {
-		log.Error(err)
-		writeHttpError(w, fmt.Sprintf("%v", err))
+		writeLogLine("error", "httpTestIp", reqId, err.Error())
+		writeHttpError(reqId, w, fmt.Sprintf("%v", err.Error()))
 		return
 	}
 
-	log.Info(result)
+	writeLogLine("info", "httpTestIp", reqId, result)
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 	io.WriteString(w, result)
 }
 
 func httpStatus(w http.ResponseWriter, r *http.Request) {
+	uuid := uuid.New()
+	reqId := uuid.String()
 	interval := r.Header.Get("interval")
 
 	if (interval != "second") && (interval != "minute") && (interval != "hour") {
-		writeHttpError(w, fmt.Sprintf("must include interval"))
+		writeHttpError(reqId, w, fmt.Sprintf("must include interval"))
+		writeLogLine("error", "httpStatus", reqId, "must include interval")
 		return
 	}
 
-	result, err := snifferReport(interval)
+	result, err := snifferReport(reqId, interval)
 
 	if err != nil {
-		log.Error(err)
-		writeHttpError(w, fmt.Sprintf("%v", err))
+		writeLogLine("error", "httpStatus", reqId, err.Error())
+		writeHttpError(reqId, w, fmt.Sprintf("%v", err))
 		return
 	}
 
-	log.Info(result)
+	writeLogLine("info", "httpStatus", reqId, result)
 	io.WriteString(w, result)
 }
 
-func snifferTestIp(ip string) (string, error) {
+func snifferTestIp(reqId string, ip string) (string, error) {
 	xci := fmt.Sprintf("<snf><xci><gbudb><test ip=\"%v\"/></gbudb></xci></snf>", ip)
 
-	log.Debug("sending xci command: ", xci)
-	r, err := sendXci(xci)
+	writeLogLine("debug", "snifferTestIp", reqId, fmt.Sprintf("{\"command\":\"%v\"}", xci))
+	r, err := sendXci(reqId, xci)
 
 	if err != nil {
+		writeLogLine("error", "snifferTestIp", reqId, err.Error())
 		return "", err
 	}
 
-	log.Debug("received xci response: ", string(r))
-	result := XciToJson(r, "testip")
+	writeLogLine("debug", "snifferTestIp", reqId, fmt.Sprintf("{\"response\":\"%v\"}", string(r)))
+	result := XciToJson(reqId, r, "testip")
 
 	return result, nil
 }
 
-func snifferScan(file string, ip string, l string, x string) (string, error) {
+func snifferScan(reqId string, file string, ip string, l string, x string) (string, error) {
 	var xci string
 
 	if ip == "" {
@@ -254,42 +275,43 @@ func snifferScan(file string, ip string, l string, x string) (string, error) {
 		xci = fmt.Sprintf("<snf><xci><scanner><scan xhdr=\"%v\" log=\"%v\" file=\"%v\" ip=\"%v\"/></scanner></xci></snf>", x, l, file, ip)
 	}
 
-	log.Debug("sending xci command: ", xci)
-	r, err := sendXci(xci)
+	writeLogLine("debug", "snifferScan", reqId, fmt.Sprintf("{\"command\":\"%v\"}", xci))
+	r, err := sendXci(reqId, xci)
 
 	if err != nil {
+		writeLogLine("error", "snifferScan", reqId, err.Error())
 		return "", err
 	}
-
-	log.Debug("received xci response: ", string(r))
-	result := XciToJson(r, "scan")
+	writeLogLine("debug", "snifferScan", reqId, fmt.Sprintf("{\"response\":\"%v\"}", string(r)))
+	result := XciToJson(reqId, r, "scan")
 
 	return result, nil
 }
 
-func snifferReport(interval string) (string, error) {
+func snifferReport(reqId string, interval string) (string, error) {
 	xci := fmt.Sprintf("<snf><xci><report><request><status class=\"%v\"/></request></report></xci></snf>", interval)
-	log.Debug("sending xci command: ", xci)
-	r, err := sendXci(xci)
+	writeLogLine("debug", "snifferReport", reqId, fmt.Sprintf("{\"command\":\"%v\"}", xci))
+	r, err := sendXci(reqId, xci)
 
 	if err != nil {
+		writeLogLine("error", "snifferReport", reqId, err.Error())
 		return "", err
 	}
 
-	log.Debug("received xci response: ", string(r))
-	result := XciToJson(r, "report")
+	writeLogLine("debug", "snifferReport", reqId, fmt.Sprintf("{\"response\":\"%v\"}", string(r)))
+	result := XciToJson(reqId, r, "report")
 
 	return result, nil
 }
 
-func XciToJson(xci []byte, reqType string) string {
+func XciToJson(reqId string, xci []byte, reqType string) string {
 	var data XciResult
 	err := xml.Unmarshal(xci, &data)
 	if err != nil {
-		log.Error("xml conversion failed: ", err)
+		writeLogLine("error", "XciToJson", reqId, err.Error())
 	}
 
-	log.Debug("unmarshaled xml: ", data)
+	writeLogLine("debug", "XciToJson", reqId, fmt.Sprintf("{\"unmarshaled_xml\":\"%v\"}", data))
 	switch reqType {
 	case "scan":
 		json, _ := json.Marshal(data.ScanResult)
@@ -305,21 +327,23 @@ func XciToJson(xci []byte, reqType string) string {
 	}
 }
 
-func sendXci(cmd string) ([]byte, error) {
-	conn, err := connInit()
+func sendXci(reqId string, cmd string) ([]byte, error) {
+	conn, err := connInit(reqId)
 
 	if err != nil {
+		writeLogLine("error", "sendXci", reqId, err.Error())
 		return nil, err
 	}
 
-	connWrite(cmd, conn)
-	tBytes, resp := connRead(conn)
+	writeLogLine("debug", "sendXci", reqId, fmt.Sprintf("{\"command\":\"%v\"}", cmd))
+	connWrite(reqId, cmd, conn)
+	resp := connRead(reqId, conn)
 	defer conn.Close()
-	return resp[:tBytes], nil
+	return resp, nil
 }
 
-func connInit() (net.Conn, error) {
-	log.Debug(cfg.SnfHost + ":" + cfg.SnfPort)
+func connInit(reqId string) (net.Conn, error) {
+	writeLogLine("debug", "connInit", reqId, cfg.SnfHost+":"+cfg.SnfPort)
 
 	d := net.Dialer{Timeout: time.Second * 5}
 	c, err := d.Dial("tcp", cfg.SnfHost+":"+cfg.SnfPort)
@@ -331,44 +355,38 @@ func connInit() (net.Conn, error) {
 	return c, nil
 }
 
-func connWrite(xci string, c net.Conn) {
+func connWrite(reqId string, xci string, c net.Conn) {
 	_, err := c.Write([]byte(xci))
 	if err != nil {
-		log.Error("write to snf-server failed:", err.Error())
+		writeLogLine("error", "connWrite", reqId, err.Error())
 	}
 }
 
-func connRead(c net.Conn) (int, []byte) {
-	buffer := make([]byte, 16384)
-	totalBytes := 0
+func connRead(reqId string, c net.Conn) []byte {
 
-	for {
-		n, err := c.Read(buffer)
-		if n == 0 {
-			break
-		}
-		if err != nil {
-			if err != io.EOF {
-				log.Error("read from snf-server failed: ", err.Error())
-			}
-			break
-		}
-		totalBytes += n
+	resp, err := io.ReadAll(c)
+	if err != nil {
+		writeLogLine("error", "connRead", reqId, err.Error())
 	}
-	log.Debug("connread totalBytes:", totalBytes)
-	return totalBytes, buffer
+
+	writeLogLine("debug", "connRead", reqId, fmt.Sprintf("{\"response\":\"%v\"}", resp))
+	return resp
 }
 
-func writeHttpError(w http.ResponseWriter, msg string) {
+func writeHttpError(reqId string, w http.ResponseWriter, msg string) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusInternalServerError)
 	io.WriteString(w, fmt.Sprintf("{\"level\":\"error\",\"msg\":\"%v\"}", msg))
+	writeLogLine("error", "writeHttpError", reqId, msg)
 }
 
 func notFound(w http.ResponseWriter, r *http.Request) {
+	uuid := uuid.New()
+	reqId := uuid.String()
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusNotFound)
 	io.WriteString(w, "{\"level\":\"error\",\"msg\":\"endpoint not found\"}")
+	writeLogLine("info", "notFound", reqId, "endpoint not found")
 }
 
 func setDefault(v string, d string) string {
@@ -389,6 +407,25 @@ func setupLogging(logLevel string) {
 	}
 }
 
+func writeLogLine(level string, function string, reqId string, msg string) {
+	if level == "info" {
+		log.WithFields(log.Fields{
+			"function":   function,
+			"request_id": reqId,
+		}).Info(msg)
+	} else if level == "error" {
+		log.WithFields(log.Fields{
+			"function":   function,
+			"request_id": reqId,
+		}).Error(msg)
+	} else if level == "debug" {
+		log.WithFields(log.Fields{
+			"function":   function,
+			"request_id": reqId,
+		}).Debug(msg)
+	}
+}
+
 func setupRoutes() {
 	r := mux.NewRouter()
 	r.NotFoundHandler = http.HandlerFunc(notFound)
@@ -398,7 +435,7 @@ func setupRoutes() {
 	r.HandleFunc("/testip", httpTestIp)
 	r.HandleFunc("/status", httpStatus)
 
-	log.Info("initialized snifferfy on port ", cfg.HttpPort)
+	writeLogLine("info", "setupRoutes", "0", fmt.Sprintf("initialized snifferfy on port %v", cfg.HttpPort))
 	srv := &http.Server{
 		Addr:         "0.0.0.0:" + cfg.HttpPort,
 		WriteTimeout: time.Second * 15,

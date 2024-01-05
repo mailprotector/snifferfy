@@ -23,9 +23,9 @@ Snifferfy sets up a web server that translates HTTP calls into sniffer XCI calls
 * * internal: interval
 * * accepted values: second, minute, hour
 * `/scan` : translates the [scanner xci interface](http://www.armresearch.com/Documentation/QA/snfxciscanner-1956222249.jsp)
-* * input: file, ip (optional), logEnable [yes/no (default: yes)], xhdrEnable [yes/no (default: no)]
+* * input: file, ip (optional), requestId (optional), logEnable [yes/no (default: yes)], xhdrEnable [yes/no (default: no)]
 * `/testip` : translates the [gbudb testip xci interface](http://www.armresearch.com/Documentation/QA/xci_gbudb_test_format--572797157.jsp)
-* * input: ip
+* * input: ip, requestId (optional)
 
 
 ## Example Output
