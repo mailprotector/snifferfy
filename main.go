@@ -435,7 +435,7 @@ func setupRoutes() {
 	r.HandleFunc("/testip", httpTestIp)
 	r.HandleFunc("/status", httpStatus)
 
-	writeLogLine("info", "setupRoutes", "0", fmt.Sprintf("initialized snifferfy on port %v", cfg.HttpPort))
+	writeLogLine("info", "setupRoutes", "0", fmt.Sprintf("{\"initialized snifferfy on port %v\"}", cfg.HttpPort))
 	srv := &http.Server{
 		Addr:         "0.0.0.0:" + cfg.HttpPort,
 		WriteTimeout: time.Second * 15,

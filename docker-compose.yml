@@ -17,8 +17,8 @@ services:
     volumes:
       - storage:/usr/share/snf-server/storage/
     environment:
-      - LICENSE=ouqpmlwq
-      - AUTH=gfbyrubr83kga2i5
+      - LICENSE=[redacted]
+      - AUTH=[redacted]
     network_mode: "service:app"
 volumes:
   storage:
